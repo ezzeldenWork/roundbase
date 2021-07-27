@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#fff" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Subscriptions</title>
+    </head>
+
+    <body>
+        <div id="page" class="hfeed site">
+            <!--           start content-->
+            <div class="main-container">
+                <main class="main wrapper">
+                    <div class="subscriptions_section">
+                        <div class="container-fluid">
+                            <div class="row" style="justify-content: center;">
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="subscriptions_min_box">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="min_title_box">
+                                                            <h5 class="title">
+                                                                الفتواتــير
+                                                            </h5>
+                                                            <a href="#" class="buttom_style opne-po-up"> اضف جديد <i class="fa fa-plus" aria-hidden="true"></i> </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <table id="bills" class="dataTable" style="width: 100%;" role="grid" aria-describedby="bills_info">
+                                                            <thead>
+                                                                <tr role="row">
+                                                                    
+                                                                    <th class="sorting sorting_asc">
+                                                                        الاسم
+                                                                    </th>
+                                                                    <th class="sorting sorting_asc">
+                                                                        الكود
+                                                                    </th>
+                                                                    <th class="sorting sorting_asc">
+                                                                        التاريخ
+                                                                    </th>
+                                                                    <th class="sorting sorting_asc">
+                                                                        الشتراك
+                                                                    </th>
+                                                                    <th class="sorting sorting_asc">
+                                                                        الرقم
+                                                                    </th>
+                                                                    <th class="sorting sorting_asc">
+                                                                        الرقم 
+                                                                    </th>
+                                                                    <th class="sorting sorting_asc">
+                                                                        الحاله
+                                                                    </th>
+                                                                    <th class="sorting sorting_asc">
+                                                                        اضف
+                                                                    </th>
+                                                                    
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="odd">
+                                                                    <td class="sorting_1">شركة 1</td>
+                                                                    <td>29347</td>
+                                                                    <td>20 \ 10 \ 2020</td>
+                                                                    <td>2 \ 4 \ 2040 - 2 \ 4 \ 2034</td>
+                                                                    <td>32</td>
+                                                                    <td>32</td>
+                                                                    <td class="pop_up_opener" data-toggle="modal" data-target="#usersTableModal2"><span class="status_inProssec">نوع الحالة</span> <i class="fas fa-highlighter"></i></td>
+
+                                                                    <td>
+                                                                        <a href="./billsTable.html" class="table_link" title="اضف فاتورة"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <!--           end content-->
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="usersTableModal" tabindex="-1" role="dialog" aria-labelledby="usersTableModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">تغير الحــالة</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="statse">الحالة</label>
+                                        <select class="select2" name="statse" id="statse">
+                                            <option value="" class="status_active">Active</option>
+                                            <option value="" class="status_disactive">DisActive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="buttom_style">حفظ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="usersTableModal2" tabindex="-1" role="dialog" aria-labelledby="usersTableModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">تغير الحــالة</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="statse">الحالة</label>
+                                        <select class="select2" name="statse" id="statse">
+                                            <option value="" class="status_active">Active</option>
+                                            <option value="" class="status_disactive">DisActive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="buttom_style">حفظ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="add-popup">
+            <div class="popup-box">
+                <div class="title-box">
+                    <h3 class="title">عنوان اساسي</h3>
+                    <i class="fas fa-times pop-up-close" aria-hidden="true"></i>
+                </div>
+                
+                <div class="search-bar">
+                    <div class="serch-box">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="search" class="search-input" name="search" id="search">
+                    </div>
+                </div>
+                
+
+                <div class="item-continer-box">
+                    <div class="item-box">
+                        <ul class="list-unstyled min-list">
+                            <li class="active">
+                                <h6 class="title-lable ">
+                                    عنوان 1 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 2 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 3 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 3 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 4 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 4 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 4 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 4 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    عنوان 4 
+                                </h6>
+                                <i class="fas fa-angle-left    "></i>
+                            </li>
+                        </ul>
+                    </div>
+                 
+                    <div class="item-box">
+                        <ul class="list-unstyled">
+                            <li>
+                                 <div class="pretty p-default">
+                                    <input type="checkbox" />
+                                        <div class="state p-primary p-svg">
+                                            <label>                                    عنوان 1 </label>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li>
+                                 <div class="pretty p-default pro-box">
+                                    <input type="checkbox" />
+                                        <div class="state p-primary p-svg">
+                                            <label> عنوان 2 </label>
+                                        </div>
+                                    </div>
+                              
+                            </li>
+                            <li>
+                                 <div class="pretty p-default">
+                                    <input type="checkbox" />
+                                        <div class="state p-primary p-svg">
+                                            <label>   عنوان 3 </label>
+                                        </div>
+                                    </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                 
+                    <div class="item-box">
+                        <ul class="list-unstyled last-one">
+                            <h4 class="list-title">
+                                عنوان القائمة
+                            </h4>
+                            <li>
+                                 
+                                <h6 class="title-lable ">
+                                    عنوان 1 
+                                </h6>
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </li>
+                            <li>
+                               
+                                <h6 class="title-lable">
+                                    عنوان 2 
+                                </h6>
+                                <i class="fa fa-times-circle dlete-icone" aria-hidden="true"></i>
+                            </li>
+                            <li>
+                                
+                                <h6 class="title-lable">
+                                    عنوان 3 
+                                </h6> 
+                                <i class="fa fa-times-circle dlete-icone" aria-hidden="true"></i>
+                            </li>
+                            <li>
+                                
+                                <h6 class="title-lable">
+                                    عنوان 3 
+                                </h6> 
+                                <i class="fa fa-times-circle dlete-icone" aria-hidden="true"></i>
+                            </li>
+                            <li>
+                                
+                                <h6 class="title-lable">
+                                    عنوان 3 
+                                </h6> 
+                                <i class="fa fa-times-circle dlete-icone" aria-hidden="true"></i>
+                            </li>
+                            <li>
+                                
+                                <h6 class="title-lable">
+                                    عنوان 3 
+                                </h6> 
+                                <i class="fa fa-times-circle dlete-icone" aria-hidden="true"></i>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                   
+                    
+                </div>
+
+                <div class="button-bar">
+                    <a href="#" class="buttom_style"> اضف جديد <i class="fa fa-plus" aria-hidden="true"></i> </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous"></script>
+        <script    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"    integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="    crossorigin="anonymous"></script>
+        <script src="assets/js/script.js"></script>
+        
+    </body>
+</html>
