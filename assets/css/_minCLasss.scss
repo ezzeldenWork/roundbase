@@ -9,7 +9,8 @@ h6 {
     margin: unset;
 }
 
-a {
+a {     
+    text-decoration: none;
     &:hover {
         text-decoration: none;
     }
@@ -17,7 +18,7 @@ a {
 
 
 body {
-    font-family: $min_font;
+    font-family: Arial;
     // background-color: rgba($gray-color, .7);
     // background-color: rgba($blue-color, .7);
     // background: $min-color;

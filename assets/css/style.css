@@ -9,12 +9,16 @@ h6 {
   margin: unset;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover {
   text-decoration: none;
 }
 
 body {
-  font-family: "Cairo", sans-serif;
+  font-family: Arial;
   background: linear-gradient(190deg, white 0%, #ddd 100%);
   padding: 0 20px 60px 20px;
   position: relative;
@@ -254,153 +258,112 @@ tr.shown td.details-control {
   background-color: #ba2c63;
 }
 
-.login_section {
-  padding: 80px 0 0;
-}
-
-.login_form {
-  margin: 60px 0;
-}
-
-.login_form .form-group {
-  direction: ltr;
-  margin: 40px 0 0;
-  position: relative;
-}
-
-.login_form .form-group.up label {
-  top: -20px;
-  color: rgba(30, 48, 86, 0.8);
-}
-
-.login_form .form-group label {
-  cursor: text;
-  font-size: 14px;
-  color: rgba(30, 48, 86, 0.5);
-  position: absolute;
-  z-index: 88;
-  left: 12px;
-  top: 6px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-}
-
-.login_form .form-group input {
-  position: relative;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid rgba(30, 48, 86, 0.5);
-  border-left: 0;
-  color: #1e3056;
-  font-family: "Roboto", sans-serif;
-}
-
-.login_form .form-group input.rong_input {
-  border-color: #ba2c63;
-  color: #ba2c63;
-}
-
-.login_form .devo-password-input {
-  position: relative;
-}
-
-.login_form .devo-password-input .toggle-password {
-  position: absolute;
-  color: #A5A6A7;
-  font-size: 25px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-html[dir="ltr"] .login_form .devo-password-input .toggle-password {
-  left: 20px;
-}
-
-html[dir="rtl"] .login_form .devo-password-input .toggle-password {
-  right: 20px;
-}
-
-.login_form .devo-password-input .password-input::-webkit-input-placeholder {
-  font-size: 70px;
-}
-
-.login_form .devo-password-input .password-input:-ms-input-placeholder {
-  font-size: 70px;
-}
-
-.login_form .devo-password-input .password-input::-ms-input-placeholder {
-  font-size: 70px;
-}
-
-.login_form .devo-password-input .password-input::placeholder {
-  font-size: 70px;
-}
-
-.login_form .rong_passrwoed {
-  padding: 10px 0;
-  text-align: center;
-}
-
-.login_form .rong_passrwoed span {
-  font-size: 14px;
-  font-weight: 600;
-  color: #ba2c63;
-}
-
-.login_form .forget_link {
-  margin: 5px  0;
-}
-
-.login_form .login_button {
-  margin: 20px 0 60px;
-  font-weight: 600;
-  font-size: 18px;
-  width: 100%;
-  height: 40px;
-  color: #fff;
-  background: #1e3056;
-}
-
-.login_form .login_button:hover {
-  background: #486fc4;
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
-}
-
-.login_form .login_button:focus {
-  -webkit-transform: translateY(5px) scale(0.97);
-          transform: translateY(5px) scale(0.97);
-}
-
-.signIn_box {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-}
-
-.signIn_box .signIn_text {
-  font-size: 13px;
-  color: rgba(30, 48, 86, 0.6);
-  margin: 10px 0 3px;
-  font-weight: 500;
-  display: block;
-}
-
-.signIn_box .signIn_link {
-  font-size: 15px;
-  color: #1e3056;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.lang_box {
+.data-label .item-box {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px 30px;
+}
+
+.data-label .item-box .img-box {
+  margin: 0 10px;
+  width: 25px;
+  height: 25px;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.data-label .item-box .img-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.data-label .item-box .item-name {
+  color: #183444;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+.prag-table {
+  font-size: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 2.4em;
+  padding-right: 8px;
+  white-space: normal;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  white-space: wrap;
+}
+
+.tabes-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e9eff5;
+  margin: 0 0 10px;
+}
+
+.tabes-box .tabs-item {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px 0 0;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+}
+
+.tabes-box .tabs-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tabes-box .tabs-item .tab-title {
+  font-size: 16px;
+  color: #183444;
+  font-weight: 500;
+}
+
+.tabes-box .tabs-item:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 10px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.tabes-box .tabs-item.active {
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.tabes-box .tabs-item.active .tab-title {
+  font-size: 16px;
+  font-weight: 590;
+}
+
+.tabes-box .tabs-item.active:after {
+  opacity: 1;
+}
+
+.tabes-box .tabs-item svg {
+  height: 16px;
+  fill: #183444;
+  padding: 0 4px;
 }
 
 .subscriptions_section {
@@ -410,7 +373,6 @@ html[dir="rtl"] .login_form .devo-password-input .toggle-password {
 .subscriptions_section .subscriptions_min_box {
   background-color: #fff;
   border-radius: 4px;
-  padding: 20px;
   -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
@@ -573,13 +535,18 @@ html[dir="rtl"] .login_form .devo-password-input .toggle-password {
   font-weight: 600;
 }
 
-.buttom_style, .small_link, .dataTable .table_link, .login_form .form-group label, .login_form .login_button, .subscriptions_section .subscriptions_min_box .subscriptions_box, .subscriptions_section .subscriptions_min_box .subscriptions_box .box_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i {
+.buttom_style, .small_link, .dataTable .table_link, .subscriptions_section .subscriptions_min_box .subscriptions_box, .subscriptions_section .subscriptions_min_box .subscriptions_box .box_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }
 
+.table-box {
+  padding: 20px;
+}
+
 .add-popup {
   position: fixed;
+  z-index: 999;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
   display: -webkit-box;
@@ -620,14 +587,27 @@ html[dir="rtl"] .login_form .devo-password-input .toggle-password {
   cursor: pointer;
 }
 
-.add-popup .popup-box .search-bar {
+.add-popup .popup-box .input-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding: 5px 30px;
   background-color: #dddddd;
   border-bottom: 1px solid rgba(51, 51, 51, 0.5);
 }
 
-.add-popup .popup-box .search-bar .serch-box {
+.add-popup .popup-box .input-bar label {
+  padding: 0 4px;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
+
+.add-popup .popup-box .input-bar .serch-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -639,13 +619,34 @@ html[dir="rtl"] .login_form .devo-password-input .toggle-password {
   padding: 6px;
 }
 
-.add-popup .popup-box .search-bar .serch-box i {
+.add-popup .popup-box .input-bar .serch-box i {
   color: #333333;
 }
 
-.add-popup .popup-box .search-bar .serch-box .search-input {
+.add-popup .popup-box .input-bar .serch-box .search-input {
   margin: 0 6px;
   border-color: transparent;
+}
+
+.add-popup .popup-box .add-bar .add-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 5px;
+  background-color: #1e3056;
+}
+
+.add-popup .popup-box .add-bar .add-button i {
+  color: white;
 }
 
 .add-popup .popup-box .item-continer-box {
@@ -660,7 +661,7 @@ html[dir="rtl"] .login_form .devo-password-input .toggle-password {
   height: 350px;
   overflow-x: auto;
   width: calc(100% / 3);
-  border-right: 1px solid black;
+  border-left: 1px solid black;
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -683,7 +684,7 @@ html[dir="rtl"] .login_form .devo-password-input .toggle-password {
 }
 
 .add-popup .popup-box .item-continer-box .item-box:first-of-type {
-  border-right: 0;
+  border-left: 0;
 }
 
 .add-popup .popup-box .item-continer-box .item-box li {
@@ -784,6 +785,7 @@ html[dir="rtl"] .login_form .devo-password-input .toggle-password {
 }
 
 .pro-box.pretty .state label:after {
+  background-color: #1e3056;
   right: 0;
   top: 1px !important;
   width: 24% !important;
