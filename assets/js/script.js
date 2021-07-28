@@ -97,7 +97,9 @@ $(document).ready(function () {
             .toggle();
 
         if($(this).attr("checked", false)){
-            
+            // if(  ){
+                $(".list-item-controled[data-list='"+id_attr+"']").show();
+            // }
         }
 
     });
