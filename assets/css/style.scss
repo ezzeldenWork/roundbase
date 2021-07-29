@@ -140,11 +140,9 @@
   transition: 0.4s all ease-in-out;
 }
 
-
-.table-box{
+.table-box {
   padding: 20px;
 }
-
 
 .add-popup {
   position: fixed;
@@ -155,6 +153,7 @@
   align-items: center;
   justify-content: center;
   .popup-box {
+    box-shadow: 0px 3px 5px 1px #1e305659;
     border-radius: 5px;
     width: 600px;
     overflow: hidden;

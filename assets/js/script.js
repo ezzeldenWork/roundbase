@@ -17,36 +17,23 @@ $(document).ready(function () {
         $(".add-popup").fadeIn();
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $(".dataTable thead .min_lable").each(function () {
         const tdLable = $(this).text(),
             datatable = $(this).data("table");
 
         if ($(this).hasClass("locked") == true) {
-            var icone = " <i class='fa fa-lock' aria-hidden='true'></i> ";
+            var icone = " <i class='fa fa-lock' aria-hidden='true'></i> ",
+                requred_input = "disabled";
         } else {
-            var icone = " <i class='fa fa-times delet_icone_parrent ' aria-hidden='true'></i> ";
+            var icone = " <i class='fa fa-times delet_icone_parrent ' aria-hidden='true'></i> ",
+                    requred_input = "";
         }
 
         if ($(this).hasClass("show_lable") == true) {
             var checked_Attr = "checked";
+            
 
-            $(".item-box ul.last-one").append(
-                '<li class="list-item-controled " data-list="' + datatable  +  '">' + "<h6 class='title-lable'>" + tdLable + "</h6>" + icone + "</li>"
-            );
+            $(".item-box ul.last-one").append('<li class="list-item-controled " data-list="' + datatable + '">' + "<h6 class='title-lable'>" + tdLable + "</h6>" + icone + "</li>");
         } else {
             var checked_Attr = "";
         }
@@ -54,11 +41,7 @@ $(document).ready(function () {
         $(".item-box.sucond-box ul").append(
             " <li>" +
                 '<div class="pretty p-default">' +
-                '<input id="' +
-                datatable +
-                '" type="checkbox" class="input-checked" ' +
-                checked_Attr +
-                " />" +
+                '<input id="' + datatable + '" type="checkbox" class="input-checked" ' + checked_Attr + " " + requred_input + "/>" +
                 ' <div class="state p-primary p-svg">' +
                 " <label> " +
                 tdLable +
@@ -77,18 +60,6 @@ $(document).ready(function () {
         }
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
     $(".input-checked").click(function () {
         const id_attr = $(this).attr("id");
 
@@ -96,17 +67,15 @@ $(document).ready(function () {
             .toggleClass("show_lable")
             .toggle();
 
-        if($(this).attr("checked", false)){
+        if ($(this).attr("checked", false)) {
             // if(  ){
-                $(".list-item-controled[data-list='"+id_attr+"']").show();
+            $(".list-item-controled[data-list='" + id_attr + "']").show();
             // }
         }
-
     });
 
     $(".delet_icone_parrent").click(function () {
         $(this).parent(".list-item-controled").toggle();
-
 
         const name_attr = $(this).parent().attr("data-list");
 
@@ -114,41 +83,13 @@ $(document).ready(function () {
             .toggleClass("show_lable")
             .toggle();
 
-            $("#" + name_attr).attr("checked", false);
-
-            
+        $("#" + name_attr).attr("checked", false);
     });
 
-
-
-
-
-
-
-
-
-    
-    $('.search-input').keyup(function() {
+    $(".search-input").keyup(function () {
         var Companyvalue = $(this).val().toLowerCase();
         $(".add-popup .popup-box .item-continer-box .item-box li").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1)
+            $(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1);
         });
-    })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    });
 });
