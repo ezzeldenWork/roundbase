@@ -1,11 +1,20 @@
 $(document).ready(function () {
-        // search-input
+    // search-input
     $(".search-input").keyup(function () {
+        // debugger;
         var Companyvalue = $(this).val().toLowerCase();
         $(".add-popup .popup-box .item-continer-box .item-box li").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1);
+            if (
+                $(this)
+                    .toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1)
+                    .hasClass("removed_data") !== true
+            ) {
+                $(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1);
+                $(".list-item-controled.removed_data ").hide();
+            }
         });
     });
+
     // datepicke
     $(".date_picker").datepicker();
 
@@ -24,8 +33,7 @@ $(document).ready(function () {
         $(".add-popup").fadeIn();
     });
 
-    
-    $(".dataTable thead .min_lable").each(function () {
+    $("#tadetest thead .min_lable").each(function () {
         const tdLable = $(this).text(),
             datatable = $(this).data("table");
 
@@ -65,34 +73,31 @@ $(document).ready(function () {
         );
     });
 
-    $(".closeandsave").click(function () {
-        $(".add-popup").fadeOut();
-
-        if ($(".input-checked").attr("checked") == false) {
-            console.log($(".input-checked").text());
-        }
-    });
-
     $(".input-checked").click(function () {
         const id_attr = $(this).attr("id");
 
-        $("." + id_attr).toggleClass("show_lable").toggle();
+        $("." + id_attr)
+            .toggleClass("show_lable")
+            .toggle();
 
-
-        $(".list-item-controled[data-list='" + id_attr + "']").toggle();
-    
+        $(".list-item-controled[data-list='" + id_attr + "']")
+            .toggle()
+            .addClass("removed_data");
     });
 
     $(".delet_icone_parrent").click(function () {
-        
         const name_attr = $(this).parent().attr("data-list");
-        
+
         $("#" + name_attr).click();
-        
-        $("."+name_attr).removeClass("show_lable").hide();
-        
-        $(this).parent(".list-item-controled").hide();
+
+        // $("." + name_attr)
+        //     .removeClass("show_lable")
+        //     .hide();
+
+        // $(this).parent(".list-item-controled").hide();
     });
 
-
+    $(".closeandsave").click(function () {
+        $(".add-popup").fadeOut();
+    });
 });
