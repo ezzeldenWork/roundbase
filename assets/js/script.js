@@ -1,19 +1,43 @@
 $(document).ready(function () {
+
+    var $litem = "<li style='width:500px'>ezzz</li>";
+
+    Tipped.create('.demo_tep', $litem, {
+        behavior: 'custom-slow',
+        skin: 'light',
+
+
+
+
+
+
+
+        // for test
+        close: true,
+        hideOn: false
+      });
+
+
+
     // search-input
     $(".search-input").keyup(function () {
         // debugger;
         var Companyvalue = $(this).val().toLowerCase();
         $(".add-popup .popup-box .item-continer-box .item-box li").filter(function () {
-            if (
-                $(this)
-                    .toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1)
-                    .hasClass("removed_data") !== true
-            ) {
+        
+            if($(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1).hasClass("removed_data") !== true){
                 $(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1);
                 $(".list-item-controled.removed_data ").hide();
+            }if($(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1).hasClass("removed_data") == true){
+                $(".list-item-controled.removed_data ").show();
             }
         });
     });
+
+
+
+
+
 
     // datepicke
     $(".date_picker").datepicker();
@@ -80,9 +104,7 @@ $(document).ready(function () {
             .toggleClass("show_lable")
             .toggle();
 
-        $(".list-item-controled[data-list='" + id_attr + "']")
-            .toggle()
-            .addClass("removed_data");
+        $(".list-item-controled[data-list='" + id_attr + "']").toggle().toggleClass("removed_data");
     });
 
     $(".delet_icone_parrent").click(function () {
