@@ -1,11 +1,9 @@
 $(document).ready(function () {
     $(".data-label .item-box").hover(
         function () {
-            // debugger;
             var img_src = $(this).children(".img-box").children("img").attr("src"),
                 box_title = $(this).children(".item-name").text();
             // console.log(img_src);
-            // debugger;
             Tipped.delegate(
                 ".demo_tep",
                 "<div class='tipped-box'>" +
@@ -57,17 +55,22 @@ $(document).ready(function () {
 
     // search-input
     $(".search-input").keyup(function () {
-        // debugger;
+        // 7
         var Companyvalue = $(this).val().toLowerCase();
         $(".add-popup .popup-box .item-continer-box .item-box li").filter(function () {
-            // debugger;
-            if ($(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1).hasClass("removed_data") !== true) {
-                // debugger;
+            if (
+                $(this)
+                    .toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1)
+                    .hasClass("removed_data") !== true
+            ) {
                 $(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1);
                 $(".list-item-controled.removed_data ").show();
             }
-            if ($(this).toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1).hasClass("removed_data") == true) {
-                // debugger;
+            if (
+                $(this)
+                    .toggle($(this).text().toLowerCase().indexOf(Companyvalue) > -1)
+                    .hasClass("removed_data") == true
+            ) {
                 $(".list-item-controled.removed_data ").hide();
             }
         });
@@ -169,25 +172,19 @@ $(document).ready(function () {
         const list_item = $(".add-popup .popup-box .item-continer-box .item-box .last-one li"),
             lable_item = $("#tadetest thead .min_lable");
 
-        //   debugger;
         for (var i = 0; i < list_item.length; i++) {
             //   console.log(list_item[i]);
 
-            // debugger;
             for (var j = 0; j < lable_item.length; j++) {
                 //   console.log(lable_item[j]);
 
-                // debugger;
                 if ($(list_item[i]).attr("data-list") == $(lable_item[j]).attr("data-table")) {
-                    //   debugger;
                     if ($(list_item[i]).hasClass("removed_data") == true) {
-                        // debugger;
                         var name_attr = $(list_item[i]).attr("data-list");
                         $("." + name_attr)
                             .removeClass("show_lable")
                             .hide();
                     } else if ($(list_item[i]).hasClass("added_to_list") == true) {
-                        //  debugger;
                         var name_attr2 = $(list_item[i]).attr("data-list");
                         $("." + name_attr2)
                             .addClass("show_lable")
@@ -198,3 +195,4 @@ $(document).ready(function () {
         }
     });
 });
+ 
