@@ -780,6 +780,7 @@ tr.shown td.details-control {
 .add-popup .popup-box .item-continer-box .item-box .last-one li i {
   font-size: 12px;
   color: red;
+  cursor: pointer;
 }
 
 .add-popup .popup-box .button-bar {
