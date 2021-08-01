@@ -265,6 +265,7 @@ tr.shown td.details-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .data-label .item-box .img-box {
@@ -795,4 +796,116 @@ tr.shown td.details-control {
   -webkit-transform: unset !important;
           transform: unset !important;
   text-align: right;
+}
+
+.tipped-box {
+  height: 100%;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.tipped-box hr {
+  margin: 0 -65px !important;
+}
+
+.tipped-box .title-box .img-box {
+  margin: 0 10px 0 0;
+}
+
+.tipped-box .title-box .img-box img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tipped-box .title-box .title-item-box .title-item {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tipped-box .title-box .title-item-box .prag-item {
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.tipped-box .title-box .title-item-box .list-item a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000061;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.tipped-box .number-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+}
+
+.tipped-box .number-box .number-item-box {
+  text-align: start;
+}
+
+.tipped-box .number-box .number-item-box .number-title-item {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 0.918);
+  display: block;
+  margin: 0 0 6px;
+}
+
+.tipped-box .number-box .number-item-box .number-item {
+  color: rgba(0, 47, 90, 0.795);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tipped-box .button-box {
+  padding: 20px 0 0;
+  display: inline-block;
+}
+
+.tipped-box .button-box a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #004586;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+
+.tipped-box .button-box a span {
+  display: inline-block;
+}
+
+.tipped-box .button-box a i {
+  margin: 0 6px;
+  font-size: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  height: 24px;
 }
