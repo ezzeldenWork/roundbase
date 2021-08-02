@@ -1,383 +1,401 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#fff" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+            integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/tipped.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Companies</title>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="theme-color" content="#fff" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
-        integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/tipped.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Companies</title>
-</head>
-
-<body>
-    <div id="page" class="hfeed site">
-        <!--           start content-->
-        <div class="main-container">
-            <main class="main wrapper">
-                <div class="subscriptions_section">
-                    <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="subscriptions_min_box">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="tabes-box">
-                                                        <div class="tabs-item active">
-                                                            <svg viewBox="0 0 24 24" class="large accent">
-                                                                <path
-                                                                    d="M12,6V1.2H0V22.8H24V6ZM4.8,20.4H2.4V18H4.8Zm0-4.8H2.4V13.2H4.8Zm0-4.8H2.4V8.4H4.8ZM4.8,6H2.4V3.6H4.8ZM9.6,20.4H7.2V18H9.6Zm0-4.8H7.2V13.2H9.6Zm0-4.8H7.2V8.4H9.6ZM9.6,6H7.2V3.6H9.6Zm12,14.4H12V18h2.4V15.6H12V13.2h2.4V10.8H12V8.4h9.6Zm-2.4-9.6H16.8v2.4h2.4Zm0,4.8H16.8V18h2.4Z">
-                                                                </path>
-                                                            </svg>
-                                                            <h5 class="tab-title">
-                                                                Companies
-                                                            </h5>
-                                                        </div>
-                                                        <div class="tabs-item">
-                                                            <svg viewBox="0 0 24 24" class="large accent">
-                                                                <path
-                                                                    d="M5.396.674v22.854h14.206a2.762 2.762 0 002.757-2.757V3.431A2.762 2.762 0 0019.602.673H5.396zm1.18 1.18h13.026c.866 0 1.576.71 1.576 1.576v17.341c0 .866-.71 1.577-1.576 1.577H6.576V1.854zM3.932.651a2.295 2.295 0 00-2.289 2.29v18.32c0 1.26 1.03 2.29 2.29 2.29h.554V.65h-.555z">
-                                                                </path>
-                                                                <path
-                                                                    d="M10.797 9.81a2.29 2.29 0 114.58 0 2.29 2.29 0 01-4.58 0zM17.093 15.534s-1.087-2.29-4.006-2.29c-2.92 0-4.007 2.29-4.007 2.29v1.145h8.013v-1.145z">
-                                                                </path>
-                                                            </svg>
-                                                            <h5 class="tab-title">
-                                                                Contacts
-                                                            </h5>
-                                                        </div>
-                                                        <div class="tabs-item">
-                                                            <svg viewBox="0 0 24 24" class="large accent">
-                                                                <path
-                                                                    d="M21.6,2.4V21.6H2.4V2.4H21.6m0-2.4H2.4A2.41,2.41,0,0,0,0,2.4V21.6A2.41,2.41,0,0,0,2.4,24H21.6A2.41,2.41,0,0,0,24,21.6V2.4A2.41,2.41,0,0,0,21.6,0Z">
-                                                                </path>
-                                                                <path
-                                                                    d="M12.31,11.12c-1.81-.47-2.4-1-2.4-1.72s.81-1.48,2.16-1.48,1.95.68,2,1.68h1.77a3.2,3.2,0,0,0-2.57-3V4.8h-2.4V6.53c-1.55.33-2.8,1.34-2.8,2.89,0,1.84,1.53,2.76,3.76,3.3,2,.48,2.4,1.18,2.4,1.93,0,.55-.39,1.43-2.16,1.43s-2.29-.74-2.38-1.68H7.93a3.34,3.34,0,0,0,2.94,3.06V19.2h2.4V17.48c1.56-.3,2.8-1.2,2.8-2.84C16.07,12.37,14.13,11.59,12.31,11.12Z">
-                                                                </path>
-                                                            </svg>
-                                                            <h5 class="tab-title">
-                                                                Investors
-                                                            </h5>
-                                                        </div>
-                                                        <div class="tabs-item">
-                                                            <svg viewBox="0 0 24 24" class="large accent">
-                                                                <path
-                                                                    d="M12,2c2.8,0,5,2.2,5,5s-2.2,5-5,5S7,9.8,7,7S9.2,2,12,2 M12,14.5c5.5,0,10,2.2,10,5V22H2v-2.5C2,16.7,6.5,14.5,12,14.5z">
-                                                                </path>
-                                                            </svg>
-                                                            <h5 class="tab-title">
-                                                                People
-                                                            </h5>
-                                                        </div>
+    <body>
+        <div id="page" class="hfeed site">
+            <!--           start content-->
+            <div class="main-container">
+                <main class="main wrapper">
+                    <div class="subscriptions_section">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="subscriptions_min_box">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="tabes-box">
+                                                    <div class="tabs-item active">
+                                                        <svg viewBox="0 0 24 24" class="large accent">
+                                                            <path
+                                                                d="M12,6V1.2H0V22.8H24V6ZM4.8,20.4H2.4V18H4.8Zm0-4.8H2.4V13.2H4.8Zm0-4.8H2.4V8.4H4.8ZM4.8,6H2.4V3.6H4.8ZM9.6,20.4H7.2V18H9.6Zm0-4.8H7.2V13.2H9.6Zm0-4.8H7.2V8.4H9.6ZM9.6,6H7.2V3.6H9.6Zm12,14.4H12V18h2.4V15.6H12V13.2h2.4V10.8H12V8.4h9.6Zm-2.4-9.6H16.8v2.4h2.4Zm0,4.8H16.8V18h2.4Z"
+                                                            ></path>
+                                                        </svg>
+                                                        <h5 class="tab-title">
+                                                            Companies
+                                                        </h5>
+                                                    </div>
+                                                    <div class="tabs-item">
+                                                        <svg viewBox="0 0 24 24" class="large accent">
+                                                            <path
+                                                                d="M5.396.674v22.854h14.206a2.762 2.762 0 002.757-2.757V3.431A2.762 2.762 0 0019.602.673H5.396zm1.18 1.18h13.026c.866 0 1.576.71 1.576 1.576v17.341c0 .866-.71 1.577-1.576 1.577H6.576V1.854zM3.932.651a2.295 2.295 0 00-2.289 2.29v18.32c0 1.26 1.03 2.29 2.29 2.29h.554V.65h-.555z"
+                                                            ></path>
+                                                            <path d="M10.797 9.81a2.29 2.29 0 114.58 0 2.29 2.29 0 01-4.58 0zM17.093 15.534s-1.087-2.29-4.006-2.29c-2.92 0-4.007 2.29-4.007 2.29v1.145h8.013v-1.145z"></path>
+                                                        </svg>
+                                                        <h5 class="tab-title">
+                                                            Contacts
+                                                        </h5>
+                                                    </div>
+                                                    <div class="tabs-item">
+                                                        <svg viewBox="0 0 24 24" class="large accent">
+                                                            <path d="M21.6,2.4V21.6H2.4V2.4H21.6m0-2.4H2.4A2.41,2.41,0,0,0,0,2.4V21.6A2.41,2.41,0,0,0,2.4,24H21.6A2.41,2.41,0,0,0,24,21.6V2.4A2.41,2.41,0,0,0,21.6,0Z"></path>
+                                                            <path
+                                                                d="M12.31,11.12c-1.81-.47-2.4-1-2.4-1.72s.81-1.48,2.16-1.48,1.95.68,2,1.68h1.77a3.2,3.2,0,0,0-2.57-3V4.8h-2.4V6.53c-1.55.33-2.8,1.34-2.8,2.89,0,1.84,1.53,2.76,3.76,3.3,2,.48,2.4,1.18,2.4,1.93,0,.55-.39,1.43-2.16,1.43s-2.29-.74-2.38-1.68H7.93a3.34,3.34,0,0,0,2.94,3.06V19.2h2.4V17.48c1.56-.3,2.8-1.2,2.8-2.84C16.07,12.37,14.13,11.59,12.31,11.12Z"
+                                                            ></path>
+                                                        </svg>
+                                                        <h5 class="tab-title">
+                                                            Investors
+                                                        </h5>
+                                                    </div>
+                                                    <div class="tabs-item">
+                                                        <svg viewBox="0 0 24 24" class="large accent">
+                                                            <path d="M12,2c2.8,0,5,2.2,5,5s-2.2,5-5,5S7,9.8,7,7S9.2,2,12,2 M12,14.5c5.5,0,10,2.2,10,5V22H2v-2.5C2,16.7,6.5,14.5,12,14.5z"></path>
+                                                        </svg>
+                                                        <h5 class="tab-title">
+                                                            People
+                                                        </h5>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
 
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="table-box">
-                                                        <table id="tadetest" class="dataTable" role="grid"
-                                                            aria-describedby="bills_info">
-                                                            <thead>
-                                                                <tr class="title-tr" role="row">
-                                                                    <th data-table="name"
-                                                                        class="sorting sorting_asc min_lable show_lable locked name">
-                                                                        Organization Name
-                                                                    </th>
-                                                                    <th data-table="code"
-                                                                        class="sorting sorting_asc min_lable show_lable code">
-                                                                        Industries
-                                                                    </th>
-                                                                    <th data-table="date"
-                                                                        class="sorting sorting_asc min_lable show_lable date">
-                                                                        Headquarters Location
-                                                                    </th>
-                                                                    <th data-table="sub" style="width: 20%;"
-                                                                        class="sorting sorting_asc min_lable show_lable sub">
-                                                                        Description
-                                                                    </th>
-                                                                    <th data-table="cbrank" style="width: 40px;"
-                                                                        class="cbrank sorting sorting_asc min_lable show_lable ">
-                                                                        CB Rank (Company)
-                                                                    </th>
-                                                                    <th data-table="new-one"
-                                                                        style="width: 40px; display: none;"
-                                                                        class="sorting sorting_asc min_lable  new-one">
-                                                                        Diversity Spotlight
-                                                                    </th>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="table-box">
+                                                    <table id="tadetest" class="dataTable" role="grid" aria-describedby="bills_info">
+                                                        <thead>
+                                                            <tr class="title-tr" role="row">
+                                                                <th data-order="0" data-table="name" class="min_lable show_lable locked name">
+                                                                    <div class="th_content">
+                                                                        <span class="textTitle">
+                                                                            Organization Name
+                                                                        </span>
 
+                                                                        <select name="order" id="">
+                                                                            <option value="" selected disabled></option>
+                                                                            <option value="left">Left</option>
+                                                                            <option value="right">Right</option>
+                                                                            <option value="toStart">To Start</option>
+                                                                            <option value="toEnd">To End</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </th>
+                                                                <th data-order="1" data-table="code" class="min_lable show_lable code">
+                                                                    <div class="th_content">
+                                                                        <span class="textTitle">Industries</span>
+                                                                        <select name="order" id="">
+                                                                            <option value="" selected disabled></option>
+                                                                            <option value="left">Left</option>
+                                                                            <option value="right">Right</option>
+                                                                            <option value="toStart">To Start</option>
+                                                                            <option value="toEnd">To End</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </th>
+                                                                <th data-order="2" data-table="date" class="min_lable show_lable date">
+                                                                    <div class="th_content">
+                                                                        <span class="textTitle"> Headquarters Location </span>
+                                                                        <select name="order" id="">
+                                                                            <option value="" selected disabled></option>
+                                                                            <option value="left">Left</option>
+                                                                            <option value="right">Right</option>
+                                                                            <option value="toStart">To Start</option>
+                                                                            <option value="toEnd">To End</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </th>
+                                                                <th data-order="3" data-table="sub" style="width: 20%;" class="min_lable show_lable sub">
+                                                                    <div class="th_content">
+                                                                        <span class="textTitle"> Description</span>
+                                                                        <select name="order" id="">
+                                                                            <option value="" selected disabled></option>
+                                                                            <option value="left">Left</option>
+                                                                            <option value="right">Right</option>
+                                                                            <option value="toStart">To Start</option>
+                                                                            <option value="toEnd">To End</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </th>
+                                                                <th data-order="5" data-table="cbrank" style="width: 200px;" class="cbrank min_lable show_lable">
+                                                                    <div class="th_content">
+                                                                        <span class="textTitle">CB Rank (Company) </span>
+                                                                        <select name="order" id="">
+                                                                            <option value="" selected disabled></option>
+                                                                            <option value="left">Left</option>
+                                                                            <option value="right">Right</option>
+                                                                            <option value="toStart">To Start</option>
+                                                                            <option value="toEnd">To End</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </th>
+                                                                <th data-order="6" data-table="new-one" style="width: 20% !important; display: none;" class="min_lable new-one">
+                                                                    <div class="th_content" style="width: 200px;">
+                                                                        <span class="textTitle"> Diversity Spotlight </span>
+                                                                        <select name="order" id="">
+                                                                            <option value="" selected disabled></option>
+                                                                            <option value="left">Left</option>
+                                                                            <option value="right">Right</option>
+                                                                            <option value="toStart">To Start</option>
+                                                                            <option value="toEnd">To End</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </th>
 
-
-
-                                                                    <th data-table="statue"
-                                                                        class="add-box-buttom statue"
-                                                                        style="width: 100px;">
-                                                                        <a href="#" class="table_link opne-po-up"
-                                                                            style="width: 50px;"><i class="fa fa-plus"
-                                                                                aria-hidden="true"></i></a>
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr class="odd">
-                                                                    <td class="sorting_1 data-label name">
-                                                                        <div class="item-box demo_tep"
-                                                                            data-src="assets/img/liab4nlbn8ov1vzuwgqu.png">
-                                                                            <span class="number-item">
-                                                                                1.
-                                                                            </span>
-                                                                            <div class="img-box">
-                                                                                <img src="assets/img/liab4nlbn8ov1vzuwgqu.png"
-                                                                                    class="img-fluid" alt="" />
-                                                                            </div>
-                                                                            <span class="item-name">
-                                                                                softbank
-                                                                            </span>
+                                                                <th data-table="statue" class="add-box-buttom statue" style="width: 100px;">
+                                                                    <a href="#" class="table_link opne-po-up" style="width: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="odd">
+                                                                <td class="sorting_1 data-label name">
+                                                                    <div class="item-box demo_tep" data-src="assets/img/liab4nlbn8ov1vzuwgqu.png">
+                                                                        <span class="number-item">
+                                                                            1.
+                                                                        </span>
+                                                                        <div class="img-box">
+                                                                            <img src="assets/img/liab4nlbn8ov1vzuwgqu.png" class="img-fluid" alt="" />
                                                                         </div>
-                                                                    </td>
+                                                                        <span class="item-name">
+                                                                            softbank
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
 
-                                                                    <td class="data-label code">Banking, Internet,
-                                                                        Mobile, Telecomm</td>
-                                                                    <td class="data-label date">Tokyo, Tokyo, Japan</td>
-                                                                    <td class="data-label sub">
-                                                                        <p class="prag-table">
-                                                                            SoftBank provides fixed-line, mobile
-                                                                            telephony, internet, telecommunications,
-                                                                        </p>
-                                                                    </td>
-                                                                    <td class="data-label sub">1</td>
-                                                                    <td></td>
-                                                                    <td class="data-label new-one"></td>
-                                                                </tr>
+                                                                <td class="data-label code">Banking, Internet, Mobile, Telecomm</td>
+                                                                <td class="data-label date">Tokyo, Tokyo, Japan</td>
+                                                                <td class="data-label sub">
+                                                                    <p class="prag-table">
+                                                                        SoftBank provides fixed-line, mobile telephony, internet, telecommunications,
+                                                                    </p>
+                                                                </td>
+                                                                <td class="data-label sub">1</td>
+                                                                <td></td>
+                                                                <td class="data-label new-one"></td>
+                                                            </tr>
 
-                                                                <tr class="odd">
-                                                                    <td class="sorting_1 data-label name">
-                                                                        <div class="item-box demo_tep">
-                                                                            <span class="number-item">
-                                                                                2.
-                                                                            </span>
-                                                                            <div class="img-box">
-                                                                                <img src="assets/img/i7yjhhitbze4kylwmbfy.png"
-                                                                                    class="img-fluid" alt="" />
-                                                                            </div>
-                                                                            <span class="item-name">
-                                                                                klarna
-                                                                            </span>
+                                                            <tr class="odd">
+                                                                <td class="sorting_1 data-label name">
+                                                                    <div class="item-box demo_tep">
+                                                                        <span class="number-item">
+                                                                            2.
+                                                                        </span>
+                                                                        <div class="img-box">
+                                                                            <img src="assets/img/i7yjhhitbze4kylwmbfy.png" class="img-fluid" alt="" />
                                                                         </div>
-                                                                    </td>
+                                                                        <span class="item-name">
+                                                                            klarna
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
 
-                                                                    <td class="data-label code">E-Commerce, Finance,
-                                                                        FinTech, Paym</td>
-                                                                    <td class="data-label date">nts, Social Media
-                                                                        Stockholm, Stockholms Lan, Sweden</td>
-                                                                    <td class="data-label sub">
-                                                                        <p class="prag-table">
-                                                                            Klarna is an e-commerce payment solutions
-                                                                            platform for merchants and shoppers.
-                                                                        </p>
-                                                                    </td>
-                                                                    <td class="data-label sub">2</td>
-                                                                    <td></td>
-                                                                    <td class="data-label new-one"></td>
-                                                                </tr>
+                                                                <td class="data-label code">E-Commerce, Finance, FinTech, Paym</td>
+                                                                <td class="data-label date">nts, Social Media Stockholm, Stockholms Lan, Sweden</td>
+                                                                <td class="data-label sub">
+                                                                    <p class="prag-table">
+                                                                        Klarna is an e-commerce payment solutions platform for merchants and shoppers.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="data-label sub">2</td>
+                                                                <td></td>
+                                                                <td class="data-label new-one"></td>
+                                                            </tr>
 
-                                                                <tr class="odd">
-                                                                    <td class="sorting_1 data-label name">
-                                                                        <div class="item-box demo_tep">
-                                                                            <span class="number-item">
-                                                                                3.
-                                                                            </span>
-                                                                            <div class="img-box">
-                                                                                <img src="assets/img/n3tgnmr1hqxolbrhrbty.png"
-                                                                                    class="img-fluid" alt="" />
-                                                                            </div>
-                                                                            <span class="item-name">
-                                                                                Flipkart
-                                                                            </span>
+                                                            <tr class="odd">
+                                                                <td class="sorting_1 data-label name">
+                                                                    <div class="item-box demo_tep">
+                                                                        <span class="number-item">
+                                                                            3.
+                                                                        </span>
+                                                                        <div class="img-box">
+                                                                            <img src="assets/img/n3tgnmr1hqxolbrhrbty.png" class="img-fluid" alt="" />
                                                                         </div>
-                                                                    </td>
+                                                                        <span class="item-name">
+                                                                            Flipkart
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
 
-                                                                    <td class="data-label code">E-Commerce, Internet,
-                                                                        Retail, Shoppi</td>
-                                                                    <td class="data-label date">
-                                                                        Bengaluru, Karnataka, India
-                                                                    </td>
-                                                                    <td class="data-label sub">
-                                                                        <p class="prag-table">
-                                                                            Flipkart operates an online shopping website
-                                                                            with a registered customer base of over 100
-                                                                            million.
-                                                                        </p>
-                                                                    </td>
-                                                                    <td class="data-label sub">3</td>
-                                                                    <td></td>
-                                                                    <td class="data-label new-one"></td>
-                                                                </tr>
+                                                                <td class="data-label code">E-Commerce, Internet, Retail, Shoppi</td>
+                                                                <td class="data-label date">
+                                                                    Bengaluru, Karnataka, India
+                                                                </td>
+                                                                <td class="data-label sub">
+                                                                    <p class="prag-table">
+                                                                        Flipkart operates an online shopping website with a registered customer base of over 100 million.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="data-label sub">3</td>
+                                                                <td></td>
+                                                                <td class="data-label new-one"></td>
+                                                            </tr>
 
-                                                                <tr class="odd">
-                                                                    <td class="sorting_1 data-label name">
-                                                                        <div class="item-box demo_tep">
-                                                                            <span class="number-item">
-                                                                                5.
-                                                                            </span>
-                                                                            <div class="img-box">
-                                                                                <img src="assets/img/t6nais5lghcxmc9nkpnk.png"
-                                                                                    class="img-fluid" alt="" />
-                                                                            </div>
-                                                                            <span class="item-name">
-                                                                                Revolut
-                                                                            </span>
+                                                            <tr class="odd">
+                                                                <td class="sorting_1 data-label name">
+                                                                    <div class="item-box demo_tep">
+                                                                        <span class="number-item">
+                                                                            5.
+                                                                        </span>
+                                                                        <div class="img-box">
+                                                                            <img src="assets/img/t6nais5lghcxmc9nkpnk.png" class="img-fluid" alt="" />
                                                                         </div>
-                                                                    </td>
+                                                                        <span class="item-name">
+                                                                            Revolut
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
 
-                                                                    <td class="data-label code">Banking, Customer
-                                                                        Service, Financial</td>
-                                                                    <td class="data-label date">
-                                                                        Services, FinTech, Mobile Payments London,
-                                                                        England, United Kingdom
-                                                                    </td>
-                                                                    <td class="data-label sub">
-                                                                        <p class="prag-table">
-                                                                            Revolut is a financial services company that
-                                                                            specializes in mobile banking, card
-                                                                            payments, money remittance, and foreign
-                                                                            exchange.
-                                                                        </p>
-                                                                    </td>
-                                                                    <td class="data-label sub">5</td>
-                                                                    <td></td>
-                                                                    <td class="data-label new-one"></td>
-                                                                </tr>
+                                                                <td class="data-label code">Banking, Customer Service, Financial</td>
+                                                                <td class="data-label date">
+                                                                    Services, FinTech, Mobile Payments London, England, United Kingdom
+                                                                </td>
+                                                                <td class="data-label sub">
+                                                                    <p class="prag-table">
+                                                                        Revolut is a financial services company that specializes in mobile banking, card payments, money remittance, and foreign exchange.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="data-label sub">5</td>
+                                                                <td></td>
+                                                                <td class="data-label new-one"></td>
+                                                            </tr>
 
-                                                                <tr class="odd">
-                                                                    <td class="sorting_1 data-label name">
-                                                                        <div class="item-box demo_tep">
-                                                                            <span class="number-item">
-                                                                                4.
-                                                                            </span>
-                                                                            <div class="img-box">
-                                                                                <img src="assets/img/nx598tedbjr4p88v6aww.png"
-                                                                                    class="img-fluid" alt="" />
-                                                                            </div>
-                                                                            <span class="item-name">
-                                                                                shopify
-                                                                            </span>
+                                                            <tr class="odd">
+                                                                <td class="sorting_1 data-label name">
+                                                                    <div class="item-box demo_tep">
+                                                                        <span class="number-item">
+                                                                            4.
+                                                                        </span>
+                                                                        <div class="img-box">
+                                                                            <img src="assets/img/nx598tedbjr4p88v6aww.png" class="img-fluid" alt="" />
                                                                         </div>
-                                                                    </td>
+                                                                        <span class="item-name">
+                                                                            shopify
+                                                                        </span>
+                                                                    </div>
+                                                                </td>
 
-                                                                    <td class="data-label code">E-Commerce, E-Commerce
-                                                                        Platforms, Enterprise Software, SaaS</td>
-                                                                    <td class="data-label date">
-                                                                        Ottawa, Ontario, Canada
-                                                                    </td>
-                                                                    <td class="data-label sub">
-                                                                        <p class="prag-table">
-                                                                            Shopify is a cloud-based, multi-channel
-                                                                            commerce platform designed for small and
-                                                                            medium-sized businesses.
-                                                                        </p>
-                                                                    </td>
-                                                                    <td class="data-label sub">4</td>
-                                                                    <td></td>
-                                                                    <td class="data-label new-one"></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                                <td class="data-label code">E-Commerce, E-Commerce Platforms, Enterprise Software, SaaS</td>
+                                                                <td class="data-label date">
+                                                                    Ottawa, Ontario, Canada
+                                                                </td>
+                                                                <td class="data-label sub">
+                                                                    <p class="prag-table">
+                                                                        Shopify is a cloud-based, multi-channel commerce platform designed for small and medium-sized businesses.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="data-label sub">4</td>
+                                                                <td></td>
+                                                                <td class="data-label new-one"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                </div>
-            </main>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <!--           end content-->
         </div>
-        <!--           end content-->
-    </div>
 
-    <div class="add-popup" style="display: none;">
-        <div class="popup-box">
-            <div class="title-box">
-                <h3 class="title">
-                    Edit View
-                </h3>
-                <i class="fas fa-times pop-up-close" aria-hidden="true"></i>
-            </div>
-
-            <div class="input-bar">
-                <div class="serch-box">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input type="search" class="search-input" name="search" id="search" />
-                </div>
-            </div>
-
-            <div class="item-continer-box">
-                <div class="item-box">
-                    <ul class="list-unstyled min-list">
-                        <li class="active">
-                            <h6 class="title-lable">
-                                Companies
-                            </h6>
-                            <i class="fas fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <h6 class="title-lable">
-                                Contacts
-                            </h6>
-                            <i class="fas fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <h6 class="title-lable">
-                                Investors
-                            </h6>
-                            <i class="fas fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <h6 class="title-lable">
-                                People
-                            </h6>
-                            <i class="fas fa-angle-right"></i>
-                        </li>
-                    </ul>
+        <div class="add-popup" style="display: none;">
+            <div class="popup-box">
+                <div class="title-box">
+                    <h3 class="title">
+                        Edit View
+                    </h3>
+                    <i class="fas fa-times pop-up-close" aria-hidden="true"></i>
                 </div>
 
-                <div class="item-box sucond-box">
-                    <ul class="list-unstyled"></ul>
+                <div class="input-bar">
+                    <div class="serch-box">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="search" class="search-input" name="search" id="search" />
+                    </div>
                 </div>
 
-                <div class="item-box">
-                    <h4 class="list-title">
-                        Selected Columns
-                    </h4>
-                    <ul class="list-unstyled last-one"></ul>
-                </div>
-            </div>
+                <div class="item-continer-box">
+                    <div class="item-box">
+                        <ul class="list-unstyled min-list">
+                            <li class="active">
+                                <h6 class="title-lable">
+                                    Companies
+                                </h6>
+                                <i class="fas fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    Contacts
+                                </h6>
+                                <i class="fas fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    Investors
+                                </h6>
+                                <i class="fas fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <h6 class="title-lable">
+                                    People
+                                </h6>
+                                <i class="fas fa-angle-right"></i>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="button-bar">
-                <a href="#" class="buttom_style closeandsave"> Save </a>
+                    <div class="item-box sucond-box">
+                        <ul class="list-unstyled"></ul>
+                    </div>
+
+                    <div class="item-box">
+                        <h4 class="list-title">
+                            Selected Columns
+                        </h4>
+                        <ul class="list-unstyled last-one"></ul>
+                    </div>
+                </div>
+
+                <div class="button-bar">
+                    <a href="#" class="buttom_style closeandsave"> Save </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-    <script type="text/javascript" src="./assets/js/tipped.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
-        integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
-        crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script type="text/javascript" src="./assets/js/tipped.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+            integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+            crossorigin="anonymous"
+        ></script>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

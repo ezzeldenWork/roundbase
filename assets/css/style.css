@@ -881,11 +881,11 @@ tr.shown td.details-control {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 12px 15px;
+  border-radius: 5px;
   background-color: #004586;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 }
 
@@ -909,4 +909,26 @@ tr.shown td.details-control {
           justify-content: center;
   width: 24px;
   height: 24px;
+}
+
+.show_lable select {
+  width: 19px;
+  border: 0;
+  cursor: pointer;
+}
+
+.show_lable select:focus {
+  outline: none;
+}
+
+.show_lable select * {
+  width: 50px;
+  padding: 5px;
+  border: 0;
+}
+
+.th_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

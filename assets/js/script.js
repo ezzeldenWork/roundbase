@@ -36,11 +36,11 @@ $(document).ready(function () {
                     "</div>" +
                     "<hr>" +
                     "<div class='button-box'> " +
-                    "<a href='#' class='button-item'>  <i class='fas fa-plus'></i> <span >save</span> </a>" +
+                    "<a href='#' class='button-item'>  <span >save</span> </a>" +
                     "</div>" +
                     "</div>",
                 {
-                    // behavior: 'custom-slow',
+                    behavior: "custom-slow",
                     skin: "light",
                     // for test
                     close: true,
@@ -84,7 +84,47 @@ $(document).ready(function () {
 
     // blur form
 
-    var table = $(".dataTable").DataTable({ searching: false });
+    // table.colReorder.move( 0, 1 );
+
+    var table = $(".dataTable").DataTable({
+        searching: false,
+        sort: false,
+        // responsive: true,
+        // colReorder: true,
+        colReorder: true,
+    });
+
+    $(".min_lable .th_content select").on("change", function () {
+        // debugger;
+        var curntly_index = $(this).parent(".th_content").parent(".min_lable").index(),
+            length_Index = $(".min_lable").length - 1;
+
+        // debugger;
+        if ($(this).val() == "left") {
+            if (curntly_index == 0) {
+            } else {
+                var reorder = curntly_index - 1;
+                table.colReorder.move(curntly_index, reorder);
+            }
+        }
+        if ($(this).val() == "right") {
+            if (curntly_index == length_Index) {
+            } else {
+                var reorder = curntly_index + 1;
+                table.colReorder.move(curntly_index, reorder);
+            }
+        }
+        if ($(this).val() == "toStart") {
+            var reorder = 0;
+            table.colReorder.move(curntly_index, reorder);
+        }
+        if ($(this).val() == "toEnd") {
+            var reorder = length_Index;
+            table.colReorder.move(curntly_index, reorder);
+        }
+
+        //  table.colReorder.move( curntly_index, reorder );
+    });
 
     $(".pop-up-close").click(function () {
         $(".add-popup").fadeOut();
@@ -95,7 +135,7 @@ $(document).ready(function () {
     });
 
     $("#tadetest thead .min_lable").each(function () {
-        const tdLable = $(this).text(),
+        const tdLable = $(this).children(".th_content").children(".textTitle").text(),
             datatable = $(this).data("table");
 
         if ($(this).hasClass("locked") == true) {
@@ -195,4 +235,3 @@ $(document).ready(function () {
         }
     });
 });
- 
