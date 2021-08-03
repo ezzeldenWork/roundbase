@@ -9,28 +9,27 @@ h6 {
     margin: unset;
 }
 
-a {     
+a {
     text-decoration: none;
     &:hover {
         text-decoration: none;
     }
 }
 
-
 body {
     font-family: Arial;
     // background-color: rgba($gray-color, .7);
     // background-color: rgba($blue-color, .7);
     // background: $min-color;
-    background: linear-gradient(190deg, rgba(255,255,255,1) 0%, $gray-color 100%);
-    padding:0 20px 60px 20px;
+    background: linear-gradient(190deg, rgba(255, 255, 255, 1) 0%, $gray-color 100%);
+    padding: 0 20px 60px 20px;
     position: relative;
     height: 100vh;
     z-index: 1;
-    &:after{
-        opacity: .1;
+    &:after {
+        opacity: 0.1;
         background-image: url("../img/bodyback.png");
-        background-position:bottom center ;
+        background-position: bottom center;
         background-size: contain;
         background-repeat: no-repeat;
         content: "";
@@ -43,22 +42,14 @@ body {
     }
 }
 
-.en_text {
-    font-family: $en_font;
-    font-weight: 600 !important;
-}
-
-
-
-.m_b10 {
-    margin: 0 0 10px;
-}
-
 input {
     display: block;
     width: 100%;
     border: 1px solid $black-color;
+    &::placeholder{
+        font-size: 14px;
 
+    }
     &:focus {
         outline: none;
         border: 1px solid $min-color;
@@ -76,80 +67,6 @@ button {
         box-shadow: unset !important;
     }
 }
-
-
-
-// logo-box
-
-.logo-box {
-    text-align: center;
-
-    .logo-link {
-        img {
-            height: 60px;
-        }
-    }
-}
-
-// logo-box
-
-// buttom_style
-
-.buttom_style {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 4px;
-    border: 1px solid $min-color;
-    color: $white-color;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: $min-color;
-    margin: 10px 0 0;
-    @extend%trans-4;
-
-    i {
-        font-size: 14px;
-    }
-
-    &:hover {
-        color: $white-color;
-        border-color: $sub_color;
-        background-color: $sub_color;
-    }
-}
-
-// buttom_style
-
-
-
-
-.form_style {
-    // form-group
-
-    .form-group {
-        margin: 4px 0;
-
-        label {
-            display: block;
-            font-size: 14px;
-            color: $min-color;
-            font-weight: 500;
-            margin: 0 0 4px;
-        }
-    }
-
-    .dropify-wrapper {
-        height: 60px;
-
-        .dropify-wrapper {
-            height: 40px !important;
-        }
-
-    }
-}
-
-// form-group
 
 // select2
 
@@ -169,13 +86,11 @@ button {
     }
 }
 
-
 .pretty {
     cursor: pointer;
 
     .state {
         label {
-
             &:before,
             &:after {
                 top: 0 !important;
@@ -187,7 +102,6 @@ button {
         }
     }
 }
-
 
 .status_active {
     color: $green-color;
@@ -201,30 +115,24 @@ button {
     color: $gold-color;
 }
 
-
 // links
 
-
-.small_link {
-    font-size: 12px;
-    font-weight: 400;
-    color: $sub_color;
-    font-family: $en_font;
-    @extend%trans-4;
-
-    &:hover {
-        color: $min-color;
-    }
+.Customm0 {
+    margin: 0 -15px;
 }
 
-
-.overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba($min-color, 0.4);
-    z-index: 99;
-    display: none;
+.pretty {
+    &.p-default {
+        input {
+            &:checked {
+                & ~ .state {
+                    label {
+                        &:after {
+                            background-color: rgba($min-color, 1) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,9 +1,11 @@
 $(document).ready(function () {
-    $(".data-label .item-box").hover(
-        function () {
+
+    $(".data-label .item-box").hover(function () {
             var img_src = $(this).children(".img-box").children("img").attr("src"),
                 box_title = $(this).children(".item-name").text();
-            // console.log(img_src);
+
+
+
             Tipped.delegate(
                 ".demo_tep",
                 "<div class='tipped-box'>" +
@@ -46,12 +48,12 @@ $(document).ready(function () {
                     close: true,
                 }
             );
-        },
-        function () {
-            var img_src = "";
-            // console.log(img_src);
-        }
-    );
+
+
+      
+
+        });
+
 
     // search-input
     $(".search-input").keyup(function () {
@@ -119,9 +121,10 @@ $(document).ready(function () {
             table.colReorder.move(curntly_index, reorder);
         }
         if ($(this).val() == "toEnd") {
-            var reorder = length_Index;
+            var reorder = length_Index-1;
             table.colReorder.move(curntly_index, reorder);
         }
+        $(this).val("");
 
         //  table.colReorder.move( curntly_index, reorder );
     });
@@ -234,4 +237,72 @@ $(document).ready(function () {
             }
         }
     });
+
+
+
+
+    $(".has-input").click(function(){
+        
+        const date_type = $(this).children('input'),
+            real = $(this).children('input').data("input"),
+            box = $("#"+ real).attr('id');
+            var boxs = "#"+ box;
+            // console.log(boxs)    
+        // .data("input")
+
+        if($(this).hasClass("hasReal") == true){
+            $("#"+ box).show();
+        }else if(($(this).hasClass("hasnt-input") == true)) {
+            $(this).siblings(".duple_input").hide();
+        }
+
+
+
+
+        
+    });
+        $('.more-bottom').click(function () {
+            $(this).siblings('.more-box:gt(2), .less-bottom').show();
+            $(this).hide();
+            
+        });
+        $('.less-bottom').click(function () {
+            $('.more-bottom').show();
+            $(this).siblings('.more-box:gt(2)').hide();
+            $(this).hide();
+        });
+    
+    
+    Tipped.create(".exclamation-mark", 
+    {
+         position: 'bottomright',
+         skin: "gray",
+         });
+    
+    
+    $(".filter_collapse ul li").click(function(){
+        $(this).siblings().children(".filter-box-content").addClass("collapse").removeClass("show");
+        $(this).siblings().children(".collopse-link").attr("aria-expanded", false);
+        
+    })
+    
 });
+
+    const sliderEz = document.getElementById('sliderEx');
+
+    noUiSlider.create(sliderEz, {
+        start: [0, 1000],
+        connect: true,
+        // snap: true,
+        tooltips: [true, true],
+        range: {
+            'min': 0,
+            'max': 1000
+            },
+    });
+
+    // var nonLinearStepSliderValueElement = document.getElementById('valueStart');
+
+    // sliderEz.noUiSlider.on('update', function (values) {
+    //     nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
+    // });
