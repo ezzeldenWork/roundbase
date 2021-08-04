@@ -18,10 +18,10 @@ a {
 
 body {
     html[dir="ltr"] & {
-        font-family: Arial;
+        font-family: $en_font;
     }
         html[dir="ltr"] & {
-        font-family: 'Almarai';
+        font-family: $ar_font;
     }
     // background-color: rgba($gray-color, .7);
     // background-color: rgba($blue-color, .7);

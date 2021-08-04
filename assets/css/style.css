@@ -26,11 +26,11 @@ body {
 }
 
 html[dir="ltr"] body {
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
 }
 
 html[dir="ltr"] body {
-  font-family: 'Almarai';
+  font-family: "Almarai", sans-serif;
 }
 
 body:after {
