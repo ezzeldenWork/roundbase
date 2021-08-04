@@ -17,7 +17,12 @@ a {
 }
 
 body {
-    font-family: Arial;
+    html[dir="ltr"] & {
+        font-family: Arial;
+    }
+        html[dir="ltr"] & {
+        font-family: 'Almarai';
+    }
     // background-color: rgba($gray-color, .7);
     // background-color: rgba($blue-color, .7);
     // background: $min-color;
@@ -132,6 +137,30 @@ button {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+.lang-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .lang_content{
+        border-radius: 4px;
+        padding: 2px 4px;
+        border: 1px solid rgba($min-color, 1);
+        a{
+            border-radius: 4px;
+            display: inline-block;
+            padding: 4px 8px;
+            color: rgba($min-color, 1);
+            &.active{
+                color: rgba($white-color, 1);
+                background-color: rgba($min-color, 1);
+
             }
         }
     }

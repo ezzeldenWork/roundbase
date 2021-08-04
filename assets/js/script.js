@@ -1,10 +1,15 @@
 $(document).ready(function () {
-    // $(".data-label .item-box").hover(function () {
-    //         var img_src = $(this).children(".img-box").children("img").attr("src"),
-    //             box_title = $(this).children(".item-name").text();
-    //         // debugger;
-    //         console.log(img_src)
+    // page dir
+    if ($("html").attr("dir") == "ltr") {
+        var lang = "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json",
+            reorder_Dir = "-";
+    }
+    if ($("html").attr("dir") == "rtl") {
+        var lang = "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Arabic.json",
+            reorder_Dir = "+";
+    }
 
+    // table tooltep
     Tipped.delegate(
         ".demo_tep",
 
@@ -56,8 +61,11 @@ $(document).ready(function () {
             close: true,
         }
     );
-
-    // });
+    // filter tooltep
+    Tipped.create(".exclamation-mark", {
+        position: "bottomright",
+        skin: "gray",
+    });
 
     // search-input
     $(".search-input").keyup(function () {
@@ -88,18 +96,18 @@ $(document).ready(function () {
     // select2
     $(".select2").select2();
 
-    // blur form
-
-    // table.colReorder.move( 0, 1 );
-
+    // DataTable
     var table = $(".dataTable").DataTable({
         searching: false,
         sort: false,
         // responsive: true,
-        // colReorder: true,
         colReorder: true,
+        language: {
+            url: lang,
+        },
     });
 
+    // pop up loop
     $(".min_lable .th_content select").on("change", function () {
         // debugger;
         var curntly_index = $(this).parent(".th_content").parent(".min_lable").index(),
@@ -109,15 +117,30 @@ $(document).ready(function () {
         if ($(this).val() == "left") {
             if (curntly_index == 0) {
             } else {
-                var reorder = curntly_index - 1;
-                table.colReorder.move(curntly_index, reorder);
+                if ($("html").attr("dir") == "ltr") {
+                    var reorder = curntly_index - 1;
+                    table.colReorder.move(curntly_index, reorder);
+                }
+                if ($("html").attr("dir") == "rtl") {
+                    var reorder = curntly_index + 1;
+                    table.colReorder.move(curntly_index, reorder);
+                }
             }
         }
         if ($(this).val() == "right") {
             if (curntly_index == length_Index) {
             } else {
-                var reorder = curntly_index + 1;
-                table.colReorder.move(curntly_index, reorder);
+                // var reorder = curntly_index + 1;
+                // table.colReorder.move(curntly_index, reorder);
+
+                if ($("html").attr("dir") == "ltr") {
+                    var reorder = curntly_index + 1;
+                    table.colReorder.move(curntly_index, reorder);
+                }
+                if ($("html").attr("dir") == "rtl") {
+                    var reorder = curntly_index - 1;
+                    table.colReorder.move(curntly_index, reorder);
+                }
             }
         }
         if ($(this).val() == "toStart") {
@@ -125,7 +148,7 @@ $(document).ready(function () {
             table.colReorder.move(curntly_index, reorder);
         }
         if ($(this).val() == "toEnd") {
-            var reorder = length_Index-1;
+            var reorder = length_Index - 1;
             table.colReorder.move(curntly_index, reorder);
         }
         $(this).val("");
@@ -190,11 +213,6 @@ $(document).ready(function () {
 
     $(".input-checked").click(function () {
         const id_attr = $(this).attr("id");
-
-        // $("." + id_attr)
-        //     .toggleClass("show_lable")
-        //     .toggle();
-
         $(".list-item-controled[data-list='" + id_attr + "']")
             .toggle()
             .toggleClass("added_to_list")
@@ -242,65 +260,49 @@ $(document).ready(function () {
         }
     });
 
-
-
-
-    $(".has-input").click(function(){
-        
-        const date_type = $(this).children('input'),
-            real = $(this).children('input').data("input"),
-            box = $("#"+ real).attr('id');
-            var boxs = "#"+ box;
-            // console.log(boxs)    
+    // has-input chked box
+    $(".has-input").click(function () {
+        const date_type = $(this).children("input"),
+            real = $(this).children("input").data("input"),
+            box = $("#" + real).attr("id");
+        var boxs = "#" + box;
+        // console.log(boxs)
         // .data("input")
 
-        if($(this).hasClass("hasReal") == true){
-            $("#"+ box).show();
-        }else if(($(this).hasClass("hasnt-input") == true)) {
+        if ($(this).hasClass("hasReal") == true) {
+            $("#" + box).show();
+        } else if ($(this).hasClass("hasnt-input") == true) {
             $(this).siblings(".duple_input").hide();
         }
-
-
-
-
-        
     });
-        $('.more-bottom').click(function () {
-            $(this).siblings('.more-box:gt(2), .less-bottom').show();
-            $(this).hide();
-            
-        });
-        $('.less-bottom').click(function () {
-            $('.more-bottom').show();
-            $(this).siblings('.more-box:gt(2)').hide();
-            $(this).hide();
-        });
-    
-    
-    Tipped.create(".exclamation-mark", 
-    {
-         position: 'bottomright',
-         skin: "gray",
-         });
-    
-    
-    $(".filter_collapse ul li").click(function(){
+
+    $(".filter_collapse ul li").click(function () {
         $(this).siblings().children(".filter-box-content").addClass("collapse").removeClass("show");
         $(this).siblings().children(".collopse-link").attr("aria-expanded", false);
-        
-    })
-    
-    const sliderEz = document.getElementById('sliderEx');
-    
+    });
+    // filter more bottom
+    $(".more-bottom").click(function () {
+        $(this).siblings(".more-box:gt(2), .less-bottom").show();
+        $(this).hide();
+    });
+    // filter less bottom
+    $(".less-bottom").click(function () {
+        $(".more-bottom").show();
+        $(this).siblings(".more-box:gt(2)").hide();
+        $(this).hide();
+    });
+
+    // sliderEx
+    const sliderEz = document.getElementById("sliderEx");
+
     noUiSlider.create(sliderEz, {
         start: [0, 1000],
         connect: true,
         // snap: true,
         tooltips: [true, true],
         range: {
-            'min': 0,
-            'max': 1000
-            },
+            min: 0,
+            max: 1000,
+        },
     });
 });
-

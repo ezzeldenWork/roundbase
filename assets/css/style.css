@@ -18,12 +18,19 @@ a:hover {
 }
 
 body {
-  font-family: Arial;
   background: linear-gradient(190deg, white 0%, #ddd 100%);
   padding: 0 20px 60px 20px;
   position: relative;
   height: 100vh;
   z-index: 1;
+}
+
+html[dir="ltr"] body {
+  font-family: Arial;
+}
+
+html[dir="ltr"] body {
+  font-family: 'Almarai';
 }
 
 body:after {
@@ -131,6 +138,37 @@ html[lang="ar"] .pretty .state label:before, html[lang="ar"] .pretty .state labe
 
 .pretty.p-default input:checked ~ .state label:after {
   background-color: #1e3056 !important;
+}
+
+.lang-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.lang-box .lang_content {
+  border-radius: 4px;
+  padding: 2px 4px;
+  border: 1px solid #1e3056;
+}
+
+.lang-box .lang_content a {
+  border-radius: 4px;
+  display: inline-block;
+  padding: 4px 8px;
+  color: #1e3056;
+}
+
+.lang-box .lang_content a.active {
+  color: white;
+  background-color: #1e3056;
 }
 
 .sucond_table {
@@ -387,6 +425,10 @@ tr.shown td.details-control {
   padding: 20px;
 }
 
+.tap_heade {
+  background-color: #e9eff5;
+}
+
 .tabes-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,11 +441,18 @@ tr.shown td.details-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 10px 0 0;
   padding: 24px;
   position: relative;
   z-index: 1;
   border-radius: 8px 8px 0 0;
+}
+
+html[dir="ltr"] .tabes-box .tabs-item {
+  margin: 0 10px 0 0;
+}
+
+html[dir="ltr"] .tabes-box .tabs-item {
+  margin: 0 0 0 10px;
 }
 
 .tabes-box .tabs-item:hover {
