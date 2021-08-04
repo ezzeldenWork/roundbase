@@ -692,6 +692,100 @@ tr.shown td.details-control {
   border-top: 1px solid rgba(51, 51, 51, 0.5);
 }
 
+.add-popup .popup-box .button-bar .buttom_style {
+  background-color: #1e3056;
+  width: 100px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  color: white;
+  position: relative;
+}
+
+.add-popup .popup-box .button-bar .buttom_style::after, .add-popup .popup-box .button-bar .buttom_style::before {
+  content: "";
+  right: 0;
+  top: 0;
+  position: absolute;
+  -webkit-transition-delay: 0.2s !important;
+          transition-delay: 0.2s !important;
+  background-color: #1e3056;
+}
+
+.add-popup .popup-box .button-bar .buttom_style::after {
+  height: 2px;
+  width: 0;
+}
+
+.add-popup .popup-box .button-bar .buttom_style::before {
+  height: 0;
+  width: 2px;
+}
+
+.add-popup .popup-box .button-bar .buttom_style .borderSpan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.add-popup .popup-box .button-bar .buttom_style .borderSpan::after, .add-popup .popup-box .button-bar .buttom_style .borderSpan::before {
+  content: "";
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-transition-delay: 0.2s !important;
+          transition-delay: 0.2s !important;
+  background-color: #1e3056;
+}
+
+.add-popup .popup-box .button-bar .buttom_style .borderSpan::after {
+  height: 2px;
+  width: 0;
+}
+
+.add-popup .popup-box .button-bar .buttom_style .borderSpan::before {
+  height: 0;
+  width: 2px;
+}
+
+.add-popup .popup-box .button-bar .buttom_style:hover {
+  background-color: white;
+  color: #1e3056;
+}
+
+.add-popup .popup-box .button-bar .buttom_style:hover .borderSpan::after {
+  width: 100%;
+}
+
+.add-popup .popup-box .button-bar .buttom_style:hover .borderSpan::before {
+  height: 100%;
+}
+
+.add-popup .popup-box .button-bar .buttom_style:hover::after {
+  width: 100%;
+}
+
+.add-popup .popup-box .button-bar .buttom_style:hover::before {
+  height: 100%;
+}
+
 .filter-box-aside {
   padding: 24px 14px 10px;
   background-color: white;
@@ -997,7 +1091,7 @@ tr.shown td.details-control {
           box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .filter-box-aside .filter_collapse .note-ul .link-box, .show_hidden_bottom, .clear-filter {
+.dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .add-popup .popup-box .button-bar .buttom_style, .add-popup .popup-box .button-bar .buttom_style::after, .add-popup .popup-box .button-bar .buttom_style::before, .add-popup .popup-box .button-bar .buttom_style .borderSpan::after, .add-popup .popup-box .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .filter-box-aside .filter_collapse .note-ul .link-box, .show_hidden_bottom, .clear-filter {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }

@@ -1,59 +1,63 @@
 $(document).ready(function () {
+    // $(".data-label .item-box").hover(function () {
+    //         var img_src = $(this).children(".img-box").children("img").attr("src"),
+    //             box_title = $(this).children(".item-name").text();
+    //         // debugger;
+    //         console.log(img_src)
 
-    $(".data-label .item-box").hover(function () {
-            var img_src = $(this).children(".img-box").children("img").attr("src"),
-                box_title = $(this).children(".item-name").text();
+    Tipped.delegate(
+        ".demo_tep",
 
-
-
-            Tipped.delegate(
-                ".demo_tep",
+        function (element) {
+            var srcimg = $(element).children(".img-box").children("img").attr("src");
+            var content = $(element).children(".item-name").text();
+            return (
                 "<div class='tipped-box'>" +
-                    "<div class='title-box d-flex align-items-center'>" +
-                    "<div class='img-box'>" +
-                    "<img src='" +
-                    img_src +
-                    "' class='img-fluid' alt=''>" +
-                    "</div>" +
-                    "<div class='title-item-box'>" +
-                    "<h4 class='title-item text-center'> " +
-                    box_title +
-                    "</h4>" +
-                    "<p class='prag-item'> SoftBank provides fixed-line, mobile telephony, internet, " +
-                    "<br> telecommunications, and digital television products.  " +
-                    "</p>" +
-                    "<div class='list-item text-center'> <a href='#'> tag </a> <a href='#'> tag </a>  <a href='#'> tag </a> " +
-                    "</div>" +
-                    "</div>" +
-                    "</div>" +
-                    "<div class='number-box'> " +
-                    "<div class='number-item-box'> " +
-                    "<span class='number-title-item'> Lorem </span>" +
-                    "<span class='number-item'> 22 </span>" +
-                    "</div>" +
-                    "<div class='number-item-box'> " +
-                    "<span class='number-title-item'> Lorem </span>" +
-                    "<span class='number-item'> 22 </span>" +
-                    "</div>" +
-                    "</div>" +
-                    "<hr>" +
-                    "<div class='button-box'> " +
-                    "<a href='#' class='button-item'>  <span >save</span> </a>" +
-                    "</div>" +
-                    "</div>",
-                {
-                    behavior: "custom-slow",
-                    skin: "light",
-                    // for test
-                    close: true,
-                }
+                "<div class='title-box d-flex align-items-center'>" +
+                "<div class='img-box'>" +
+                "<img src='" +
+                srcimg +
+                "' class='img-fluid' alt=''>" +
+                "</div>" +
+                "<div class='title-item-box'>" +
+                "<h4 class='title-item text-center'> " +
+                content +
+                "</h4>" +
+                "<p class='prag-item'> SoftBank provides fixed-line, mobile telephony, internet, " +
+                "<br> telecommunications, and digital television products.  " +
+                "</p>" +
+                "<div class='list-item text-center'> <a href='#'> tag </a> <a href='#'> tag </a>  <a href='#'> tag </a> " +
+                "</div>" +
+                "</div>" +
+                "</div>" +
+                "<div class='number-box'> " +
+                "<div class='number-item-box'> " +
+                "<span class='number-title-item'> Lorem </span>" +
+                "<span class='number-item'> 22 </span>" +
+                "</div>" +
+                "<div class='number-item-box'> " +
+                "<span class='number-title-item'> Lorem </span>" +
+                "<span class='number-item'> 22 </span>" +
+                "</div>" +
+                "</div>" +
+                "<hr>" +
+                "<div class='button-box'> " +
+                "<a href='#' class='button-item'>  <span >save</span> </a>" +
+                "</div>" +
+                "</div>"
             );
+        },
 
+        {
+            cache: false,
+            behavior: "custom-slow",
+            skin: "light",
+            // for test
+            close: true,
+        }
+    );
 
-      
-
-        });
-
+    // });
 
     // search-input
     $(".search-input").keyup(function () {
@@ -286,10 +290,8 @@ $(document).ready(function () {
         
     })
     
-});
-
     const sliderEz = document.getElementById('sliderEx');
-
+    
     noUiSlider.create(sliderEz, {
         start: [0, 1000],
         connect: true,
@@ -300,9 +302,5 @@ $(document).ready(function () {
             'max': 1000
             },
     });
+});
 
-    // var nonLinearStepSliderValueElement = document.getElementById('valueStart');
-
-    // sliderEz.noUiSlider.on('update', function (values) {
-    //     nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
-    // });
