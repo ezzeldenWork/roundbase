@@ -835,11 +835,29 @@ html[dir="ltr"] .tabes-box .tabs-item {
   height: 100%;
 }
 
+.filter_opne_button {
+  text-align: center;
+  display: none;
+  padding-inline: 20px;
+}
+
+.filter_opne_button .opne_botton {
+  width: 100%;
+  cursor: pointer;
+}
+
 .filter-box-aside {
   padding: 24px 14px 10px;
   background-color: white;
   position: relative;
   height: 100%;
+}
+
+.filter-box-aside .close-button {
+  display: none;
+  color: #1e3056;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .filter-box-aside .tab-title {
@@ -1011,11 +1029,11 @@ html[dir="ltr"] .tabes-box .tabs-item {
   background-color: white !important;
 }
 
-.filter-box-aside .filter_collapse .note-ul {
+.note-ul {
   padding: 10px 0;
 }
 
-.filter-box-aside .filter_collapse .note-ul .text {
+.note-ul .text {
   margin: 10px 0 5px;
   font-size: 12px;
   font-weight: 500;
@@ -1023,15 +1041,16 @@ html[dir="ltr"] .tabes-box .tabs-item {
   display: block;
 }
 
-.filter-box-aside .filter_collapse .note-ul .link-box {
+.link-box, .filter_opne_button .opne_botton {
   display: inline-block;
   padding: 5px 20px;
   margin: 10px 0 0;
   border: 1px solid #486fc4;
   border-radius: 5px;
+  color: #0d6efd;
 }
 
-.filter-box-aside .filter_collapse .note-ul .link-box:hover {
+.link-box:hover, .filter_opne_button .opne_botton:hover {
   background-color: rgba(72, 111, 196, 0.1);
 }
 
@@ -1128,6 +1147,324 @@ html[dir="ltr"] .tabes-box .tabs-item {
   background-color: rgba(0, 0, 255, 0.1);
 }
 
+.register_wallpeper_box {
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.register_form_box .wizard ul[role="tablist"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #333333;
+}
+
+.register_form_box .wizard ul[role="tablist"] li {
+  -ms-flex-preferred-size: 14%;
+      flex-basis: 14%;
+}
+
+.register_form_box .wizard ul[role="tablist"] li.current a {
+  color: #486fc4;
+}
+
+.register_form_box .wizard ul[role="tablist"] li.current a::after {
+  opacity: 1;
+}
+
+.register_form_box .wizard ul[role="tablist"] li.done a {
+  color: #333333;
+}
+
+.register_form_box .wizard ul[role="tablist"] li a {
+  padding-block: 14px;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  position: relative;
+  color: #dddddd;
+}
+
+.register_form_box .wizard ul[role="tablist"] li a::after {
+  content: "";
+  opacity: 0;
+  left: 0;
+  bottom: -1px;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #486fc4;
+}
+
+.register_form_box .wizard ul[role="tablist"] li a .number {
+  display: none;
+}
+
+.register_form_box .wizard .step_content {
+  padding: 34px 20px 24px;
+}
+
+.register_form_box .wizard .step_content .step_header {
+  text-align: center;
+}
+
+.register_form_box .wizard .step_content .step_header .step_title {
+  margin: 0 0 10px;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 0.7);
+  font-size: 34px;
+}
+
+.register_form_box .wizard .step_content .step_header .prag {
+  padding: 5px 0;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 0.5);
+  font-size: 16px;
+}
+
+.register_form_box .wizard .step_content .boxs_componant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items {
+  width: calc(25% - 30px);
+  text-align: center;
+  padding: 18px 0;
+  margin: 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
+          box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
+  cursor: pointer;
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items:hover {
+  background-color: rgba(51, 51, 51, 0.1);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items i {
+  font-size: 50px;
+  color: #1e3056;
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items .box_title {
+  padding: 10px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e3056;
+}
+
+.register_form_box .wizard .hiddin_form_new {
+  padding: 20px 0 0;
+}
+
+.register_form_box .wizard .hiddin_form_new .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register_form_box .wizard .hiddin_form_new .form-group input {
+  width: calc(100% - 100px);
+  border: 0;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  border-radius: 0;
+}
+
+.register_form_box .wizard .hiddin_form_new .form-group button {
+  padding: 10px 20px;
+  border-radius: 0;
+  background-color: rgba(51, 51, 51, 0.1);
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.register_form_box .wizard h3.title {
+  display: none;
+}
+
+.register_form_box ul[aria-label="Pagination"] {
+  display: none;
+}
+
+.register_wallpeper_box {
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.register_form_box .wizard ul[role="tablist"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #333333;
+}
+
+.register_form_box .wizard ul[role="tablist"] li {
+  -ms-flex-preferred-size: 14%;
+      flex-basis: 14%;
+}
+
+.register_form_box .wizard ul[role="tablist"] li.current a {
+  color: #486fc4;
+}
+
+.register_form_box .wizard ul[role="tablist"] li.current a::after {
+  opacity: 1;
+}
+
+.register_form_box .wizard ul[role="tablist"] li.done a {
+  color: #333333;
+}
+
+.register_form_box .wizard ul[role="tablist"] li a {
+  padding-block: 14px;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  position: relative;
+  color: #dddddd;
+}
+
+.register_form_box .wizard ul[role="tablist"] li a::after {
+  content: "";
+  opacity: 0;
+  left: 0;
+  bottom: -1px;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #486fc4;
+}
+
+.register_form_box .wizard ul[role="tablist"] li a .number {
+  display: none;
+}
+
+.register_form_box .wizard .step_content {
+  padding: 34px 20px 24px;
+}
+
+.register_form_box .wizard .step_content .step_header {
+  text-align: center;
+}
+
+.register_form_box .wizard .step_content .step_header .step_title {
+  margin: 0 0 10px;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 0.7);
+  font-size: 34px;
+}
+
+.register_form_box .wizard .step_content .step_header .prag {
+  padding: 5px 0;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 0.5);
+  font-size: 16px;
+}
+
+.register_form_box .wizard .step_content .boxs_componant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items {
+  width: calc(25% - 30px);
+  text-align: center;
+  padding: 18px 0;
+  margin: 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
+          box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
+  cursor: pointer;
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items:hover {
+  background-color: rgba(51, 51, 51, 0.1);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items i {
+  font-size: 50px;
+  color: #1e3056;
+}
+
+.register_form_box .wizard .step_content .boxs_componant .box_items .box_title {
+  padding: 10px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e3056;
+}
+
+.register_form_box .wizard .hiddin_form_new {
+  padding: 20px 0 0;
+}
+
+.register_form_box .wizard .hiddin_form_new .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register_form_box .wizard .hiddin_form_new .form-group input {
+  width: calc(100% - 100px);
+  border: 0;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  border-radius: 0;
+}
+
+.register_form_box .wizard .hiddin_form_new .form-group button {
+  padding: 10px 20px;
+  border-radius: 0;
+  background-color: rgba(51, 51, 51, 0.1);
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.register_form_box .wizard h3.title {
+  display: none;
+}
+
+.register_form_box ul[aria-label="Pagination"] {
+  display: none;
+}
+
 .body_box {
   padding: 60px 0 0;
 }
@@ -1140,7 +1477,7 @@ html[dir="ltr"] .tabes-box .tabs-item {
           box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .add-popup .popup-box .button-bar .buttom_style, .add-popup .popup-box .button-bar .buttom_style::after, .add-popup .popup-box .button-bar .buttom_style::before, .add-popup .popup-box .button-bar .buttom_style .borderSpan::after, .add-popup .popup-box .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .filter-box-aside .filter_collapse .note-ul .link-box, .show_hidden_bottom, .clear-filter {
+.dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .add-popup .popup-box .button-bar .buttom_style, .add-popup .popup-box .button-bar .buttom_style::after, .add-popup .popup-box .button-bar .buttom_style::before, .add-popup .popup-box .button-bar .buttom_style .borderSpan::after, .add-popup .popup-box .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .clear-filter, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }

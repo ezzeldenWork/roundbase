@@ -9,6 +9,18 @@ $(document).ready(function () {
             reorder_Dir = "+";
     }
 
+
+
+    // opne filter 
+    $(".filter_opne_button .opne_botton").click(function(){
+        $(".filter-box-aside").slideDown();
+    });
+    $(".filter-box-aside .close-button").click(function(){
+        $(".filter-box-aside").slideUp();
+    });
+
+
+
     // table tooltep
     Tipped.delegate(
         ".demo_tep",
@@ -291,6 +303,45 @@ $(document).ready(function () {
         $(this).siblings(".more-box:gt(2)").hide();
         $(this).hide();
     });
+
+
+
+
+
+
+
+
+
+    
+
+    
+    $("#example-basic").steps({
+        headerTag: "h3",
+        bodyTag: "div",
+        autoFocus: true,
+        skip: true,
+        saveState: true,
+        // enableKeyNavigation: false,
+        // enablePagination: false,    
+        transitionEffect : 'fade' ,
+        labels: {
+            current: ""
+        }
+    });
+
+
+
+    $(".boxs_componant .next_step").click(function () {
+        $("a[href='#next']").click();
+    }); 
+    $(".boxs_componant .opne_new_box").click(function () {
+        $(".hiddin_form_new").show();
+    }); 
+
+
+
+
+
 
     // sliderEx
     const sliderEz = document.getElementById("sliderEx");
