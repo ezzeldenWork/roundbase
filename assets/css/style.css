@@ -1148,10 +1148,11 @@ html[dir="ltr"] .tabes-box .tabs-item {
 }
 
 .register_wallpeper_box {
-  height: 100px;
+  height: 200px;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  background-position: center bottom;
 }
 
 .register_form_box .wizard ul[role="tablist"] {
@@ -1249,6 +1250,7 @@ html[dir="ltr"] .tabes-box .tabs-item {
   -webkit-box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
           box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
   cursor: pointer;
+  border-bottom: 1px solid rgba(51, 51, 51, 0);
 }
 
 .register_form_box .wizard .step_content .boxs_componant .box_items:hover {
@@ -1307,10 +1309,11 @@ html[dir="ltr"] .tabes-box .tabs-item {
 }
 
 .register_wallpeper_box {
-  height: 100px;
+  height: 200px;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  background-position: center bottom;
 }
 
 .register_form_box .wizard ul[role="tablist"] {
@@ -1408,6 +1411,7 @@ html[dir="ltr"] .tabes-box .tabs-item {
   -webkit-box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
           box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
   cursor: pointer;
+  border-bottom: 1px solid rgba(51, 51, 51, 0);
 }
 
 .register_form_box .wizard .step_content .boxs_componant .box_items:hover {
@@ -1477,7 +1481,7 @@ html[dir="ltr"] .tabes-box .tabs-item {
           box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .add-popup .popup-box .button-bar .buttom_style, .add-popup .popup-box .button-bar .buttom_style::after, .add-popup .popup-box .button-bar .buttom_style::before, .add-popup .popup-box .button-bar .buttom_style .borderSpan::after, .add-popup .popup-box .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .clear-filter, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after {
+.dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .add-popup .popup-box .button-bar .buttom_style, .add-popup .popup-box .button-bar .buttom_style::after, .add-popup .popup-box .button-bar .buttom_style::before, .add-popup .popup-box .button-bar .buttom_style .borderSpan::after, .add-popup .popup-box .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .clear-filter, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }

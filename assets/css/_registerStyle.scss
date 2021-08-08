@@ -1,136 +1,139 @@
 .register_wallpeper_box {
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center bottom;
 }
 
 .register_form_box {
-  .wizard {
-      ul[role="tablist"] {
-          display: flex;
-          align-items: center;
-          list-style: none;
-          padding: 0;
-          border-bottom: 1px solid rgba($darkgray-color, 1);
-          li {
-              flex-basis: 14%;
-              &.current {
-                  a {
-                      color: rgba($blue-color, 1);
-                      &::after {
-                          opacity: 1;
-                      }
-                  }
-              }
-              &.done {
-                  a {
-                      color: rgba($darkgray-color, 1);
-                  }
-              }
-              a {
-                  padding-block: 14px;
-                  text-align: center;
-                  font-weight: 600;
-                  display: block;
-                  position: relative;
-                  color: rgba($gray-color, 1);
-                  @extend%trans-4;
-                  &::after {
-                      content: "";
-                      opacity: 0;
-                      left: 0;
-                      bottom: -1px;
-                      position: absolute;
-                      width: 100%;
-                      height: 2px;
-                      @extend%trans-4;
-                      background-color: rgba($blue-color, 1);
-                  }
-                  .number {
-                      display: none;
-                  }
-              }
-          }
-      }
-
-      .step_content {
-          padding: 34px 20px 24px;
-          .step_header {
-              text-align: center;
-              .step_title {
-                  margin: 0 0 10px;
-                  font-weight: 500;
-                  color: rgba($darkgray-color, 0.7);
-                  font-size: 34px;
-              }
-              .prag {
-                  padding: 5px 0;
-                  font-weight: 400;
-                  color: rgba($darkgray-color, 0.5);
-                  font-size: 16px;
-              }
-          }
-
-          .boxs_componant {
-              display: flex;
-              justify-content: space-between;
-              flex-wrap: wrap;
-              .box_items {
-                  width: calc(25% - 30px);
-                  text-align: center;
-                  padding: 18px 0;
-                  margin: 10px;
-                  border-radius: 3px;
-                  box-shadow: 0 4px 8px -2px rgba($darkgray-color, 0.4);
-                  cursor: pointer;
-                  &:hover {
-                      background-color: rgba($darkgray-color, 0.1);
-                      border-bottom: 1px solid rgba($darkgray-color, 0.5);
-                  }
-                  i {
-                      font-size:50px;
-                      color: rgba($min-color, 1);
-                  }
-                  .box_title {
-                      padding: 10px 0 0;
-                      font-size: 14px;
-                      font-weight: 500;
-                      color: rgba($min-color, 1);
-                  }
-              }
-          }
-      }
-
-      .hiddin_form_new {
-          padding: 20px 0 0;
-          .form-group {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              input {
-                  width: calc(100% - 100px);
-                  border: 0;
-                  border-bottom: 1px solid rgba($darkgray-color, .2);
-                  border-radius: 0;
+    .wizard {
+        ul[role="tablist"] {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            border-bottom: 1px solid rgba($darkgray-color, 1);
+            li {
+                flex-basis: 14%;
+                &.current {
+                    a {
+                        color: rgba($blue-color, 1);
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
                 }
-                button{
-                  padding: 10px 20px;
-                  border-radius: 0;
-                background-color: rgba($darkgray-color, 0.1);
-                color: rgba($darkgray-color, 0.7);
-              }
-          }
-      }
+                &.done {
+                    a {
+                        color: rgba($darkgray-color, 1);
+                    }
+                }
+                a {
+                    padding-block: 14px;
+                    text-align: center;
+                    font-weight: 600;
+                    display: block;
+                    position: relative;
+                    color: rgba($gray-color, 1);
+                    @extend%trans-4;
+                    &::after {
+                        content: "";
+                        opacity: 0;
+                        left: 0;
+                        bottom: -1px;
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        @extend%trans-4;
+                        background-color: rgba($blue-color, 1);
+                    }
+                    .number {
+                        display: none;
+                    }
+                }
+            }
+        }
 
-      h3 {
-          &.title {
-              display: none;
-          }
-      }
-  }
+        .step_content {
+            padding: 34px 20px 24px;
+            .step_header {
+                text-align: center;
+                .step_title {
+                    margin: 0 0 10px;
+                    font-weight: 500;
+                    color: rgba($darkgray-color, 0.7);
+                    font-size: 34px;
+                }
+                .prag {
+                    padding: 5px 0;
+                    font-weight: 400;
+                    color: rgba($darkgray-color, 0.5);
+                    font-size: 16px;
+                }
+            }
 
-  ul[aria-label="Pagination"] {
-      display: none;
-  }
+            .boxs_componant {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .box_items {
+                    width: calc(25% - 30px);
+                    text-align: center;
+                    padding: 18px 0;
+                    margin: 10px;
+                    border-radius: 3px;
+                    box-shadow: 0 4px 8px -2px rgba($darkgray-color, 0.4);
+                    cursor: pointer;
+                    border-bottom: 1px solid rgba($darkgray-color, 0);
+                    @extend%trans-4;
+                    &:hover {
+                        background-color: rgba($darkgray-color, 0.1);
+                        border-bottom: 1px solid rgba($darkgray-color, 0.5);
+                    }
+                    i {
+                        font-size: 50px;
+                        color: rgba($min-color, 1);
+                    }
+                    .box_title {
+                        padding: 10px 0 0;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: rgba($min-color, 1);
+                    }
+                }
+            }
+        }
+
+        .hiddin_form_new {
+            padding: 20px 0 0;
+            .form-group {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    width: calc(100% - 100px);
+                    border: 0;
+                    border-bottom: 1px solid rgba($darkgray-color, 0.2);
+                    border-radius: 0;
+                }
+                button {
+                    padding: 10px 20px;
+                    border-radius: 0;
+                    background-color: rgba($darkgray-color, 0.1);
+                    color: rgba($darkgray-color, 0.7);
+                }
+            }
+        }
+
+        h3 {
+            &.title {
+                display: none;
+            }
+        }
+    }
+
+    ul[aria-label="Pagination"] {
+        display: none;
+    }
 }
