@@ -323,10 +323,10 @@ $(document).ready(function () {
         var $state = $(
             '<div class="opstion_style_box"><div class="img_title"><img  src="' +baseUrl +'" class="img-fluid select_img" /> ' +
                 '<div class="option_text"><h4 class="bold_title">' +
-                state.element.value +
+                state.text +
                 "</h4>" +
                 "<h4>" +
-                state.text +
+                   state.element.value +
                 "</h4></div>" +
                 '</div><i class="fa fa-plus icon-select-add" aria-hidden="true"></i></div>'
         );
