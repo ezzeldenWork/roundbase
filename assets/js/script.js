@@ -9,17 +9,13 @@ $(document).ready(function () {
             reorder_Dir = "+";
     }
 
-
-
-    // opne filter 
-    $(".filter_opne_button .opne_botton").click(function(){
+    // opne filter
+    $(".filter_opne_button .opne_botton").click(function () {
         $(".filter-box-aside").slideDown();
     });
-    $(".filter-box-aside .close-button").click(function(){
+    $(".filter-box-aside .close-button").click(function () {
         $(".filter-box-aside").slideUp();
     });
-
-
 
     // table tooltep
     Tipped.delegate(
@@ -128,15 +124,15 @@ $(document).ready(function () {
         // debugger;
         if ($(this).val() == "left") {
             if (curntly_index == 0) {
+                if ($("html").attr("dir") == "rtl") {
+                    var reorder = curntly_index + 1;
+                }
+                table.colReorder.move(curntly_index, reorder);
             } else {
                 if ($("html").attr("dir") == "ltr") {
                     var reorder = curntly_index - 1;
-                    table.colReorder.move(curntly_index, reorder);
                 }
-                if ($("html").attr("dir") == "rtl") {
-                    var reorder = curntly_index + 1;
-                    table.colReorder.move(curntly_index, reorder);
-                }
+                table.colReorder.move(curntly_index, reorder);
             }
         }
         if ($(this).val() == "right") {
@@ -304,17 +300,6 @@ $(document).ready(function () {
         $(this).hide();
     });
 
-
-
-
-
-
-
-
-
-    
-
-    
     $("#example-basic").steps({
         headerTag: "h3",
         bodyTag: "div",
@@ -322,26 +307,19 @@ $(document).ready(function () {
         skip: true,
         saveState: true,
         // enableKeyNavigation: false,
-        // enablePagination: false,    
-        transitionEffect : 'fade' ,
+        // enablePagination: false,
+        transitionEffect: "fade",
         labels: {
-            current: ""
-        }
+            current: "",
+        },
     });
-
-
 
     $(".boxs_componant .next_step").click(function () {
         $("a[href='#next']").click();
-    }); 
+    });
     $(".boxs_componant .opne_new_box").click(function () {
         $(".hiddin_form_new").show();
-    }); 
-
-
-
-
-
+    });
 
     // sliderEx
     const sliderEz = document.getElementById("sliderEx");
