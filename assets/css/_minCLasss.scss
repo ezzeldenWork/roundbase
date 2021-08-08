@@ -29,8 +29,9 @@ body {
     background: linear-gradient(190deg, rgba(255, 255, 255, 1) 0%, $gray-color 100%);
     padding: 0 20px 60px 20px;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 1;
+    overflow-x: hidden;
     &:after {
         opacity: 0.1;
         background-image: url("../img/bodyback.png");
@@ -99,7 +100,7 @@ button {
             &:before,
             &:after {
                 top: 0 !important;
-                html[lang="ar"] & {
+                html[dir="rtl"] & {
                     left: unset;
                     right: 0;
                 }

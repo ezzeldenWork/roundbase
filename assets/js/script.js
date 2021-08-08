@@ -101,9 +101,6 @@ $(document).ready(function () {
     // datepicke
     $(".date_picker").datepicker();
 
-    // select2
-    $(".select2").select2();
-
     // DataTable
     var table = $(".dataTable").DataTable({
         searching: false,
@@ -201,7 +198,7 @@ $(document).ready(function () {
 
         $(".item-box.sucond-box ul").append(
             " <li>" +
-                '<div class="pretty p-default">' +
+                '<div class="pretty p-default p-smooth">' +
                 '<input id="' +
                 datatable +
                 '" type="checkbox" class="input-checked" ' +
@@ -300,9 +297,9 @@ $(document).ready(function () {
         $(this).hide();
     });
 
-    $("#example-basic").steps({
+    $("#register_form").steps({
         headerTag: "h3",
-        bodyTag: "div",
+        bodyTag: "section",
         autoFocus: true,
         skip: true,
         saveState: true,
@@ -314,7 +311,34 @@ $(document).ready(function () {
         },
     });
 
-    $(".boxs_componant .next_step").click(function () {
+    // select2
+    $(".select2").select2({});
+
+    function formatState(state) {
+        if (!state.id) {
+            return state.text, state.value;
+        }
+        // debugger;
+        var baseUrl = "assets/img/cb.png";
+        var $state = $(
+            '<div class="opstion_style_box"><div class="img_title"><img  src="' +baseUrl +'" class="img-fluid select_img" /> ' +
+                '<div class="option_text"><h4 class="bold_title">' +
+                state.element.value +
+                "</h4>" +
+                "<h4>" +
+                state.text +
+                "</h4></div>" +
+                '</div><i class="fa fa-plus icon-select-add" aria-hidden="true"></i></div>'
+        );
+        //   debugger;
+        return $state;
+    }
+
+    $(".custom_select").select2({
+        templateResult: formatState,
+    });
+
+    $(".boxs_componant .next_step, .skip_button").click(function () {
         $("a[href='#next']").click();
     });
     $(".boxs_componant .opne_new_box").click(function () {
@@ -322,16 +346,4 @@ $(document).ready(function () {
     });
 
     // sliderEx
-    const sliderEz = document.getElementById("sliderEx");
-
-    noUiSlider.create(sliderEz, {
-        start: [0, 1000],
-        connect: true,
-        // snap: true,
-        tooltips: [true, true],
-        range: {
-            min: 0,
-            max: 1000,
-        },
-    });
 });

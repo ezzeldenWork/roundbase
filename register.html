@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
@@ -38,25 +38,25 @@
                     <div class="body_box">
                         <div class="container-fluid">
                             <div class="row justify-content-center">
-                                <div class="col-7">
+                                <div class="col-lg-7 col-md-12">
                                     <div class="body_content">
                                         <div class="register_box">
                                             <div class="register_wallpeper_box" style="background-image: url('assets/img/wallpeper.jpg');"></div>
                                             <div class="register_form_box">
-                                                <div id="example-basic">
+                                                <div id="register_form">
                                                     <h3>Step 1</h3>
                                                     <h3>Step 2</h3>
                                                     <h3>Step 3</h3>
-                                                    <div class="step_content frist_step">
+                                                    <section class="step_content frist_step">
                                                         <div class="step_header">
                                                             <h4 class="step_title">
                                                                 Welcome Title
                                                             </h4>
                                                             <p class="prag">
-                                                                Help us customizes your Curnshbase experience to get you start ?
+                                                                Help us customizes your Roundsbase experience to get you start ?
                                                             </p>
                                                             <p class="prag">
-                                                                How do you see Curnshbase?
+                                                                How do you see Roundsbase?
                                                             </p>
                                                         </div>
 
@@ -106,7 +106,7 @@
                                                             <div class="box_items opne_new_box">
                                                                 <i class="fas fa-question-circle"></i>
                                                                 <h6 class="box_title">
-                                                                    Outher
+                                                                    Other
                                                                 </h6>
                                                             </div>
                                                         </div>
@@ -119,14 +119,182 @@
                                                                 </div>
                                                             </form>
                                                         </div>
-                                                    </div>
-                                                    <div class="tabs_content">
-                                                        <p>Ahmed</p>
-                                                    </div>
+                                                    </section>
+                                                    <section class="step_content">
+                                                        <div class="step_header">
+                                                            <h4 class="step_title">
+                                                                Help us personalize your experience
+                                                            </h4>
+                                                            <p class="prag">
+                                                                Tell us a bit more about yourself and what you`re interested in .
+                                                            </p>
+                                                        </div>
+                                                        <div class="form_box">
+                                                            <form action="">
+                                                                <div class="form-group border-custom-0">
+                                                                    <label class="lable_select" for="iam">I am a ..</label>
+                                                                    <select class="select2" id="iam">
+                                                                        <option value="1" selected hidden disabled>I am a ..</option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="">5</option>
+                                                                        <option value="">6</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group border-custom-0">
+                                                                    <label class="lable_select" for=" work">working in ..</label>
+                                                                    <select class="select2" id="work">
+                                                                        <option value="1" selected hidden disabled>working in ..</option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="">5</option>
+                                                                        <option value="">6</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group border-custom-0">
+                                                                    <label class="lable_select" for="industry">My industry is ...</label>
+                                                                    <select class="select2" id="industry">
+                                                                        <option value="1" selected hidden disabled>My industry is ...</option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="">5</option>
+                                                                        <option value="">6</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="checkbox_lable">choose at least one location that interests you:</label>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>New York</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>London </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>San </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>Tokyo</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="margin_in form-group border-custom-0">
+                                                                        <select class="custom_select" data-placeholder="Select a state" multiple="multiple" id="city">
+                                                                            <option value="Las Vages">
+                                                                                Location . New York . usa
+                                                                            </option>
+                                                                            <option value="Welcome 2">new2</option>
+                                                                            <option value="Welcome 3">new3</option>
+                                                                            <option value="Welcome 4">new4</option>
+                                                                            <option value="Welcome 5">new5</option>
+                                                                            <option value="Welcome 6">new6</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="checkbox_lable">choose at least one industry that interests you:</label>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>New York</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>London </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>San </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pretty p-default p-smooth">
+                                                                        <input type="checkbox" />
+                                                                        <div class="state">
+                                                                            <label>Tokyo</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="margin_in form-group border-custom-0">
+                                                                        <select class="custom_select" data-placeholder="Select a state" multiple="multiple" id="interests">
+                                                                            <option value="Welcome 1">new1</option>
+                                                                            <option value="Welcome 2">new2</option>
+                                                                            <option value="Welcome 3">new3</option>
+                                                                            <option value="Welcome 4">new4</option>
+                                                                            <option value="Welcome 5">new5</option>
+                                                                            <option value="Welcome 6">new6</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="button_banner"><span class="skip_button">skip step</span><span class="see_recommendations">see my recommendations</span></div>
+                                                    </section>
 
-                                                    <div class="tabs_content">
-                                                        new
-                                                    </div>
+                                                    <section class="step_content">
+                                                        <div class="step_header">
+                                                            <h4 class="step_title">
+                                                                Follow profiles to stay updated
+                                                            </h4>
+                                                            <p class="prag">
+                                                                Here are some profiles that we think you would interested in :
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="profiles_box">
+                                                            <div class="profiles_item">
+                                                                <div class="pretty p-default p-smooth">
+                                                                    <input type="checkbox" />
+                                                                    <div class="state">
+                                                                        <label><img src="assets/img/i7yjhhitbze4kylwmbfy.png" alt="" /><span class="text">Check</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profiles_item">
+                                                                <div class="pretty p-default p-smooth">
+                                                                    <input type="checkbox" />
+                                                                    <div class="state">
+                                                                        <label><img src="assets/img/n3tgnmr1hqxolbrhrbty.png" alt="" /><span class="text">Check</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profiles_item">
+                                                                <div class="pretty p-default p-smooth">
+                                                                    <input type="checkbox" />
+                                                                    <div class="state">
+                                                                        <label><img src="assets/img/nx598tedbjr4p88v6aww.png" alt="" /><span class="text">Check</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profiles_item">
+                                                                <div class="pretty p-default p-smooth">
+                                                                    <input type="checkbox" />
+                                                                    <div class="state">
+                                                                        <label><img src="assets/img/t6nais5lghcxmc9nkpnk.webp" alt="" /><span class="text">Check</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="button_banner"><span class="skip_button">skip step</span><span class="see_recommendations">see my recommendations</span></div>
+                                                    </section>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,10 +311,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
         <script type="text/javascript" src="./assets/js/tipped.min.js"></script>
         <script type="text/javascript" src="./assets/js/nouislider.min.js"></script>
         <script

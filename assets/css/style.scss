@@ -1,8 +1,10 @@
-@import "vars", "minCLasss", "tableStyle", "tabesStyle", "pop_upBox", "filter_box",  "registerStyle","registerStyle";
+@import "vars", "minCLasss", "tableStyle", "tabesStyle", "pop_upBox", "filter_box",  "registerStyle";
+
 
 // body_box
 .body_box {
-    padding: 60px 0 0;
+    
+    padding: 60px 0 ;
     .body_content {
         background-color: $white-color;
         border-radius: 4px;
