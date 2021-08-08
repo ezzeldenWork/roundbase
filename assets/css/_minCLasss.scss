@@ -23,11 +23,11 @@ body {
         html[dir="ltr"] & {
         font-family: $ar_font;
     }
-    // background-color: rgba($gray-color, .7);
-    // background-color: rgba($blue-color, .7);
-    // background: $min-color;
+    &.pad_cus{
+        padding: 0 60px 20px;
+    }
     background: linear-gradient(190deg, rgba(255, 255, 255, 1) 0%, $gray-color 100%);
-    padding: 0 20px 60px 20px;
+    padding: 0 0  60px ;
     position: relative;
     min-height: 100vh;
     z-index: 1;

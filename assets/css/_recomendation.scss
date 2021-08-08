@@ -1,0 +1,88 @@
+.page_banner_title{
+    padding: 20px 0;
+    background-color: rgba($gray-color, 1);
+    .banner_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .button_box{
+        display: flex;
+        align-items: center;
+        .title_text{
+            font-size: 20px;
+            font-weight: 550;
+            color: rgba($black-color, 1);
+        }
+        .button_item{
+            font-size: 15px;
+            font-weight: 550;
+            background-color: rgba($white-color, 1);
+            @extend%trans-4;
+            padding: 8px 16px;
+            border: 1px solid ;
+            border-radius: 5px;
+            margin: 0 10px;
+            overflow: hidden;
+            position: relative;
+            text-transform: uppercase;
+            z-index: 1;
+            &:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                @extend%trans-4;
+                width: 0;
+                z-index: -1;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                @extend%trans-4;
+                transition-timing-function: cubic-bezier(1, 0.63, 0.57, 1) !important;
+                width: 0;
+                z-index: -1;
+            }
+            &:hover{
+                &:after,&:before{
+                    width: 50%;
+                }
+            }
+            i{
+                html[dir="ltr"] &{
+                    padding: 0 16px 0 0;
+                }
+                html[dir="rtl"] &{
+                    padding: 0 0 0 16px;
+                }
+                font-size: 12px;
+            }
+            &.blue_item{
+                color: rgba($blue-color, 1);
+                border-color: rgba($blue-color, 1);
+                &:after,&:before{
+                    background-color: rgba($blue-color, 1);
+                }
+                &:hover{
+                    color: rgba($white-color, 1);
+                }
+            }
+            &.gold_item{
+                color: rgba($gold-color, 1);
+                border-color: rgba($gold-color, 1);
+                &:after,&:before{
+                    background-color: rgba($gold-color, 1);
+                }
+                &:hover{
+                    color: rgba($white-color, 1);
+                }
+            }
+        }
+    }
+}
+
+}
