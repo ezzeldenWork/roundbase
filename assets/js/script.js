@@ -297,22 +297,45 @@ $(document).ready(function () {
         $(this).hide();
     });
 
-    $("#register_form").steps({
-        headerTag: "h3",
-        bodyTag: "section",
-        autoFocus: true,
-        skip: true,
-        saveState: true,
-        // enableKeyNavigation: false,
-        // enablePagination: false,
-        transitionEffect: "fade",
-        labels: {
-            current: "",
-        },
+
+        
+    
+    $(".recomendation_item .delet_icon").click(function(){
+        $(this).parent(".recomendation_item").parent('li').remove();
     });
+    $(".openin_box button").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    $(".recomendation_item").each(function(){
+        
+        const card_html =$(this).children(".min_content").children('.min_side').children(".title_box").children(".min-title-box").html();
+        $(this).children(".min_content").children('.min_side').children(".img_box").children(".title_seucond").html(card_html);
+    });
+
+
+    $(".list_card_box .list_box i").click(function(){
+        $(this).parent(".list_box").toggleClass('clicked');
+        $(this).addClass('active').siblings().removeClass('active');
+        if($(this).attr('id') == "list_view"){
+            $(".recomendation_section .recomendation_box .recomendation_list").removeClass("card_style");
+        }else{
+            $(".recomendation_section .recomendation_box .recomendation_list").addClass("card_style");
+        }
+    });
+
+    if ($(window).width() < 772) {
+        $(".list_card_box").remove();
+        $(".recomendation_section .recomendation_box .recomendation_list").addClass("card_style");
+     }
+     
+
 
     // select2
     $(".select2").select2({});
+
+
+
 
     function formatState(state) {
         if (!state.id) {

@@ -329,5 +329,22 @@
         <!-- new -->
 
         <script src="assets/js/script.js"></script>
+        <script>
+            
+
+    $("#register_form").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        autoFocus: true,
+        skip: true,
+        saveState: true,
+        // enableKeyNavigation: false,
+        // enablePagination: false,
+        transitionEffect: "fade",
+        labels: {
+            current: "",
+        },
+    });
+        </script>
     </body>
 </html>
