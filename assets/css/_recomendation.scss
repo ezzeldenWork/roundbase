@@ -4,6 +4,7 @@
     .banner_content {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-between;
         .button_box {
             display: flex;
@@ -357,6 +358,18 @@
 }
 
 @media (max-width: 992px) {
+    .page_banner_title {.banner_content{
+        display: block;
+        text-align: center;
+        .button_box{
+            margin: 10px 0;
+            justify-content: center;
+            flex-wrap: wrap;
+            .button_item {
+                margin: 5px ;
+            }
+        }
+    }}
     .recomendation_section {
         .recomendation_box {
             .recomendation_list {
