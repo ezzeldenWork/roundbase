@@ -1773,7 +1773,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
 
 @media (max-width: 772px) {
   .recomendation_section .recomendation_box .recomendation_list.card_style .card-li {
-    width: 100% !important;
+    width: calc(100% - 20px) !important;
   }
 }
 
