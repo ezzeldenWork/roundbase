@@ -1,12 +1,67 @@
 $(document).ready(function () {
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
     // page dir
     if ($("html").attr("dir") == "ltr") {
         var lang = "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json",
             reorder_Dir = "-";
-    }
-    if ($("html").attr("dir") == "rtl") {
-        var lang = "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Arabic.json",
+            
+            $(".lang-box .lang_content a#ar_lang").removeClass("active");
+            $(".lang-box .lang_content a#en_lang").addClass("active");
+
+
+        }
+        if ($("html").attr("dir") == "rtl") {
+            var lang = "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Arabic.json",
             reorder_Dir = "+";
+            $(".lang-box .lang_content a#ar_lang").addClass("active");
+            $(".lang-box .lang_content a#en_lang").removeClass("active");
     }
 
     // opne filter

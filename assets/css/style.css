@@ -152,10 +152,18 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 100%;
+}
+
+html[dir="ltr"] .tap_heade .lang-box {
+  margin: 0 20px 0;
+}
+
+html[dir="rtl"] .tap_heade .lang-box {
+  margin: 0  0 0  20px;
 }
 
 .lang-box .lang_content {
@@ -174,6 +182,16 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
 .lang-box .lang_content a.active {
   color: white;
   background-color: #1e3056;
+}
+
+@media (max-width: 992px) {
+  .lang-box {
+    padding: 14px 0;
+    margin: 0 !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .sucond_table {
@@ -438,6 +456,8 @@ tr.shown td.details-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #e9eff5;
 }
 
@@ -1273,6 +1293,22 @@ html[dir="rtl"] .tabes-box .tabs-item {
   background-color: rgba(0, 0, 255, 0.1);
 }
 
+@media (max-width: 992px) {
+  .filter_opne_button {
+    display: block;
+  }
+  .filter-box-aside {
+    position: fixed;
+    display: none;
+    inset: 0;
+    z-index: 9999;
+    padding: 35px;
+  }
+  .filter-box-aside .close-button {
+    display: block;
+  }
+}
+
 .page_banner_title {
   padding: 20px 0;
   background-color: #dddddd;
@@ -1428,6 +1464,13 @@ html[dir="rtl"] .list_card_box .list_box.clicked:after {
 .recomendation_section .recomendation_box .recomendation_list .recomendation_item .delet_icon {
   position: absolute;
   top: 10px;
+}
+
+html[dir="rtl"] .recomendation_section .recomendation_box .recomendation_list .recomendation_item .delet_icon {
+  left: 10px;
+}
+
+html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .recomendation_item .delet_icon {
   right: 10px;
 }
 
