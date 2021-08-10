@@ -194,6 +194,10 @@ html[dir="rtl"] .tap_heade .lang-box {
   }
 }
 
+.registerbox {
+  display: none;
+}
+
 .log_box .log_title {
   padding: 20px;
   font-size: 22px;
@@ -328,10 +332,13 @@ html[dir="rtl"] .tap_heade .lang-box {
   position: relative;
 }
 
-.note_box_register .note_text {
+.note_text {
   color: rgba(51, 51, 51, 0.7);
   font-weight: 500;
   font-size: 12px;
+  padding: 10px;
+  display: block;
+  text-align: center;
 }
 
 .note_list {

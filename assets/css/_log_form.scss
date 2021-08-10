@@ -1,3 +1,6 @@
+.registerbox{
+    display: none;
+}
 .log_box{
     .log_title{
         padding: 20px;
@@ -109,14 +112,15 @@ display: none;
     }
 }
 
-
-.note_box_register{
     .note_text{
         color: rgba($darkgray-color,.7);
         font-weight: 500;
         font-size: 12px;
+        padding: 10px;
+        display: block;
+        text-align: center;
     }
-}
+
 .note_list{
     margin: 0 0 20px;
     ul{

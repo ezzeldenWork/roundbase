@@ -25,7 +25,14 @@ $(document).ready(function () {
 
 
 
-    
+    $("#retrunlogin").click(function(){
+        $(".loginbox").show();
+        $(".registerbox").hide();
+    });
+    $("#reternregister").click(function(){
+        $(".loginbox").hide();
+        $(".registerbox").show();
+    });
 
 
 
