@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#fff" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+            integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/tipped.css" />
+        <link rel="stylesheet" href="assets/css/nouislider.min.css" />
+
+        <!-- new -->
+
+        <link rel="stylesheet" href="assets/css/smart_wizard_all.min.css" />
+
+        <!-- new -->
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Companies</title>
+    </head>
+
+    <body class="pad_cus">
+        <div id="page" class="hfeed site">
+            <!--           start content-->
+            <div class="main-container">
+                <main class="main wrapper">
+                    <div class="body_box">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="body_content">
+                                        
+                                        <div class="log_box loginbox d-none">
+
+
+                                            <h3 class="log_title">
+                                                Log In
+                                            </h3>
+                                            <form action="" id="login" class="log_sign">
+                                                <div class="form-group">
+                                                  <label for="email">Email Address</label>
+                                                  <input type="text" name="email" id="email" class="form-control" placeholder="" aria-describedby="helpId">
+                                                </div>
+                                                <div class="form-group">
+                                                  <label for="password">Password</label>
+                                                  <input type="text" name="password" id="password" class="form-control" placeholder="" aria-describedby="helpId">
+                                                </div>
+                                                <div class="log_sng_button">
+                                                    <button class="log-in">
+                                                        log in
+                                                    </button>
+                                                    <a href="#" class="register_button">register </a>
+                                                </div>
+                                            </form>
+                                            <h6 class="outSing">
+                                                <span>    OR LOG IN WITH</span>
+                                            </h6>
+                                            <ul class="list-unstyled sochile_list">
+                                                <li><a href="#" style="background-color: #0077b5;"> <i class="fab fa-linkedin-in" aria-hidden="true"></i> </a></li>
+                                                <li><a href="#" style="background-color: #4267B2;"> <i class="fab fa-facebook-f" aria-hidden="true"></i> </a></li>
+                                                <li><a href="#" style="background-color: #1DA1F2;"> <i class="fab fa-twitter" aria-hidden="true"></i> </a></li>
+                                            </ul>
+
+                                            
+                                            <hr>
+                                            <div class="log_sng_button">
+                                            <a href="#" class="clear-filter">
+                                                Log in with Single Sign-On 
+                                            </a>
+                                            <a href="#" class="clear-filter">
+                                                Forgot password? 
+                                            </a>
+
+                                        </div>
+                                        </div>
+
+
+                                        <div class="log_box registerbox">
+
+
+                                            <h3 class="log_title">
+                                                Register
+                                            </h3>
+
+                                            <h6 class="outSing after_none">
+                                                <span>   Register using your e-mail address
+
+                                                </span>
+                                            </h6>
+                                            <ul class="list-unstyled sochile_list">
+                                                <li><a href="#" style="background-color: #0077b5;"> <i class="fab fa-linkedin-in" aria-hidden="true"></i> </a></li>
+                                                <li><a href="#" style="background-color: #4267B2;"> <i class="fab fa-facebook-f" aria-hidden="true"></i> </a></li>
+                                                <li><a href="#" style="background-color: #1DA1F2;"> <i class="fab fa-twitter" aria-hidden="true"></i> </a></li>
+                                            </ul>
+
+
+                                            <h6 class="outSing">
+                                                <span>    Register using social authentication
+                                                </span>
+                                            </h6>
+
+
+                                            <form action="" id="login" class="log_sign">
+                                                <div class="form-group">
+                                                  <label for="email">Email Address</label>
+                                                  <input type="text" name="email" id="email" class="form-control" placeholder="" aria-describedby="helpId">
+                                                </div>
+                                                <div class="form-group">
+                                                  <label for="fristname">frist name</label>
+                                                  <input type="text" name="fristname" id="fristname" class="form-control" placeholder="" aria-describedby="helpId">
+                                                </div>
+                                                <div class="form-group">
+                                                  <label for="lastname">last name</label>
+                                                  <input type="text" name="lastname" id="lastname" class="form-control" placeholder="" aria-describedby="helpId">
+                                                </div>
+                                                <div class="form-group">
+                                                  <label for="newpassword">new Password</label>
+                                                  <input type="text" name="newpassword" id="newpassword" class="form-control" placeholder="" aria-describedby="helpId">
+                                                </div>
+                                                <div class="form-group">
+                                                  <label for="contermnewpassworf">new password (again)</label>
+                                                  <input type="text" name="contermnewpassworf" id="contermnewpassworf" class="form-control" placeholder="" aria-describedby="helpId">
+                                                </div>
+
+                                                <div class="note_list">
+                                                    <ul class="">
+                                                        <li>
+                                                            8 characters or longer
+                                                        </li>
+                                                        <li>
+                                                            At least one lowercase letter
+                                                        </li>
+                                                        <li>
+                                                            At least one number
+
+                                                        </li>
+                                                        <li>
+                                                            At least one uppercase letter
+                                                        </li>
+                                                        <li>
+                                                            Passwords must match
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="log_sng_button note_box_register">
+                                                    <button class="log-in">
+                                                        Register 
+                                                    </button>
+                                                    <span class="note_text">
+                                                        By clicking on Register, you agree to <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                                    </span>
+                                                </div>
+                                            </form>
+                                        
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <!--           end content-->
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+        <script type="text/javascript" src="./assets/js/tipped.min.js"></script>
+        <script type="text/javascript" src="./assets/js/nouislider.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+            integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- new -->
+        <script src="assets/js/jquery.steps.min.js"></script>
+
+        <!-- new -->
+
+        <script src="assets/js/script.js"></script>
+        <script>
+            
+
+    $("#register_form").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        autoFocus: true,
+        skip: true,
+        saveState: true,
+        // enableKeyNavigation: false,
+        // enablePagination: false,
+        transitionEffect: "fade",
+        labels: {
+            current: "",
+        },
+    });
+        </script>
+    </body>
+</html>

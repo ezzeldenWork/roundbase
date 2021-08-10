@@ -194,6 +194,165 @@ html[dir="rtl"] .tap_heade .lang-box {
   }
 }
 
+.log_box .log_title {
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background-color: #1e3056;
+}
+
+.log_box .log_sign {
+  padding: 20px;
+}
+
+.log_box .log_sign .form-group label {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+  display: block;
+  text-transform: capitalize;
+}
+
+.log_box .log_sign .form-group input {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #1e3056;
+}
+
+.log_box .log_sign .log-in {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #1e3056;
+  background-color: rgba(30, 48, 86, 0.1);
+  text-transform: capitalize;
+  font-size: 14px;
+  margin: 0 6px;
+}
+
+.log_box .log_sign .register_button {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+  background-color: #1e3056;
+  text-transform: uppercase;
+}
+
+.log_box .outSing {
+  padding: 1px;
+  margin: 10px 0;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 550;
+  color: rgba(30, 48, 86, 0.8);
+  z-index: 1;
+}
+
+.log_box .outSing span {
+  padding: 4px 10px;
+  background-color: white;
+}
+
+.log_box .outSing.after_none {
+  padding: 20px 0 0;
+}
+
+.log_box .outSing.after_none:after {
+  display: none;
+}
+
+.log_box .outSing:after {
+  height: 1px;
+  width: 100%;
+  content: "";
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  z-index: -1;
+  background-color: #dddddd;
+}
+
+.log_sng_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.log_sng_button .clear-filter {
+  margin: 0 0 10px;
+}
+
+.sochile_list {
+  padding: 10px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sochile_list li a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.note_box_register .note_text {
+  color: rgba(51, 51, 51, 0.7);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.note_list {
+  margin: 0 0 20px;
+}
+
+.note_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.note_list ul li {
+  min-width: 50%;
+  margin-top: 8px;
+  color: rgba(51, 51, 51, 0.7);
+  font-size: 13px;
+}
+
 .sucond_table {
   margin: 0 0 20px;
 }
@@ -1286,6 +1445,7 @@ html[dir="rtl"] .tabes-box .tabs-item {
   font-weight: 600;
   font-size: 14px;
   border-radius: 5px;
+  display: inline-block;
   color: #0a58ca;
 }
 
@@ -2202,7 +2362,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
           box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .button-bar .buttom_style i, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .openin_box button, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button {
+.sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .button-bar .buttom_style i, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .openin_box button, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }

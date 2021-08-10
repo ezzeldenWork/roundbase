@@ -280,6 +280,7 @@
     font-size: 14px;
     @extend%trans-4;
     border-radius: 5px;
+    display: inline-block;
     color: #0a58ca;
     &:hover{
         background-color: rgba($blueclear-color, .1);
