@@ -2,6 +2,7 @@
     display: none;
 }
 .log_box{
+    margin: 0 0 60px;
     .log_title{
         padding: 20px;
         font-size: 22px;
@@ -134,3 +135,76 @@ display: none;
         }
     }
 }
+
+
+
+
+// svg aimation
+
+
+$min_sucond:1s;
+$tow_sucond:2s;
+$last_time :7s;
+$transtion_suconed:0.4s;
+
+
+
+
+.line_circle{
+    circle{
+        opacity: 0;
+        animation: opacity_animation $min_sucond ease forwards alternate; 
+        @for $i from 1 to 5 {
+                &:nth-child(#{$i}) { animation-delay:$i * $min_sucond  ; }
+        }
+    }
+    &.sc_line_log{
+        circle{
+            @for $i from 1 to 5 {
+                &:nth-child(#{$i}) { animation-delay: ($i * $min_sucond) + .6s + $tow_sucond  ; }
+            }
+        }
+    }
+}
+
+.button_log_svg{
+    transform: scale(1) translate(-206px, -76px);
+    animation: button_animation $transtion_suconed + .4 $last_time   ease-in-out forwards alternate; 
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+
+.log_in_front_box{
+    animation: opacity_animation $transtion_suconed + .4 $last_time + .8 ease forwards reverse ;
+}
+
+
+.box_mane{
+    transform: translate(-76%, -44%) scale(.8);
+    transform-box: fill-box;
+    transform-origin: center;
+    opacity: 0;
+    animation: opacity_animation $transtion_suconed + .4 $last_time + 1 ease forwards  ;
+}
+
+@keyframes opacity_animation{
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes button_animation{
+    0% , 100% {
+        transform: translate(-206px, -76px) scale(1) ;
+    }
+    50% {
+        transform: translate(-206px, -76px) scale(.8) ;
+    }
+}
+
