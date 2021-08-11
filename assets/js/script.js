@@ -25,6 +25,13 @@ $(document).ready(function () {
 
 
 
+    $(".header_section .menu_box ").click(function(){
+        $(this).children(".sub_menu").slideToggle()
+    });
+
+
+
+
     $("#retrunlogin").click(function(){
         $(".loginbox").show();
         $(".registerbox").hide();

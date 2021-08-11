@@ -26,6 +26,10 @@ body {
     &.pad_cus{
         padding: 0 60px 20px;
     }
+    &.home_header{
+        padding: 0;
+        margin: 100px 0 40px;
+    }
     background: linear-gradient(190deg, rgba(255, 255, 255, 1) 0%, $gray-color 100%);
     padding: 0 0  60px ;
     position: relative;
@@ -176,6 +180,122 @@ button {
 }
 
 
+.button-bar {
+    padding: 10px 30px;
+    border-top: 1px solid rgba($darkgray-color, 0.5);
+}
+.buttom_style{ 
+    &.gold_v{
+        background-color: rgba($gold-color, 1);
+        color:rgba($black-color, 1);
+        &::after,&::before{
+            background-color: rgba($gold-color, 1);
+        }
+        .borderSpan{
+            &::after,&::before{
+                background-color: rgba($gold-color, 1);
+            }
+
+        }
+    }
+    // display: inline-block;
+    background-color: rgba($min-color, 1);
+    // padding: 9px 28px ;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border-radius: px;
+    overflow: hidden;
+    color: rgba($white-color, 1);
+    position: relative;
+    @extend%trans-4;
+    i{
+    
+        font-size: 12px;
+        @extend%trans-4;
+        margin: 0 6px;
+    &.fa-plus{    
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid rgba($white-color, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+    }
+    &::after,&::before{
+        content: "";
+        right: 0;
+        top: 0;
+        position: absolute;
+        @extend%trans-4;
+        transition-delay: 0.2s !important;
+        background-color:rgba($min-color, 1);
+    }
+    &::after{
+        height: 2px;
+        width: 0;
+    }
+    &::before{
+        height: 0;
+        width: 2px;
+    }
+
+    .borderSpan{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        font-size: 14px;
+        font-weight: 550;
+        &::after,&::before{
+            content: "";
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            @extend%trans-4;
+            transition-delay: 0.2s !important;
+            background-color: rgba($min-color, 1);
+        }
+        &::after{
+            height: 2px;
+            width: 0;
+        }
+        &::before{
+            height: 0;
+            width: 2px;
+        }
+    }
+
+    &:hover{
+        background-color: rgba($white-color, 1);
+        color: rgba($min-color, 1);
+        i{
+            border-color: rgba($min-color, 1) ;
+        }
+        .borderSpan{
+
+            &::after{
+                width: 100%;
+            }
+            &::before{
+                height: 100%;
+            }
+        }
+        &::after{
+            width: 100%;
+        }
+        &::before{
+            height: 100%;
+        }
+        
+    }
+
+}
 
 @media (max-width:992px) {
     .lang-box{
@@ -185,5 +305,14 @@ button {
     }
     .order_md_1{
         order: -1;
+    }
+}
+
+
+
+.after_none{
+    padding: 0;
+    &:after{
+        display: none;
     }
 }
