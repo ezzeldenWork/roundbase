@@ -1,0 +1,75 @@
+.profile_img{
+  display: flex;
+  align-items: center;
+
+
+
+  .img_box{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 3px 1px -2px rgba($black-color, 0.2), 0 2px 2px 0 rgba($black-color, 0.14), 0 1px 5px 0 rgba($black-color, 0.12);
+    &:hover{
+      &::after{
+        opacity: 1;
+      }
+    }
+    &:after{
+      inset: 0;
+      content: "\f304";
+      position: absolute;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+      background-color: rgba($black-color, 0.14);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba($black-color, 0.7);
+      opacity: 0;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+    input{
+      // display: none;
+      opacity: 0;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top:0;
+      left: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+
+
+
+  .img_role{
+    padding: 0 40px ;
+    color: rgba($darkgray-color, .5);
+    li{
+      font-size: 14px;
+      font-weight: 500;
+      padding: 4px 0;
+    }
+  }
+}
+
+.input_flex_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 10px 0 30px;
+  .form-group{
+    width: calc(100% - 20px);
+    margin: 6px;
+  }
+}

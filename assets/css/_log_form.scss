@@ -13,20 +13,7 @@
     }
     .log_sign{
         padding: 20px;
-        .form-group{
-            label{
-                font-size: 14px;
-                color: rgba($darkgray-color,1);
-                font-weight: 500;
-                display: block;
-                text-transform: capitalize;
-            }
-            input{
-                border-radius: 0;
-                border: 0;
-                border-bottom: 1px solid rgba($min-color,1);
-            }
-        }
+
         .log-in{
             padding: 10px;
             text-align: center;

@@ -26,9 +26,31 @@ $(document).ready(function () {
 
 
     $(".header_section .menu_box ").click(function(){
-        $(this).children(".sub_menu").slideToggle()
+        $(this).children(".sub_menu").slideToggle();
     });
 
+
+
+
+    // tap Toggle
+
+
+    $(".tabes-box .tabs-item").click(function(){
+        var data_tap = $(this).data("tap");
+        $(this).addClass("active").siblings().removeClass("active");
+        $("#" + data_tap).addClass("active").siblings().removeClass("active");
+    });
+    
+    $(".profile_img .img_box .img-input").change(function () {
+        var data_src = $(this).data("img");
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $("#" + data_src).attr("src", e.target.result);
+            };
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
 
 
 
@@ -45,7 +67,20 @@ $(document).ready(function () {
 
 
 
+    // opne Closed input
 
+    $(".clos_button").click(function(){
+        var closed_date = $(this).attr("data-opneInput");
+        $(this).toggleClass("closed_buttom_tre");
+        if($(this).hasClass("closed_buttom_tre") == true ){
+
+            $( "#" + closed_date).find(".closed_input").attr("disabled", false);
+        }
+        if($(this).hasClass("closed_buttom_tre") == false ){
+            
+        $( "#" + closed_date).find(".closed_input").attr("disabled", true);
+        }
+    })
 
 
 
@@ -394,9 +429,11 @@ $(document).ready(function () {
 
     // select2
     $(".select2").select2({});
-
-
-
+    $(".multi_s").select2({
+        multiple: true,
+        tags:false
+    });
+    
 
     function formatState(state) {
         if (!state.id) {

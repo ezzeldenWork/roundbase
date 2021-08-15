@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#fff" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+            integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/tipped.css" />
+        <link rel="stylesheet" href="assets/css/nouislider.min.css" />
+
+        <!-- new -->
+
+        <link rel="stylesheet" href="assets/css/smart_wizard_all.min.css" />
+
+        <!-- new -->
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Companies</title>
+    </head>
+
+    <body class="pad_cus">
+        <div id="page" class="hfeed site">
+            <!--           start content-->
+            <div class="main-container">
+                <main class="main wrapper">
+                    <div class="body_box">
+                        <div class="container-fluid">
+                            <div class="body_content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tap_heade">
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-12">
+                                                    <div class="tabes-box">
+                                                        <div class="tabs-item active" data-tap="over_tap">
+                                                            <svg viewBox="0 0 24 24" class="large accent">
+                                                                <path
+                                                                    d="M12,6V1.2H0V22.8H24V6ZM4.8,20.4H2.4V18H4.8Zm0-4.8H2.4V13.2H4.8Zm0-4.8H2.4V8.4H4.8ZM4.8,6H2.4V3.6H4.8ZM9.6,20.4H7.2V18H9.6Zm0-4.8H7.2V13.2H9.6Zm0-4.8H7.2V8.4H9.6ZM9.6,6H7.2V3.6H9.6Zm12,14.4H12V18h2.4V15.6H12V13.2h2.4V10.8H12V8.4h9.6Zm-2.4-9.6H16.8v2.4h2.4Zm0,4.8H16.8V18h2.4Z"
+                                                                ></path>
+                                                            </svg>
+                                                            <h5 class="tab-title langAttr">
+                                                                Overview
+                                                            </h5>
+                                                        </div>
+                                                        <div class="tabs-item" data-tap="funding_tap">
+                                                            <svg viewBox="0 0 24 24" class="large accent">
+                                                                <path
+                                                                    d="M5.396.674v22.854h14.206a2.762 2.762 0 002.757-2.757V3.431A2.762 2.762 0 0019.602.673H5.396zm1.18 1.18h13.026c.866 0 1.576.71 1.576 1.576v17.341c0 .866-.71 1.577-1.576 1.577H6.576V1.854zM3.932.651a2.295 2.295 0 00-2.289 2.29v18.32c0 1.26 1.03 2.29 2.29 2.29h.554V.65h-.555z"
+                                                                ></path>
+                                                                <path d="M10.797 9.81a2.29 2.29 0 114.58 0 2.29 2.29 0 01-4.58 0zM17.093 15.534s-1.087-2.29-4.006-2.29c-2.92 0-4.007 2.29-4.007 2.29v1.145h8.013v-1.145z"></path>
+                                                            </svg>
+                                                            <h5 class="tab-title langAttr">
+                                                                Funding
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-12 text-end order-md-1">
+                                                    <div class="lang-box">
+                                                        <div class="lang_content">
+                                                            <a href="./add-new.html" id="en_lang" class="">En</a>
+                                                            <a href="./add-new-ar.html" id="ar_lang" class="">Ar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tap_content_section">
+                                            <div class="tap_content active" id="over_tap">
+                                                <div class="tap_heade tap_heade_inside">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="tabes-box">
+                                                                <div class="tabs-item active" data-tap="overview_inside">
+                                                                    Overview
+                                                                </div>
+                                                                <div class="tabs-item" data-tap="headquarters_tap">
+                                                                    Headquarters
+                                                                </div>
+                                                                <div class="tabs-item" data-tap="industries_tap">
+                                                                    Industries
+                                                                </div>
+                                                                <div class="tabs-item" data-tap="founders_tap">
+                                                                    Founders
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="tap_content_section">
+                                                                <div class="tap_content active" id="overview_inside">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="title_box">
+                                                                                <h3 class="title"><i class="fas fa-newspaper"></i> <span>Overview</span></h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="profile_img" for="img">
+                                                                                <div class="img_box">
+                                                                                    <input type="file" class="img-input" name="img" data-img="profileOver" id="img" />
+                                                                                    <img src="assets/img/logo.png" class="img-fluid img_show" id="profileOver" alt="" />
+                                                                                </div>
+                                                                                <ul class="img_role">
+                                                                                    <li>
+                                                                                        Square images work best (at least 100 x 100 pixels)
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Crop your image before you upload
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Image uploads are limited to 2MB
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        Accepted image types: JPG, PNG and SVG
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="name">Name en <span>*</span></label>
+                                                                                        <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="name">Name ar <span>*</span></label>
+                                                                                        <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="description"> Description en <span>*</span></label>
+                                                                                        <input required type="text" name="description" id="description" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="description"> Description ar <span>*</span></label>
+                                                                                        <input required type="text" name="description" id="description" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="alsoKnow">Also Known As en <span>*</span></label>
+                                                                                        <input required type="text" name="alsoKnow" id="alsoKnow" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="alsoKnow">Also Known As ar <span>*</span></label>
+                                                                                        <input required type="text" name="alsoKnow" id="alsoKnow" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="legalname"> Legal Name en</label>
+                                                                                        <input type="text" name="legalname" id="legalname" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="legalname"> Legal Name ar</label>
+                                                                                        <input type="text" name="legalname" id="legalname" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <span class="as_lable_text">Founded Date</span>
+                                                                                    <div class="input_flex_box">
+                                                                                        <div class="form-group">
+                                                                                            <label for="foundedYear"> Year </label>
+                                                                                            <input type="number" name="foundedYear" id="foundedYear" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                        </div>
+                                                                                        <div class="form-group border-custom-0">
+                                                                                            <label for="monthYear"> Month </label>
+                                                                                            <select name="monthYear" class="select2 border-custom-0" id="monthYear">
+                                                                                                <option value="1">1</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="form-group border-custom-0">
+                                                                                            <label for="dayYear">Day </label>
+                                                                                            <select name="dayYear" class="select2 border-custom-0" id="dayYear">
+                                                                                                <option value="1">1</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="as_lable_text">
+                                                                                        <div class="d-flex align-items-center">
+                                                                                            <span>Closed Date</span>
+
+                                                                                            <div class="pretty p-default p-smooth">
+                                                                                                <input id="cbrank" type="checkbox" class="input-checked clos_button" data-opneInput="closed_date" />
+                                                                                                <div class="state p-primary p-svg"><label> </label></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="input_flex_box" id="closed_date">
+                                                                                        <div class="form-group">
+                                                                                            <label for="closedYear"> Year </label>
+                                                                                            <input disabled type="number" name="closedYear" id="closedYear" class="form-control closed_input" placeholder="" aria-describedby="helpId" />
+                                                                                        </div>
+                                                                                        <div class="form-group border-custom-0">
+                                                                                            <label for="monthClosed"> Month </label>
+                                                                                            <select disabled name="monthClosed" class="select2 border-custom-0 closed_input" id="monthClosed">
+                                                                                                <option value="1" selected disabled></option>
+                                                                                                <option value="1">1</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="form-group border-custom-0">
+                                                                                            <label for="dayClosed">Day </label>
+                                                                                            <select disabled name="dayClosed" class="select2 border-custom-0 closed_input" id="dayClosed">
+                                                                                                <option value="1" selected disabled></option>
+                                                                                                <option value="1">1</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group border-custom-0">
+                                                                                        <label for="numberemployees">Number of Employees </label>
+                                                                                        <select name="numberemployees" class="select2 border-custom-0" id="numberemployees">
+                                                                                            <option value="1" selected disabled></option>
+                                                                                            <option value="1">1 - 10</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group border-custom-0">
+                                                                                        <label for="company-type">Company Type</label>
+                                                                                        <select name="company-type" class="select2 border-custom-0" id="company-type">
+                                                                                            <option value="1" selected disabled></option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="facebook">Face Book <i class="fab fa-facebook" aria-hidden="true"></i></label>
+                                                                                        <input required type="text" name="facebook" id="facebook" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="linkedin">LinkedIn <i class="fab fa-linkedin"></i></label>
+                                                                                        <input required type="text" name="linkedin" id="linkedin" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="twitter">Twitter <i class="fab fa-twitter-square" aria-hidden="true"></i></label>
+                                                                                        <input required type="text" name="twitter" id="twitter" class="form-control" placeholder="url" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="contact">Contact Email <i class="fas fa-envelope"></i></label>
+                                                                                        <input required type="text" name="contact" id="contact" class="form-control" placeholder="url" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-12">
+                                                                                    <div class="form-group">
+                                                                                        <label for="phoneNumber">Phone Number <i class="fa fa-phone-square" aria-hidden="true"></i></label>
+                                                                                        <input required type="text" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="Description">Full Description en</label>
+                                                                                <textarea name="Description" id="Description" cols="30" rows="2"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="Description">Full Description ar</label>
+                                                                                <textarea name="Description" id="Description" cols="30" rows="2"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tap_content" id="headquarters_tap">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="title_box">
+                                                                                <h3 class="title"><i class="fas fa-building"></i> <span>Headquarters</span></h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-md-12">
+                                                                            <div class="form-group border-custom-0">
+                                                                                <label for="contry">Country </label>
+                                                                                <div class="add_box_form">
+                                                                                    <select name="contry" class="select2 border-custom-0" id="contry">
+                                                                                        <option value="1" selected disabled></option>
+                                                                                        <option value="1">1</option>
+                                                                                    </select>
+                                                                                    <div class="add_form">
+                                                                                        <a data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                                                                                            <i class="fas fa-plus"></i>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-12">
+                                                                            <div class="form-group border-custom-0">
+                                                                                <label for="city">City </label>
+                                                                                <div class="add_box_form">
+                                                                                    <select name="city" class="select2 border-custom-0" id="city">
+                                                                                        <option value="1" selected disabled></option>
+                                                                                        <option value="1">1</option>
+                                                                                    </select>
+                                                                                    <div class="add_form">
+                                                                                        <a data-bs-toggle="modal" href="#exampleModalToggleLabel2" role="button">
+                                                                                            <i class="fas fa-plus"></i>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label for="postalCode"> Postal Code </label>
+                                                                                <input type="text" name="postalCode" id="postalCode" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12">
+                                                                            <span class="as_lable_text">Address Details</span>
+                                                                            <div class="form-group">
+                                                                                <label for="closedYear"> Address Name </label>
+                                                                                <input type="text" name="closedaddress" id="closedaddress" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="closedaddress1"> Address Line 1</label>
+                                                                                <input type="text" name="closedaddress" id="closedaddress" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="closedaddress2"> Address Line 2 </label>
+                                                                                <input type="text" name="closedaddress" id="closedaddress" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tap_content" id="industries_tap">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="title_box add_box_form">
+                                                                                <h3 class="title"><i class="fas fa-industry"></i> <span>Industries</span></h3>
+                                                                                <div class="add_form">
+                                                                                    <a href="">
+                                                                                        <i class="fas fa-plus"></i>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group border-custom-0">
+                                                                                <label for="Industries">Industries </label>
+                                                                                <select name="Industries" class="multi_s custom_select" id="Industries">
+                                                                                    <option value="1">Software </option>
+                                                                                    <option value="2">Information Technology </option>
+                                                                                    <option value="3">E-Commerce </option>
+                                                                                    <option value="4">4</option>
+                                                                                    <option value="5">5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tap_content" id="founders_tap">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="title_box add_box_form">
+                                                                                <h3 class="title"><i class="fas fa-user-tie"></i> <span>Founders</span></h3>
+                                                                                <div class="add_form">
+                                                                                    <a data-bs-toggle="modal" href="#founderspopUp" role="button">
+                                                                                        <i class="fas fa-plus"></i>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group border-custom-0">
+                                                                                <label for="founders">Founders </label>
+                                                                                <select name="founders" class="multi_s custom_select" id="founders">
+                                                                                    <option value="1">Jeff Bezos </option>
+                                                                                    <option value="2">Warren Buffett </option>
+                                                                                    <option value="3">Marc Benioff </option>
+                                                                                    <option value="4">4</option>
+                                                                                    <option value="5">5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tap_content" id="funding_tap">
+                                                <div class="tap_heade tap_heade_inside">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="tabes-box">
+                                                                <div class="tabs-item active" data-tap="overview_inside2">
+                                                                    Overview
+                                                                </div>
+                                                                
+                                                                <div class="tabs-item " data-tap="location_founded">
+                                                                    Location & founded organization
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-12">
+                                                            <div class="tap_content_section">
+                                                                <div class="tap_content active" id="overview_inside2">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="title_box">
+                                                                                <h3 class="title"><i class="fas fa-newspaper"></i> <span>Overview</span></h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="name">frist Name en <span>*</span></label>
+                                                                                <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="name">frist Name ar <span>*</span></label>
+                                                                                <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="name">last Name en <span>*</span></label>
+                                                                                <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="name">last Name ar <span>*</span></label>
+                                                                                <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label for="gender"> Gender</label>
+                                                                                <div class="checked_group">
+                                                                                    <div class="pretty p-default p-smooth">
+                                                                                        <input id="Mela" name="gender" type="radio" class="input-checked clos_button" data-opneinput="closed_date" />
+                                                                                        <div class="state p-primary p-svg"><label>Mela </label></div>
+                                                                                    </div>
+                                                                                    <div class="pretty p-default p-smooth">
+                                                                                        <input id="Female" name="gender" type="radio" class="input-checked clos_button" data-opneinput="closed_date" />
+                                                                                        <div class="state p-primary p-svg"><label>Female </label></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="alsoKnow">Also Known As en <span>*</span></label>
+                                                                                <input required type="text" name="alsoKnow" id="alsoKnow" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="alsoKnow">Also Known As ar <span>*</span></label>
+                                                                                <input required type="text" name="alsoKnow" id="alsoKnow" class="form-control" placeholder="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="facebook">website <i class="fas fa-globe-europe"></i></label>
+                                                                                <input required type="text" name="facebook" id="facebook" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="facebook">Face Book <i class="fab fa-facebook" aria-hidden="true"></i></label>
+                                                                                <input required type="text" name="facebook" id="facebook" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="linkedin">LinkedIn <i class="fab fa-linkedin"></i></label>
+                                                                                <input required type="text" name="linkedin" id="linkedin" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="twitter">Twitter <i class="fab fa-twitter-square" aria-hidden="true"></i></label>
+                                                                                <input required type="text" name="twitter" id="twitter" class="form-control" placeholder="url" aria-describedby="helpId" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tap_content " id="location_founded">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="title_box add_box_form">
+                                                                                <h3 class="title"><i class="fas fa-map-marker-alt"></i> <span> Location & founded organization </span></h3>
+                                                                                <div class="add_form">
+                                                                                    <a href="">
+                                                                                        <i class="fas fa-plus"></i>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group border-custom-0">
+                                                                                <label for="location">Primary Location </label>
+                                                                                <select name="location" class="select2 custom_select" id="location">
+                                                                                    <option value="1">Software </option>
+                                                                                    <option value="2">Information Technology </option>
+                                                                                    <option value="3">E-Commerce </option>
+                                                                                    <option value="4">4</option>
+                                                                                    <option value="5">5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group border-custom-0">
+                                                                                <label for="founded_org">Founded organization </label>
+                                                                                <select name="founded_org" class="multi_s  custom_select" id="founded_org">
+                                                                                    <option value="1">Software </option>
+                                                                                    <option value="2">Information Technology </option>
+                                                                                    <option value="3">E-Commerce </option>
+                                                                                    <option value="4">4</option>
+                                                                                    <option value="5">5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <!--           end content-->
+        </div>
+
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel">Add Country</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Country en <span>*</span></label>
+                                    <input required="" type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Country en <span>*</span></label>
+                                    <input required="" type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="buttom_style closeandsave"> <span class="borderSpan">Save</span> <span class="hole"></span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalToggleLabel2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel">Add City</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">City en <span>*</span></label>
+                                    <input required="" type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">City en <span>*</span></label>
+                                    <input required="" type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="buttom_style closeandsave"> <span class="borderSpan">Save</span> <span class="hole"></span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="founderspopUp" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sssss">Add Founders</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">frist Name en <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">frist Name ar <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">last Name en <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">last Name ar <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="gender"> Gender</label>
+                                    <div class="checked_group">
+                                        <div class="pretty p-default p-smooth">
+                                            <input id="Mela" name="gender" type="radio" class="input-checked clos_button" data-opneinput="closed_date" />
+                                            <div class="state p-primary p-svg"><label>Mela </label></div>
+                                        </div>
+                                        <div class="pretty p-default p-smooth">
+                                            <input id="Female" name="gender" type="radio" class="input-checked clos_button" data-opneinput="closed_date" />
+                                            <div class="state p-primary p-svg"><label>Female </label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="alsoKnow">Also Known As en <span>*</span></label>
+                                    <input required type="text" name="alsoKnow" id="alsoKnow" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="alsoKnow">Also Known As ar <span>*</span></label>
+                                    <input required type="text" name="alsoKnow" id="alsoKnow" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="facebook">website <i class="fas fa-globe-europe"></i></label>
+                                    <input required type="text" name="facebook" id="facebook" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="facebook">Face Book <i class="fab fa-facebook" aria-hidden="true"></i></label>
+                                    <input required type="text" name="facebook" id="facebook" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="linkedin">LinkedIn <i class="fab fa-linkedin"></i></label>
+                                    <input required type="text" name="linkedin" id="linkedin" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="twitter">Twitter <i class="fab fa-twitter-square" aria-hidden="true"></i></label>
+                                    <input required type="text" name="twitter" id="twitter" class="form-control" placeholder="url" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="buttom_style closeandsave"> <span class="borderSpan">Save</span> <span class="hole"></span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+        <script type="text/javascript" src="./assets/js/tipped.min.js"></script>
+        <script type="text/javascript" src="./assets/js/nouislider.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+            integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+            crossorigin="anonymous"
+        ></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
