@@ -1278,6 +1278,7 @@ html[dir="rtl"] .tabes-box .tabs-item {
   margin: 0 0 20px;
   border-bottom: 1px solid #486fc4;
   padding: 0 0 10px;
+  text-transform: capitalize;
 }
 
 .tap_content_section .tap_content .title_box .title {
