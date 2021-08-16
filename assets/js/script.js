@@ -75,11 +75,11 @@ $(document).ready(function () {
 
     $("a[data-opneModle]").click(function () {
         var opne_data = $(this).attr("data-opneModle");
-        $("#" + opne_data).show();
+        $("#" + opne_data).addClass("opned_pop");
         $("body").addClass("over_y");
     });
     $(".custome-btn-close").click(function () {
-        $(".custome_modle").hide();
+        $(".custome_modle").removeClass("opned_pop");
         $("body").removeClass("over_y");
     });
 

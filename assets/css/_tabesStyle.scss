@@ -28,6 +28,7 @@
     background-color: #e9eff5;
     // margin: 0 0 10px;
     .tabs-item {
+        text-transform: capitalize;
         cursor: pointer;
         display: flex;
         html[dir="ltr"] & {

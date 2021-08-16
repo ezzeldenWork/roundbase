@@ -403,6 +403,9 @@ button {
     .modal-title {
         text-transform: capitalize;
     }
+    &.opned_pop{
+      display: flex;
+    }
 }
 
 .custome-btn-close {
