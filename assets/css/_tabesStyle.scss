@@ -1,6 +1,6 @@
 .tap_heade {
     background-color: #e9eff5;
-    &.tap_heade_inside{
+    &.tap_heade_inside {
         background-color: transparent;
         .tabes-box {
             background-color: transparent;
@@ -10,12 +10,12 @@
                 padding: 10px 26px;
                 border-radius: 80px;
                 box-shadow: unset;
-                color: rgba($black-color, .5);
-                &.active{   
+                color: rgba($black-color, 0.5);
+                &.active {
                     font-weight: 550;
                     color: rgba($black-color, 1);
                 }
-                &::after{
+                &::after {
                     display: none;
                 }
             }
@@ -74,9 +74,6 @@
             padding: 0 4px;
         }
     }
-
-
-
 }
 
 .tab-title {
@@ -85,27 +82,23 @@
     font-weight: 500;
 }
 
-
-.tap_content_section{
-    .tap_content{
+.tap_content_section {
+    .tap_content {
         display: none;
         padding: 20px;
-        &.active{
+        &.active {
             display: block;
         }
 
-
-
-        
-    .title_box{
-        margin: 0 0 20px;
-        border-bottom: 1px solid rgba($blue-color, 1);
-        padding: 0 0 10px;
-        .title{
-            font-size: 22px;
-            font-weight: 600;
-            color: rgba($min-color, 1);
+        .title_box {
+            margin: 0 0 20px;
+            border-bottom: 1px solid rgba($blue-color, 1);
+            padding: 0 0 10px;
+            .title {
+                font-size: 22px;
+                font-weight: 600;
+                color: rgba($min-color, 1);
+            }
         }
-    }
     }
 }

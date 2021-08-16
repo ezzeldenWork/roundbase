@@ -349,6 +349,12 @@ html[dir="rtl"] .tap_heade .lang-box {
   }
 }
 
+@media (max-width: 992px) {
+  body.pad_cus {
+    padding: 0 10px 20px;
+  }
+}
+
 .after_none {
   padding: 0;
 }
@@ -373,6 +379,11 @@ html[dir="rtl"] .tap_heade .lang-box {
   margin: 0 4px;
 }
 
+.as_lable_text.back-none {
+  margin: 0;
+  background-color: transparent;
+}
+
 .form-group label {
   font-size: 14px;
   color: rgba(51, 51, 51, 0.7);
@@ -388,7 +399,8 @@ html[dir="rtl"] .tap_heade .lang-box {
   font-size: 21px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   border-radius: 0;
   border: 0;
   border-bottom: 1px solid #1e3056;
@@ -404,6 +416,11 @@ html[dir="rtl"] .tap_heade .lang-box {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.add_box_form.back-gray {
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.1);
 }
 
 .add_box_form .add_form a {
@@ -433,6 +450,41 @@ html[dir="rtl"] .tap_heade .lang-box {
       -ms-flex-align: center;
           align-items: center;
   margin: 4px 0;
+}
+
+.custome_modle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(51, 51, 51, 0.1);
+  z-index: 111;
+  display: none;
+}
+
+.custome_modle .modal-title {
+  text-transform: capitalize;
+}
+
+.custome-btn-close {
+  background-color: transparent;
+  font-size: x-large;
+}
+
+.over_y {
+  overflow-y: hidden;
+}
+
+.modal-dialog {
+  height: calc(100% - 20px);
+  overflow-y: auto;
 }
 
 .header_section {
@@ -2788,6 +2840,8 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .profile_img .img_box {
@@ -2796,6 +2850,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   height: 100px;
   overflow: hidden;
   position: relative;
+  margin: 0 0 10px;
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -2865,12 +2920,22 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-block: 10px 0 30px;
+  margin: 10px 0 30px;
 }
 
 .input_flex_box .form-group {
   width: calc(100% - 20px);
   margin: 6px;
+}
+
+@media (max-width: 772px) {
+  .tap_heade.tap_heade_inside .tabes-box .tabs-item {
+    margin: 10px 4px;
+  }
+  .input_flex_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .body_box {
