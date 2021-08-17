@@ -235,7 +235,7 @@
         background-color: rgba($blue-color, 1);
         font-weight: 500;
         color: rgba($white-color, 1);
-        border-radius: 5px;
+        @extend%bordR4;
     }
 }
 
@@ -258,7 +258,7 @@
                     img {
                         height: 40px;
                         box-shadow: 0 4px 8px -2px rgba($darkgray-color, 0.4);
-                        border-radius: 5px;
+                        @extend%bordR4;
                     }
                     .text {
                         font-size: 18px;

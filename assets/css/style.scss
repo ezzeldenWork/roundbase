@@ -1,22 +1,20 @@
-@import "vars", "minCLasss", "header_style" , "log_form" , "tableStyle", "tabesStyle", "pop_upBox", "filter_box", "recomendation",  "registerStyle", "add_page";
+@import "vars",
+"minCLasss",
+"form-style",
+"header_style",
+"log_form",
+"tableStyle",
+"tabBox",
+"pop_upBox",
+"filter_box",
+"recomendation",
+"registerStyle",
+"add_page",
 
 
-// body_box
-.body_box {
-    
-    padding: 60px 0 ;
-    .body_content {
-        background-color: $white-color;
-        border-radius: 4px;
-        overflow: hidden;
-        box-shadow: 0px 6px 10px rgba($black-color, 0.1);
-    }
-}
-// body_box
 
-// to extent
 
-%trans-4 {
-    transition: 0.4s all ease-in-out;
-}
 
+
+"keyFram",
+"extendClass";
