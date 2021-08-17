@@ -71,6 +71,23 @@ $(document).ready(function () {
         }
     });
 
+    // opne Closed input
+
+    $(".clos_button2").click(function () {
+        var closed_date = $(this).attr("data-opneInput");
+        $(this).toggleClass("closed_buttom_tre");
+        if ($(this).hasClass("closed_buttom_tre") == true) {
+            $("#" + closed_date)
+                .find(".closed_Now")
+                .attr("disabled", true);
+        }
+        if ($(this).hasClass("closed_buttom_tre") == false) {
+            $("#" + closed_date)
+                .find(".closed_Now")
+                .attr("disabled", false);
+        }
+    });
+
     // data-opneModle
 
     $("a[data-opneModle]").click(function () {
