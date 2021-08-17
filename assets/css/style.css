@@ -393,6 +393,10 @@ html[dir="rtl"] .tap_heade .lang-box {
   text-transform: capitalize;
 }
 
+.form-group label i {
+  margin: 0 4px;
+}
+
 .form-group label span {
   top: -7px;
   position: absolute;

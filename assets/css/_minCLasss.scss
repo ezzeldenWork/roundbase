@@ -346,6 +346,9 @@ button {
         display: block;
         position: relative;
         text-transform: capitalize;
+        i{
+            margin: 0 4px;
+        }
         span {
             top: -7px;
             position: absolute;
