@@ -1,7 +1,5 @@
 .img_box {
     cursor: pointer;
-    width: 100px;
-    height: 100px;
     overflow: hidden;
     position: relative;
     margin: 0 0 10px;
@@ -26,6 +24,12 @@
         justify-content: center;
         color: rgba($black-color, 0.7);
         opacity: 0;
+    }
+    &.full_img{
+        img {
+        width: 200px ;
+        height: 200px ;
+        }
     }
     img {
         width: 100px;
