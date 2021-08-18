@@ -228,6 +228,7 @@ html[dir="rtl"] .tap_heade .lang-box {
   font-weight: 600;
   margin: 0 0 20px;
   color: black;
+  text-transform: capitalize;
 }
 
 input,
@@ -2924,9 +2925,21 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
 .box_item {
   position: relative;
   padding: 20px 40px 10px;
+  border-radius: 10px;
   background-color: white;
-  margin: 10px 0 30px;
+  margin: 10px 0;
   border: 1px solid #dddddd;
+}
+
+.box_item.tow_one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(48.5% - 10px);
 }
 
 .box_item .edite_icon {
@@ -3041,6 +3054,7 @@ html[dir="rtl"] .box_item ul.have_line li::after {
 }
 
 .box_item ul.links_list li .lable_text {
+  text-transform: capitalize;
   min-width: 40%;
   font-weight: 550;
   font-size: 14px;
@@ -3108,6 +3122,6 @@ html[dir="rtl"] .box_item ul.have_line li::after {
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .buttom_style, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .box_item {
+.lang-box .lang_content, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .buttom_style, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img {
   border-radius: 4px;
 }
