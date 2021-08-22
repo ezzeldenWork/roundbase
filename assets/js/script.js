@@ -425,7 +425,7 @@ $(document).ready(function () {
 
     $(".recomendation_item").each(function () {
         const card_html = $(this).children(".min_content").children(".min_side").children(".title_box").children(".min-title-box").html();
-        $(this).children(".min_content").children(".min_side").children(".img_box").children(".title_seucond").html(card_html);
+        $(this).children(".min_content").children(".min_side").children(".img_box_recomaend").children(".title_seucond").html(card_html);
     });
 
     $(".list_card_box .list_box i").click(function () {

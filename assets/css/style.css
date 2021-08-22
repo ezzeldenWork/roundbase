@@ -2158,7 +2158,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
           align-items: center;
 }
 
-.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box {
+.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2169,7 +2169,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
       flex-wrap: wrap;
 }
 
-.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box img {
+.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img {
   height: 100px;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -2177,7 +2177,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
      object-fit: contain;
 }
 
-.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box .title_seucond {
+.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend .title_seucond {
   display: none;
 }
 
@@ -2387,17 +2387,17 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   display: block;
 }
 
-.recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box {
+.recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box_recomaend {
   margin: 0 0 10px;
 }
 
-.recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box .title_seucond {
+.recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box_recomaend .title_seucond {
   width: 50%;
   display: block;
   margin: 8px 16px;
 }
 
-.recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box .title_seucond .recomendation_title {
+.recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box_recomaend .title_seucond .recomendation_title {
   font-size: 18px;
 }
 
@@ -2442,7 +2442,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content {
     padding: 20px;
   }
-  .recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box .title_seucond {
+  .recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .min_side .img_box_recomaend .title_seucond {
     width: 100%;
   }
   .recomendation_section .recomendation_box .recomendation_list.card_style .card-li .min_content .note_side .note_title {
@@ -3397,6 +3397,6 @@ html[dir="ltr"] .dash_boxs .statistics_content .statistics_line .statistics_box:
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .buttom_style, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs {
+.lang-box .lang_content, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .buttom_style, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs {
   border-radius: 4px;
 }

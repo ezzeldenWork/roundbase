@@ -156,7 +156,7 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        .img_box {
+                        .img_box_recomaend {
                             display: flex;
                             align-items: center;
                             flex-wrap: wrap;
@@ -333,7 +333,7 @@
                         min-height: 390px;
                         .min_side {
                             display: block;
-                            .img_box {
+                            .img_box_recomaend {
                                 margin: 0 0 10px;
                                 .title_seucond {
                                     width: 50%;
@@ -389,7 +389,7 @@
                             }
 
                             .min_side {
-                                .img_box {
+                                .img_box_recomaend {
                                     .title_seucond {
                                         width: 100%;
                                     }
