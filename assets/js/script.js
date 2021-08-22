@@ -54,6 +54,19 @@ $(document).ready(function () {
         $(".registerbox").show();
     });
 
+
+
+
+    // button_redio_box
+
+    $(".button_redio_box").click(function(){
+        $(this).addClass("checked_class");
+        $(this).siblings().removeClass("checked_class");
+    });
+
+
+
+
     // opne Closed input
 
     $(".clos_button").click(function () {

@@ -25,11 +25,28 @@
         color: rgba($black-color, 0.7);
         opacity: 0;
     }
-    &.full_img{
+    &.full_img {
         img {
-        width: 200px ;
-        height: 200px ;
+            width: 200px;
+            height: 200px;
         }
+    }
+    &.border_new_50{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .screen_shot_title{
+        font-weight: 700;
+        font-size: 35px;
+        color: rgba($white-color, 1);
     }
     img {
         width: 100px;
@@ -49,47 +66,108 @@
     }
 }
 
-
-
 .profile_img {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-
-  .img_role {
-      padding: 0 40px;
-      color: rgba($darkgray-color, 0.5);
-      li {
-          font-size: 14px;
-          font-weight: 500;
-          padding: 4px 0;
-      }
-  }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .title_box_text{
+        font-size: 16px;
+        margin: 0 10PX;
+    }
+    .img_role {
+        padding: 0 40px;
+        color: rgba($darkgray-color, 0.5);
+        li {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 4px 0;
+        }
+    }
 }
 
 .input_flex_box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0 30px;
-  .form-group {
-      width: calc(100% - 20px);
-      margin: 6px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 30px;
+    .form-group {
+        width: calc(100% - 20px);
+        margin: 6px;
+    }
 }
 
 @media (max-width: 772px) {
-  .tap_heade {
-      &.tap_heade_inside {
-          .tabes-box {
-              .tabs-item {
-                  margin: 10px 4px;
-              }
-          }
-      }
-  }
-  .input_flex_box {
-      flex-wrap: wrap;
-  }
+    .tap_heade {
+        &.tap_heade_inside {
+            .tabes-box {
+                .tabs-item {
+                    margin: 10px 4px;
+                }
+            }
+        }
+    }
+    .input_flex_box {
+        flex-wrap: wrap;
+    }
+}
+
+.redio_like_butto {
+    display: flex;
+    align-items: center;
+    .button_redio_box{
+        margin: 10px 0;
+        &.checked_class{
+            .option {
+                background-color: rgba($blue-color, 1);
+                border-color: rgba($blue-color, 1);
+                .dot{
+                    background: rgba($white-color, 1);
+                    &::before{
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+
+                  }
+                  span{
+                    color: rgba($white-color, 1);
+                  }
+            }
+        }
+        .option {
+            background: rgba($white-color, 1);
+            height: 40px;
+            width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid rgba($gray-color, 1);
+            transition: all 0.3s ease;
+            .dot {
+                height: 20px;
+                width: 20px;
+                background: rgba($gray-color, 1);
+                border-radius: 50%;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 4px;
+                    left: 4px;
+                    width: 12px;
+                    height: 12px;
+                    background: rgba($blue-color, 1);
+                    border-radius: 50%;
+                    opacity: 0;
+                    transform: scale(1.5);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+    .redio_button_like {
+        display: none;
+    }
 }

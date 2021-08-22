@@ -21,7 +21,7 @@
       background-color: rgba($white-color, 1);
       align-items: center;
       padding: 8px 18px;
-       @extend%bordR4;
+       @extend%bord_r4;
       width: 75%;
       margin: 0 10px;
       input {
@@ -68,7 +68,7 @@
           position: absolute;
           padding: 8px 0;
           top: 115%;
-           @extend%bordR4;
+           @extend%bord_r4;
           box-shadow: 0 4px 8px rgba($min-color, 0.1);
           ul {
               li {
@@ -115,7 +115,7 @@
     text-align: center;
     margin: 0 10px;
     padding: 10px;
-     @extend%bordR4;
+     @extend%bord_r4;
     @extend%trans-4;
     &:hover{
       background-color: rgba($white-color, 0.1);

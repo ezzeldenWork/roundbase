@@ -126,7 +126,7 @@
                         .input-box {
 
                             .input-group_custom{
-                                @extend%bordR4;
+                                @extend%bord_r4;
                                 padding: 0 4px;
                                 border: 2px solid rgba($min-color, 0.2);
                                 display: flex;
@@ -144,7 +144,7 @@
 
 
                             input {
-                                @extend%bordR4;
+                                @extend%bord_r4;
                                 padding: 0 4px;
                                 border: 2px solid rgba($min-color, 0.2);
                                 &:focus {
@@ -196,7 +196,7 @@
     padding: 5px 20px;
     margin: 10px 0 0;
     border: 1px solid rgba($blue-color, 1);
-    @extend%bordR4;
+    @extend%bord_r4;
     color: #0d6efd;
     @extend%trans-4;
     &:hover{
@@ -279,7 +279,7 @@
     font-weight: 600;
     font-size: 14px;
     @extend%trans-4;
-    @extend%bordR4;
+    @extend%bord_r4;
     display: inline-block;
     color: #0a58ca;
     &:hover{

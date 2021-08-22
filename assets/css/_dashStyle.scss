@@ -1,0 +1,129 @@
+.dash_list {
+  padding: 10px 0 16px;
+  border-bottom: 1px solid #0000001f;
+  ul {
+    li {
+      a {
+        display: block;
+        padding: 6px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba($min-color, 1);
+        margin-top: 4px;
+        text-transform: capitalize;
+        position: relative;
+        z-index: 1;
+        i {
+          margin: 0 4px 0 0;
+        }
+        &:hover {
+          background-color: rgba($darkgray-color, 0.1);
+        }
+      }
+      &.icon_list {
+        a {
+          padding-inline: 4px;
+          &::after {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-image: linear-gradient(
+              90deg,
+              rgba($gold-color, 0.2),
+              #f5a62300
+            );
+            content: "";
+          }
+          i {
+            color: rgba($gold-color, 1);
+          }
+          .textr {
+            color: rgba($min-color, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  TODO: this is dash_boxs 
+*/
+
+.dash_boxs {
+  @extend%bord_r4;
+  box-shadow: 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
+  background-color: rgba($white-color, 1);
+  margin: 0 0 10px;
+  .title-box {
+    padding: 6px;
+    border-bottom: 1px solid rgba($gray-color, 1);
+    .min-title {
+        display: flex;
+        align-items: center;
+        .small_img{
+          height: 20px;
+          margin: 0 2px;
+        }
+
+      .title_box_text {
+        font-size: 16px;
+        font-weight: 500;
+        margin-block: 4px;
+      }
+    }
+    .list_title {
+      font-size: 14px;
+      letter-spacing: 0.4px;
+      font-weight: 500;
+    }
+  }
+  .statistics_content {
+    border-bottom: 1px solid rgba($gray-color, 1);
+    padding-block: 6px;
+    .statistics_line {
+      display: flex;
+      border-bottom: 1px solid rgba($gray-color, 1);
+      &:last-of-type {
+        border-bottom: 0;
+      }
+      .statistics_box {
+        width: 50%;
+        text-align: center;
+        padding: 10px 0;
+        margin: 6px 0;
+        html[dir="rtl"] & {
+          border-right: 1px solid rgba($gray-color, 1);
+          &:first-of-type {
+            border-right: 0;
+          }
+        }
+        html[dir="ltr"] & {
+          border-left: 1px solid rgba($gray-color, 1);
+          &:first-of-type {
+            border-left:0;
+          }
+        }
+        a {
+          display: block;
+          .number_content {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: rgba($blue-color, 1);
+          }
+          .tilte_content {
+            font-size: 13px;
+            color: rgba($darkgray-color, 1);
+          }
+        }
+      }
+    }
+  }
+
+  .edite_box {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+}

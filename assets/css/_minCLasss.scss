@@ -92,7 +92,7 @@ body {
         }
     }
     .lang_content {
-        @extend%bordR4;
+        @extend%bord_r4;
         padding: 2px 4px;
         border: 1px solid rgba($min-color, 1);
         a {
@@ -202,6 +202,11 @@ body {
 }
 
 
+
+/*
+  TODO: this is title style
+*/
+
 .title_box_text{
     font-size: 24px ;
     font-weight: 600;
@@ -209,3 +214,12 @@ body {
     color: rgba($black-color, 1);
     text-transform: capitalize;
 }
+
+
+.list_title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba($darkgray-color, 0.7);
+    margin: 10px 0 6px;
+  }

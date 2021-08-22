@@ -223,12 +223,23 @@ html[dir="rtl"] .tap_heade .lang-box {
   margin: 0 10px;
 }
 
+/*
+  TODO: this is title style
+*/
 .title_box_text {
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 20px;
   color: black;
   text-transform: capitalize;
+}
+
+.list_title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.7);
+  margin: 10px 0 6px;
 }
 
 input,
@@ -2854,6 +2865,32 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   height: 200px;
 }
 
+.img_box.border_new_50 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.img_box.border_new_50 img {
+  width: 60px;
+  height: 60px;
+}
+
+.img_box .screen_shot_title {
+  font-weight: 700;
+  font-size: 35px;
+  color: white;
+}
+
 .img_box img {
   width: 100px;
   height: 100px;
@@ -2881,6 +2918,11 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.profile_img .title_box_text {
+  font-size: 16px;
+  margin: 0 10PX;
 }
 
 .profile_img .img_role {
@@ -2920,6 +2962,87 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.redio_like_butto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.redio_like_butto .button_redio_box {
+  margin: 10px 0;
+}
+
+.redio_like_butto .button_redio_box.checked_class .option {
+  background-color: #486fc4;
+  border-color: #486fc4;
+}
+
+.redio_like_butto .button_redio_box.checked_class .option .dot {
+  background: white;
+}
+
+.redio_like_butto .button_redio_box.checked_class .option .dot::before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.redio_like_butto .button_redio_box.checked_class .option span {
+  color: white;
+}
+
+.redio_like_butto .button_redio_box .option {
+  background: white;
+  height: 40px;
+  width: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #dddddd;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.redio_like_butto .button_redio_box .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #dddddd;
+  border-radius: 50%;
+  position: relative;
+}
+
+.redio_like_butto .button_redio_box .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #486fc4;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.redio_like_butto .redio_button_like {
+  display: none;
 }
 
 .box_item {
@@ -3077,6 +3200,158 @@ html[dir="rtl"] .box_item ul.have_line li::after {
   color: #486fc4;
 }
 
+.dash_list {
+  padding: 10px 0 16px;
+  border-bottom: 1px solid #0000001f;
+}
+
+.dash_list ul li a {
+  display: block;
+  padding: 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3056;
+  margin-top: 4px;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+}
+
+.dash_list ul li a i {
+  margin: 0 4px 0 0;
+}
+
+.dash_list ul li a:hover {
+  background-color: rgba(51, 51, 51, 0.1);
+}
+
+.dash_list ul li.icon_list a {
+  padding-inline: 4px;
+}
+
+.dash_list ul li.icon_list a::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(250, 177, 24, 0.2)), to(#f5a62300));
+  background-image: linear-gradient(90deg, rgba(250, 177, 24, 0.2), #f5a62300);
+  content: "";
+}
+
+.dash_list ul li.icon_list a i {
+  color: #fab118;
+}
+
+.dash_list ul li.icon_list a .textr {
+  color: #1e3056;
+}
+
+/*
+  TODO: this is dash_boxs 
+*/
+.dash_boxs {
+  -webkit-box-shadow: 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
+          box-shadow: 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
+  background-color: white;
+  margin: 0 0 10px;
+}
+
+.dash_boxs .title-box {
+  padding: 6px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.dash_boxs .title-box .min-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dash_boxs .title-box .min-title .small_img {
+  height: 20px;
+  margin: 0 2px;
+}
+
+.dash_boxs .title-box .min-title .title_box_text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-block: 4px;
+}
+
+.dash_boxs .title-box .list_title {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+}
+
+.dash_boxs .statistics_content {
+  border-bottom: 1px solid #dddddd;
+  padding-block: 6px;
+}
+
+.dash_boxs .statistics_content .statistics_line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #dddddd;
+}
+
+.dash_boxs .statistics_content .statistics_line:last-of-type {
+  border-bottom: 0;
+}
+
+.dash_boxs .statistics_content .statistics_line .statistics_box {
+  width: 50%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 6px 0;
+}
+
+html[dir="rtl"] .dash_boxs .statistics_content .statistics_line .statistics_box {
+  border-right: 1px solid #dddddd;
+}
+
+html[dir="rtl"] .dash_boxs .statistics_content .statistics_line .statistics_box:first-of-type {
+  border-right: 0;
+}
+
+html[dir="ltr"] .dash_boxs .statistics_content .statistics_line .statistics_box {
+  border-left: 1px solid #dddddd;
+}
+
+html[dir="ltr"] .dash_boxs .statistics_content .statistics_line .statistics_box:first-of-type {
+  border-left: 0;
+}
+
+.dash_boxs .statistics_content .statistics_line .statistics_box a {
+  display: block;
+}
+
+.dash_boxs .statistics_content .statistics_line .statistics_box a .number_content {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #486fc4;
+}
+
+.dash_boxs .statistics_content .statistics_line .statistics_box a .tilte_content {
+  font-size: 13px;
+  color: #333333;
+}
+
+.dash_boxs .edite_box {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @-webkit-keyframes opacity_animation {
   0% {
     opacity: 0;
@@ -3122,6 +3397,6 @@ html[dir="rtl"] .box_item ul.have_line li::after {
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .buttom_style, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img {
+.lang-box .lang_content, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .clear-filter, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar .buttom_style, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs {
   border-radius: 4px;
 }
