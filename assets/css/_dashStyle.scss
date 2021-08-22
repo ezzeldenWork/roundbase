@@ -1,21 +1,13 @@
 .dash_list {
   padding: 10px 0 16px;
   border-bottom: 1px solid #0000001f;
+  &:last-of-type {
+    border-bottom: 0;
+  }
   ul {
     li {
       a {
-        display: block;
-        padding: 6px 0;
-        font-size: 16px;
-        font-weight: 600;
-        color: rgba($min-color, 1);
-        margin-top: 4px;
-        text-transform: capitalize;
-        position: relative;
-        z-index: 1;
-        i {
-          margin: 0 4px 0 0;
-        }
+        @extend%title_home_style;
         &:hover {
           background-color: rgba($darkgray-color, 0.1);
         }
@@ -55,21 +47,60 @@
   box-shadow: 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
   background-color: rgba($white-color, 1);
   margin: 0 0 10px;
+
+  .img-title {
+    padding: 20px 20px 8px;
+    .head-box {
+      display: flex;
+      align-items: center;
+      img {
+        box-shadow: 0 2px 1px -1px #0003, 0 1px 1px 0 #00000024,
+          0 1px 3px 0 #0000001f;
+        height: 40px;
+        @extend%bord_r4;
+      }
+      .title_link {
+        margin: 0 8px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba($darkgray-color, 1);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .prag {
+      font-size: 13px;
+      line-height: 20px;
+      color: rgba($darkgray-color, 0.8);
+      letter-spacing: 0.2px;
+      font-weight: 500;
+      white-space: normal;
+      overflow-wrap: break-word;
+      margin-top: 8px;
+      font-style: italic;
+    }
+  }
+
+
+
   .title-box {
-    padding: 6px;
+    padding: 10px 6px;
     border-bottom: 1px solid rgba($gray-color, 1);
     .min-title {
-        display: flex;
-        align-items: center;
-        .small_img{
-          height: 20px;
-          margin: 0 2px;
-        }
-
+      display: flex;
+      align-items: center;
+      .small_img {
+        height: 20px;
+      }
+      i {
+        font-size: 20px;
+      }
       .title_box_text {
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 15px;
+        font-weight: 550;
         margin-block: 4px;
+        margin: 0 8px;
       }
     }
     .list_title {
@@ -78,6 +109,13 @@
       font-weight: 500;
     }
   }
+
+
+  .button-bar {
+    padding: 10px 12px;
+    justify-content: space-between;
+  }
+
   .statistics_content {
     border-bottom: 1px solid rgba($gray-color, 1);
     padding-block: 6px;
@@ -101,7 +139,7 @@
         html[dir="ltr"] & {
           border-left: 1px solid rgba($gray-color, 1);
           &:first-of-type {
-            border-left:0;
+            border-left: 0;
           }
         }
         a {
@@ -121,9 +159,67 @@
     }
   }
 
+  .dash_comapny_list_box {
+    border-bottom: 1px solid rgba($gray-color, 1);
+    .dash_company_list {
+      padding: 10px 0;
+      &.list_style_number {
+        list-style: decimal-leading-zero;
+        html[dir="ltr"] & {
+          padding-left: 30px;
+        }
+        html[dir="rtl"] & {
+          padding-right: 30px;
+        }
+        li {
+          .list_itme_box_company {
+            padding: 0;
+            html[dir="ltr"] & {
+              padding-right: 4px;
+            }
+            html[dir="rtl"] & {
+              padding-left: 4px;
+            }
+          }
+        }
+      }
+      li {
+        font-size: 14px;
+        .list_itme_box_company {
+          margin: 4px 0;
+          padding: 0 6px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .img-list-box {
+            a {
+              display: flex;
+              align-items: center;
+              img {
+                height: 25px;
+                box-shadow: 0 2px 1px -1px #0003, 0 1px 1px 0 #00000024,
+                  0 1px 3px 0 #0000001f;
+              }
+              .dash_company_list_title {
+                font-size: 14px;
+                font-weight: 600;
+                margin: 0 10px;
+                color: rgba($blue-color, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .edite_box {
     padding: 10px 0;
     display: flex;
     justify-content: center;
   }
+}
+
+.dash_content_title {
+  @extend%title_home_style;
 }
