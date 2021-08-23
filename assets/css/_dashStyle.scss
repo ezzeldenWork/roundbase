@@ -47,7 +47,9 @@
   box-shadow: 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
   background-color: rgba($white-color, 1);
   margin: 0 0 10px;
-
+  &.shadow_none {
+    box-shadow: unset;
+  }
   .img-title {
     padding: 20px 20px 8px;
     .head-box {
@@ -82,8 +84,6 @@
     }
   }
 
-
-
   .title-box {
     padding: 10px 6px;
     border-bottom: 1px solid rgba($gray-color, 1);
@@ -109,7 +109,6 @@
       font-weight: 500;
     }
   }
-
 
   .button-bar {
     padding: 10px 12px;
@@ -163,6 +162,11 @@
     border-bottom: 1px solid rgba($gray-color, 1);
     .dash_company_list {
       padding: 10px 0;
+      &.list_hgt {
+        @extend%scrollbar_style;
+        overflow-y: auto;
+        height: 219px;
+      }
       &.list_style_number {
         list-style: decimal-leading-zero;
         html[dir="ltr"] & {
@@ -217,6 +221,31 @@
     padding: 10px 0;
     display: flex;
     justify-content: center;
+  }
+
+  .dash_statistics_content {
+    .statistics_box {
+      text-align: center;
+      padding: 30px 0;
+      border-right: 1px solid rgba($gray-color, 1);
+
+      i {
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+        color: rgba($sub_color, 1);
+      }
+      .number_content {
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: rgba($min-color, 0.8);
+        font-family: "Roboto", sans-serif;
+      }
+      .tilte_content {
+        font-size: 0.95rem;
+        font-weight: 300;
+        color: rgba($gray-color2, 1);
+      }
+    }
   }
 }
 

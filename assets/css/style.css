@@ -3266,6 +3266,11 @@ html[dir="rtl"] .box_item ul.have_line li::after {
   margin: 0 0 10px;
 }
 
+.dash_boxs.shadow_none {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
 .dash_boxs .img-title {
   padding: 20px 20px 8px;
 }
@@ -3413,6 +3418,11 @@ html[dir="ltr"] .dash_boxs .statistics_content .statistics_line .statistics_box:
   padding: 10px 0;
 }
 
+.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt {
+  overflow-y: auto;
+  height: 219px;
+}
+
 .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_number {
   list-style: decimal-leading-zero;
 }
@@ -3487,6 +3497,31 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
           justify-content: center;
 }
 
+.dash_boxs .dash_statistics_content .statistics_box {
+  text-align: center;
+  padding: 30px 0;
+  border-right: 1px solid #dddddd;
+}
+
+.dash_boxs .dash_statistics_content .statistics_box i {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  color: #ba2c63;
+}
+
+.dash_boxs .dash_statistics_content .statistics_box .number_content {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: rgba(30, 48, 86, 0.8);
+  font-family: "Roboto", sans-serif;
+}
+
+.dash_boxs .dash_statistics_content .statistics_box .tilte_content {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #a2a5b9;
+}
+
 @-webkit-keyframes opacity_animation {
   0% {
     opacity: 0;
@@ -3558,4 +3593,20 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
 
 .dash_list ul li a a:hover, .dash_content_title a:hover {
   text-decoration: underline;
+}
+
+.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-track {
+  background: #dddddd !important;
+}
+
+.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-thumb {
+  background: #333333 !important;
+}
+
+.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-thumb:hover {
+  background: #1e3056 !important;
 }
