@@ -165,12 +165,6 @@ html[dir="rtl"] .tap_heade .lang-box {
   overflow-y: hidden;
 }
 
-.modal-dialog {
-  height: calc(100% - 20px);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 @media (max-width: 992px) {
   .lang-box {
     padding: 14px 0;
@@ -308,6 +302,17 @@ html[dir="rtl"] .tap_heade .lang-box {
 
 .button-bar .openin_box button.dislikeit:hover {
   background-color: rgba(186, 44, 99, 0.5);
+}
+
+.modal-content-pop {
+  max-height: calc(100% - 20px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 8px rgba(51, 51, 51, 0.1);
+          box-shadow: 2px 2px 8px rgba(51, 51, 51, 0.1);
+  width: 950px;
+  max-width: 100%;
 }
 
 input,
@@ -3568,7 +3573,7 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .button-bar .buttom_style, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img {
+.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img {
   border-radius: 4px;
 }
 
@@ -3596,18 +3601,18 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
   text-decoration: underline;
 }
 
-.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar {
+.modal-content-pop::-webkit-scrollbar, .dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar {
   width: 5px !important;
 }
 
-.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-track {
+.modal-content-pop::-webkit-scrollbar-track, .dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-track {
   background: #dddddd !important;
 }
 
-.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-thumb {
+.modal-content-pop::-webkit-scrollbar-thumb, .dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-thumb {
   background: rgba(51, 51, 51, 0.2) !important;
 }
 
-.dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-thumb:hover {
+.modal-content-pop::-webkit-scrollbar-thumb:hover, .dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-thumb:hover {
   background: rgba(30, 48, 86, 0.7) !important;
 }

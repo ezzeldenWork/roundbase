@@ -169,12 +169,7 @@ body {
 .over_y {
     overflow-y: hidden;
 }
-.modal-dialog {
-    height: calc(100% - 20px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    // @extend%scrollbar_style;
-}
+
 @media (max-width: 992px) {
     .lang-box {
         padding: 14px 0;
@@ -315,3 +310,20 @@ body {
         }
     }
 }
+
+
+
+
+
+
+
+.modal-content-pop {
+    max-height: calc(100% - 20px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba($white-color, 1);
+    box-shadow: 2px 2px 8px rgba($darkgray-color, 0.1);
+    @extend%scrollbar_style,%bord_r4;
+    width: 950px;
+    max-width: 100%;
+}   
