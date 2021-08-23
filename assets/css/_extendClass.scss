@@ -43,11 +43,11 @@
 
   // /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: rgba($darkgray-color, 1) !important;
+    background: rgba($darkgray-color, .2) !important;
   }
 
   // /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: rgba($min-color, 1) !important;
+    background: rgba($min-color, .7) !important;
   }
 }
