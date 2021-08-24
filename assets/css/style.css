@@ -633,155 +633,94 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
 }
 
 .header_section {
-  padding: 10px 0;
-  background-color: #1e3056 !important;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-
-.header_section .logo_box img {
-  height: 50px;
-}
-
-.header_section .search_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header_section .search_header_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 10px 0 10px;
   background-color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 8px 18px;
-  width: 75%;
-  margin: 0 10px;
+  border-top: 10px solid #1e3056;
+  border-bottom: 1px solid rgba(30, 48, 86, 0.2);
+  -webkit-box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
+          box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
 }
 
-.header_section .search_header_box input {
-  border: 0;
-  margin: 0 10px;
+.header_section .logo-box a img {
+  height: 65px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: auto;
 }
 
-.header_section .menu_box {
-  position: relative;
-  cursor: pointer;
+.header_section .top_nav {
+  text-align: end;
 }
 
-.header_section .menu_box .text-menu {
-  font-size: 12px;
-  font-weight: 550;
-  color: white;
-  position: relative;
-  position: relative;
-}
-
-html[dir="rtl"] .header_section .menu_box .text-menu {
-  padding-left: 24px;
-}
-
-html[dir="ltr"] .header_section .menu_box .text-menu {
-  padding-right: 24px;
-}
-
-.header_section .menu_box .text-menu::after {
-  content: "\f078";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 700;
-  top: 50%;
-  color: inherit;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-html[dir="rtl"] .header_section .menu_box .text-menu::after {
-  left: 0;
-}
-
-html[dir="ltr"] .header_section .menu_box .text-menu::after {
-  right: 0;
-}
-
-.header_section .menu_box .sub_menu {
-  display: none;
-  background-color: white;
-  position: absolute;
-  padding: 8px 0;
-  top: 115%;
-  -webkit-box-shadow: 0 4px 8px rgba(30, 48, 86, 0.1);
-          box-shadow: 0 4px 8px rgba(30, 48, 86, 0.1);
-}
-
-.header_section .menu_box .sub_menu ul li a {
-  display: block;
-  padding: 10px;
-  min-width: 167px;
-  font-weight: 500;
-  font-size: 14px;
-  color: black;
-}
-
-.header_section .menu_box .sub_menu ul li a i {
-  margin: 0 4px;
-}
-
-.header_section .menu_box .sub_menu ul li a:hover {
-  background-color: rgba(30, 48, 86, 0.1);
-}
-
-.header_section .menu_box .sub_menu .seco_section {
-  padding: 4px 0 0;
-  border-top: 1px solid rgba(30, 48, 86, 0.1);
-}
-
-.header_section .menu_box .sub_menu .seco_section .sub_title {
-  padding: 10px 14px;
-  font-size: 14px;
-  font-weight: 500;
-  color: black;
-}
-
-.header_section .header_asied_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.header_section .top_nav ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.header_section .header_link {
-  display: block;
+.header_section .top_nav ul li {
+  margin: 4px 10px;
+}
+
+.header_section .top_nav ul li a {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 8px 26px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e3056;
+}
+
+.header_section .top_nav ul li a.active {
+  background-color: rgba(30, 48, 86, 0.1);
+}
+
+.header_section .top_nav ul li a:hover {
+  background-color: rgba(30, 48, 86, 0.1);
+}
+
+.header_section .min_menu ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header_section .min_menu ul li {
+  padding: 14px 10px;
+}
+
+.header_section .min_menu ul li a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
-  margin: 0 10px;
-  padding: 10px;
+  border-radius: 10px;
+  color: #1e3056;
+  padding: 8px 10px;
+  font-size: 13px;
 }
 
-.header_section .header_link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.header_section .min_menu ul li a.active, .header_section .min_menu ul li a:hover {
+  color: #ba2c63;
+  background-color: rgba(30, 48, 86, 0.05);
 }
 
-.header_section .header_link .min-icone {
-  color: white;
-  font-size: 16px;
-}
-
-.header_section .header_link .after_none {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
+.header_section .min_menu ul li a .text {
+  padding: 0 4px;
+  font-weight: 550;
 }
 
 .registerbox {
@@ -3568,12 +3507,12 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
   }
 }
 
-.button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .menu_box .sub_menu ul li a, .header_section .header_link, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link {
+.button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .min_menu ul li a, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .header_section .search_header_box, .header_section .menu_box .sub_menu, .header_section .header_link, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img {
+.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img {
   border-radius: 4px;
 }
 
