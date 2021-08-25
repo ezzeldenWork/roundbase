@@ -1,42 +1,42 @@
-.registerbox{
+.registerbox {
     display: none;
 }
-.log_box{
+.log_box {
     margin: 0 0 60px;
-    .log_title{
+    .log_title {
         padding: 20px;
         font-size: 22px;
         font-weight: 600;
         text-align: center;
-        color: rgba($white-color,1);
-        background-color: rgba($min-color,1);
+        color: rgba($white-color, 1);
+        background-color: rgba($min-color, 1);
     }
-    .log_sign{
+    .log_sign {
         padding: 20px;
 
-        .log-in{
+        .log-in {
             padding: 10px;
             text-align: center;
             font-weight: 600;
             border-radius: 5px;
-            color: rgba($min-color,1);
-            background-color: rgba($min-color,.1);
+            color: rgba($min-color, 1);
+            background-color: rgba($min-color, 0.1);
             text-transform: capitalize;
             font-size: 14px;
             margin: 0 6px;
         }
- 
-        .register_button{
+
+        .register_button {
             padding: 10px;
             text-align: center;
             font-weight: 600;
             border-radius: 5px;
-            color: rgba($white-color,1);
-            background-color: rgba($min-color,1);
+            color: rgba($white-color, 1);
+            background-color: rgba($min-color, 1);
             text-transform: uppercase;
         }
     }
-    .outSing{
+    .outSing {
         padding: 1px;
         margin: 10px 0;
         position: relative;
@@ -44,19 +44,19 @@
         text-align: center;
         font-size: 13px;
         font-weight: 550;
-        color: rgba($min-color,.8);
+        color: rgba($min-color, 0.8);
         z-index: 1;
-        span{
+        span {
             padding: 4px 10px;
-            background-color: rgba($white-color,1);
+            background-color: rgba($white-color, 1);
         }
-        &.after_none{
+        &.after_none {
             padding: 20px 0 0;
-                &:after{
-display: none;
+            &:after {
+                display: none;
             }
         }
-        &:after{
+        &:after {
             height: 1px;
             width: 100%;
             content: "";
@@ -65,105 +65,101 @@ display: none;
             transform: translateY(-50%);
             position: absolute;
             z-index: -1;
-            background-color: rgba($gray-color,1);
+            background-color: rgba($gray-color, 1);
         }
     }
 }
-.log_sng_button{
+.log_sng_button {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    .clear-filter{
+    .clear-filter {
         margin: 0 0 10px;
     }
 }
-.sochile_list{
+.sochile_list {
     padding: 10px 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    li{
-        a{
+    li {
+        a {
             @extend%trans-4;
             font-size: 20px;
             width: 36px;
             height: 36px;
-            color: rgba($white-color,1);
+            color: rgba($white-color, 1);
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             position: relative;
-            
         }
     }
 }
 
-    .note_text{
-        color: rgba($darkgray-color,.7);
-        font-weight: 500;
-        font-size: 12px;
-        padding: 10px;
-        display: block;
-        text-align: center;
-    }
+.note_text {
+    color: rgba($darkgray-color, 0.7);
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
 
-.note_list{
+.note_list {
     margin: 0 0 20px;
-    ul{
+    ul {
         display: flex;
         flex-wrap: wrap;
-        li{
+        li {
             min-width: 50%;
             margin-top: 8px;
-            color: rgba($darkgray-color,.7);
-            font-size:13px;
+            color: rgba($darkgray-color, 0.7);
+            font-size: 13px;
         }
     }
 }
-
-
-
 
 // svg aimation
 
-
-
-.line_circle{
-    circle{
+.line_circle {
+    circle {
         opacity: 0;
-        animation: opacity_animation $min_sucond ease forwards alternate; 
+        animation: opacity_animation $min_sucond ease forwards alternate;
         @for $i from 1 to 5 {
-                &:nth-child(#{$i}) { animation-delay:$i * $min_sucond  ; }
+            &:nth-child(#{$i}) {
+                animation-delay: $i * $min_sucond;
+            }
         }
     }
-    &.sc_line_log{
-        circle{
+    &.sc_line_log {
+        circle {
             @for $i from 1 to 5 {
-                &:nth-child(#{$i}) { animation-delay: ($i * $min_sucond) + .6s + $tow_sucond  ; }
+                &:nth-child(#{$i}) {
+                    animation-delay: ($i * $min_sucond) + 0.6s + $tow_sucond;
+                }
             }
         }
     }
 }
 
-.button_log_svg{
+.button_log_svg {
     transform: scale(1) translate(-206px, -76px);
-    animation: button_animation $transtion_suconed + .4 $last_time   ease-in-out forwards alternate; 
+    animation: button_animation $transtion_suconed + 0.4 $last_time ease-in-out forwards alternate;
     transform-box: fill-box;
     transform-origin: center;
 }
 
-
-.log_in_front_box{
-    animation: opacity_animation $transtion_suconed + .4 $last_time + .8 ease forwards reverse ;
+.log_in_front_box {
+    animation: opacity_animation $transtion_suconed + 0.4 $last_time + 0.8 ease forwards reverse;
 }
 
-
-.box_mane{
-    transform: translate(-76%, -44%) scale(.8);
+.box_mane {
+    transform: translate(-76%, -44%) scale(0.8);
     transform-box: fill-box;
     transform-origin: center;
     opacity: 0;
-    animation: opacity_animation $transtion_suconed + .4 $last_time + 1 ease forwards  ;
+    animation: opacity_animation $transtion_suconed + 0.4 $last_time + 1 ease forwards;
 }

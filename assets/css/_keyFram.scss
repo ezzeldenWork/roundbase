@@ -1,6 +1,5 @@
-
-@keyframes opacity_animation{
-  0%{
+@keyframes opacity_animation {
+  0% {
       opacity: 0;
   }
   100% {
@@ -8,14 +7,12 @@
   }
 }
 
-
-
-@keyframes button_animation{
-  0% , 100% {
-      transform: translate(-206px, -76px) scale(1) ;
+@keyframes button_animation {
+  0%,
+  100% {
+      transform: translate(-206px, -76px) scale(1);
   }
   50% {
-      transform: translate(-206px, -76px) scale(.8) ;
+      transform: translate(-206px, -76px) scale(0.8);
   }
 }
-

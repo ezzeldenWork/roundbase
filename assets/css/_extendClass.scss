@@ -21,33 +21,33 @@
   position: relative;
   z-index: 1;
   i {
-    margin: 0 4px 0 0;
+      margin: 0 4px 0 0;
   }
   a {
-    font-weight: 500;
-    &:hover {
-      text-decoration: underline;
-    }
+      font-weight: 500;
+      &:hover {
+          text-decoration: underline;
+      }
   }
 }
 
 %scrollbar_style {
   &::-webkit-scrollbar {
-    width: 5px !important;
+      width: 5px !important;
   }
 
   // /* Track */
   &::-webkit-scrollbar-track {
-    background: rgba($gray-color, 1) !important;
+      background: rgba($gray-color, 1) !important;
   }
 
   // /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: rgba($darkgray-color, .2) !important;
+      background: rgba($darkgray-color, 0.2) !important;
   }
 
   // /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: rgba($min-color, .7) !important;
+      background: rgba($min-color, 0.7) !important;
   }
 }

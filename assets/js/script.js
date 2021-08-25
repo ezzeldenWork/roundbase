@@ -19,6 +19,10 @@ $(document).ready(function () {
     //     $(this).text(arrLang[lang_name][$(this).data("trans")])
     // })
 
+
+    if ($(".filter-content").length) {
+    var mixer = mixitup(".filter-content");
+    }
     $(".header_section .menu_box ").click(function () {
         $(this).children(".sub_menu").slideToggle();
     });

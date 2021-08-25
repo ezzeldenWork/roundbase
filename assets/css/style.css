@@ -35,7 +35,7 @@ html[dir="rtl"] body {
 }
 
 body.pad_cus {
-  padding: 0 60px 20px;
+  padding: 60px 60px 20px;
 }
 
 body.home_header {
@@ -56,10 +56,6 @@ body:after {
   position: absolute;
   height: 100%;
   z-index: -1;
-}
-
-.body_box {
-  padding: 60px 0;
 }
 
 .body_box .body_content {
@@ -313,6 +309,49 @@ html[dir="rtl"] .tap_heade .lang-box {
           box-shadow: 2px 2px 8px rgba(51, 51, 51, 0.1);
   width: 950px;
   max-width: 100%;
+}
+
+.page_banner_box {
+  padding: 60px 0;
+  background: radial-gradient(circle, rgba(51, 51, 51, 0.1) 0%, rgba(30, 48, 86, 0.1) 5%, rgba(72, 111, 196, 0.1) 100%);
+  border-bottom: 1px solid rgba(30, 48, 86, 0.2);
+}
+
+.page_banner_box .page_title {
+  text-align: center;
+  font-size: 28px;
+  color: #1e3056;
+  font-weight: 600;
+}
+
+.tags_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 25px;
+}
+
+.tags_list li {
+  margin-block: 5px;
+  padding: 6px 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  color: black;
+  background-color: rgba(2, 204, 2, 0.2);
+  text-align: center;
+}
+
+html[dir="rtl"] .tags_list li {
+  margin-left: 10px;
+}
+
+html[dir="ltr"] .tags_list li {
+  margin-right: 10px;
 }
 
 input,
@@ -1286,6 +1325,10 @@ html[dir="rtl"] .tabes-box .tabs-item {
   font-weight: 500;
 }
 
+.tap_content_section {
+  margin: 20px 0 0;
+}
+
 .tap_content_section .tap_content {
   display: none;
   padding: 20px;
@@ -1306,6 +1349,10 @@ html[dir="rtl"] .tabes-box .tabs-item {
   font-size: 22px;
   font-weight: 600;
   color: #1e3056;
+}
+
+.tab_section_box {
+  margin: 40px 0 0;
 }
 
 .add-popup {
@@ -2244,36 +2291,6 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   text-decoration: underline;
 }
 
-.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .tags_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 0 25px;
-}
-
-.recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .tags_list li {
-  margin-block: 5px;
-  padding: 6px 10px;
-  border-radius: 50px;
-  font-size: 14px;
-  color: black;
-  background-color: rgba(2, 204, 2, 0.2);
-  text-align: center;
-}
-
-html[dir="rtl"] .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .tags_list li {
-  margin-left: 10px;
-}
-
-html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .tags_list li {
-  margin-right: 10px;
-}
-
 .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side {
   padding: 18px;
   width: 400px;
@@ -2889,7 +2906,7 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
 
 .profile_img .title_box_text {
   font-size: 16px;
-  margin: 0 10PX;
+  margin: 0 10px;
 }
 
 .profile_img .img_role {
@@ -3202,7 +3219,7 @@ html[dir="rtl"] .box_item ul.have_line li::after {
 }
 
 /*
-  TODO: this is dash_boxs 
+TODO: this is dash_boxs 
 */
 .dash_boxs {
   -webkit-box-shadow: 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
@@ -3467,6 +3484,236 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
   color: #a2a5b9;
 }
 
+.show_company_box {
+  margin: 10px 0;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
+
+.show_company_box .show_comapny_img {
+  margin: 0 0 10px;
+}
+
+.show_company_box .show_comapny_img img {
+  height: 100px;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.show_company_box .recomendation_title {
+  font-size: 20px;
+  font-weight: 550;
+  color: black;
+}
+
+.show_company_box .adrees {
+  padding: 6px 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.show_company_box .adrees a {
+  color: #1e3056;
+  margin: 0 4px;
+}
+
+.show_company_box .adrees a:hover {
+  text-decoration: underline;
+}
+
+.show_company_box .card_padding {
+  padding: 24px;
+}
+
+.show_company_box .link_company {
+  padding: 10px;
+  border-top: 1px solid rgba(51, 51, 51, 0.4);
+  text-align: center;
+}
+
+.show_company_box .link_company .button_hover_style {
+  display: inline-block;
+}
+
+.person_filter_button_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.4);
+  padding: 0 0 10px;
+}
+
+.person_filter_button_box .filter_button {
+  position: relative;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+html[dir="rtl"] .person_filter_button_box .filter_button {
+  margin: 0 0 0 20px;
+}
+
+html[dir="ltr"] .person_filter_button_box .filter_button {
+  margin: 0 20px 0 0;
+}
+
+.person_filter_button_box .filter_button.investor-button::after {
+  background-color: #ba2c63;
+}
+
+.person_filter_button_box .filter_button.founder-button::after {
+  background-color: #486fc4;
+}
+
+.person_filter_button_box .filter_button.employee-button::after {
+  background-color: #333333;
+}
+
+.person_filter_button_box .filter_button::after {
+  content: "";
+  bottom: -11px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  background-color: #fab118;
+}
+
+.person_filter_button_box .filter_button.mixitup-control-active::after {
+  width: 100%;
+}
+
+.filter-content .filter_box_content {
+  margin: 0 0 10px;
+  padding: 20px 14px;
+  border: 1px solid;
+  background-color: white;
+}
+
+.filter-content .filter_box_content.investor_box {
+  border-color: rgba(186, 44, 99, 0.5);
+}
+
+.filter-content .filter_box_content.investor_box .person_img {
+  background-color: #ba2c63;
+}
+
+.filter-content .filter_box_content.investor_box .person_img i {
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.filter-content .filter_box_content.founder_box {
+  border-color: rgba(72, 111, 196, 0.5);
+}
+
+.filter-content .filter_box_content.founder_box .person_img {
+  background-color: #486fc4;
+}
+
+.filter-content .filter_box_content.founder_box .person_img i {
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.filter-content .filter_box_content.employee_box {
+  border-color: rgba(51, 51, 51, 0.5);
+}
+
+.filter-content .filter_box_content.employee_box .person_img {
+  background-color: #333333;
+}
+
+.filter-content .filter_box_content.employee_box .person_img i {
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.filter-content .filter_box_content .min_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filter-content .filter_box_content .min_title .person_img {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+html[dir="rtl"] .filter-content .filter_box_content .min_title .person_img {
+  margin-left: 20px;
+}
+
+html[dir="ltr"] .filter-content .filter_box_content .min_title .person_img {
+  margin-right: 20px;
+}
+
+.filter-content .filter_box_content .min_title .person_img img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.filter-content .filter_box_content .min_title .person_img i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-size: 14px;
+  bottom: 0;
+}
+
+html[dir="rtl"] .filter-content .filter_box_content .min_title .person_img i {
+  left: 0;
+}
+
+html[dir="ltr"] .filter-content .filter_box_content .min_title .person_img i {
+  right: 0;
+}
+
+.filter-content .filter_box_content .min_title .title_box_text {
+  margin: 10px 0;
+}
+
+.filter-content .filter_box_content .button_hover_style {
+  display: inline-block;
+}
+
 @-webkit-keyframes opacity_animation {
   0% {
     opacity: 0;
@@ -3486,7 +3733,8 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
 }
 
 @-webkit-keyframes button_animation {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translate(-206px, -76px) scale(1);
             transform: translate(-206px, -76px) scale(1);
   }
@@ -3497,7 +3745,8 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
 }
 
 @keyframes button_animation {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translate(-206px, -76px) scale(1);
             transform: translate(-206px, -76px) scale(1);
   }
@@ -3507,12 +3756,12 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
   }
 }
 
-.button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .min_menu ul li a, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link {
+.button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .min_menu ul li a, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link, .person_filter_button_box .filter_button::after {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img {
+.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img, .show_company_box, .show_company_box .show_comapny_img img, .filter-content .filter_box_content {
   border-radius: 4px;
 }
 
