@@ -1,23 +1,16 @@
 $(document).ready(function () {
-    // var lang_name = $("html").attr("lang");
-    // var arrLang = {
-    //     "en" : {
-    //       "Companies":  "Companies",
-    //       "Contacts":  "Contacts",
-    //       "Investors":  "Investors",
-    //       "People":  "People"
-    //     },
-    //     "ar" : {
-    //         "Companies":  "الشركات",
-    //         "Contacts":  "التواصل",
-    //         "Investors":  "المستثمرون",
-    //         "People":  "اشخاص"
-    //   }
-    //   };
+ 
 
-    // $(".translet").each(function(){
-    //     $(this).text(arrLang[lang_name][$(this).data("trans")])
-    // })
+    $("body").click(function(){
+        $(".sub_menu").hide();
+    });
+
+
+    $(".header_section .nav-profile img").click(function(clickEvent){
+        clickEvent.stopPropagation();
+        $(".sub_menu").toggle();
+    });
+
 
 
     if ($(".filter-content").length) {

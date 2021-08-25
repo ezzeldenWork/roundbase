@@ -71,4 +71,54 @@
             }
         }
     }
+
+    .nav-profile {
+        text-align: end;
+        position: relative;
+        margin: 0 20px;
+        img {
+            height: 34px;
+            width: 34px;
+            border-radius: 50%;
+            box-shadow: 0 1px 8px rgba($min-color, 0.1);
+            cursor: pointer;
+        }
+        .sub_menu {
+            text-align: start;
+            @extend%bord_r4;
+            position: absolute;
+            border: 1px solid rgba($min-color, 0.1);
+            border-top: 2px solid rgba($min-color, 1);
+            width: 163px;
+            margin: 6px 0 0;
+            display: none;
+            li {
+                border-bottom: 1px solid rgba($min-color, 0.1);
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 550;
+                    padding: 10px 6px;
+                    background-color: rgba($white-color, 1);
+                    color: rgba($min-color, 1);
+                    @extend%trans-4;
+                    &:hover {
+                        padding: 10px;
+                        color: rgba($white-color, 1);
+                        background-color: rgba($min-color, 1);
+                    }
+                }
+            }
+            html[dir="rtl"] & {
+                left: 10px;
+            }
+            html[dir="ltr"] & {
+                right: 10px;
+            }
+        }
+    }
 }

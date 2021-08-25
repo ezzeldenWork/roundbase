@@ -762,6 +762,63 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
   font-weight: 550;
 }
 
+.header_section .nav-profile {
+  text-align: end;
+  position: relative;
+  margin: 0 20px;
+}
+
+.header_section .nav-profile img {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
+          box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
+  cursor: pointer;
+}
+
+.header_section .nav-profile .sub_menu {
+  text-align: start;
+  position: absolute;
+  border: 1px solid rgba(30, 48, 86, 0.1);
+  border-top: 2px solid #1e3056;
+  width: 163px;
+  margin: 6px 0 0;
+  display: none;
+}
+
+.header_section .nav-profile .sub_menu li {
+  border-bottom: 1px solid rgba(30, 48, 86, 0.1);
+}
+
+.header_section .nav-profile .sub_menu li:last-of-type {
+  border-bottom: 0;
+}
+
+.header_section .nav-profile .sub_menu li a {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 550;
+  padding: 10px 6px;
+  background-color: white;
+  color: #1e3056;
+}
+
+.header_section .nav-profile .sub_menu li a:hover {
+  padding: 10px;
+  color: white;
+  background-color: #1e3056;
+}
+
+html[dir="rtl"] .header_section .nav-profile .sub_menu {
+  left: 10px;
+}
+
+html[dir="ltr"] .header_section .nav-profile .sub_menu {
+  right: 10px;
+}
+
 .registerbox {
   display: none;
 }
@@ -3756,12 +3813,12 @@ html[dir="ltr"] .filter-content .filter_box_content .min_title .person_img i {
   }
 }
 
-.button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .min_menu ul li a, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link, .person_filter_button_box .filter_button::after {
+.button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .min_menu ul li a, .header_section .nav-profile .sub_menu li a, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link, .person_filter_button_box .filter_button::after {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img, .show_company_box, .show_company_box .show_comapny_img img, .filter-content .filter_box_content {
+.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .header_section .nav-profile .sub_menu, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img, .show_company_box, .show_company_box .show_comapny_img img, .filter-content .filter_box_content {
   border-radius: 4px;
 }
 
