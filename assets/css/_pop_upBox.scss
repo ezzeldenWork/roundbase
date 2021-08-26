@@ -7,9 +7,8 @@
     align-items: center;
     justify-content: center;
     .popup-box {
-        box-shadow: 0 11px 15px -7px rgba($black-color, 0.2), 0 24px 38px 3px rgba($black-color, 0.2), 0 9px 46px 8px rgba($black-color, 0.2);
         // border: 1px solid rgba($min-color, .8);
-        @extend%bord_r4;
+        @extend%boxshadow-style,%bord_r4;
         width: 600px;
         overflow: hidden;
         background-color: rgba($white-color, 1);

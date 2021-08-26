@@ -6,6 +6,16 @@ $(document).ready(function () {
     });
 
 
+    $(".header_section .menu-icon i").click(function(){
+        $(".header_section .min_menu").addClass('opne_nemu');
+        $(".overlay").show();
+    });
+    $(".overlay,.header_section .min_menu .close-icon").click(function(){
+        $(".header_section .min_menu").removeClass('opne_nemu');
+        $(".overlay").hide();
+    });
+
+
     $(".header_section .nav-profile img").click(function(clickEvent){
         clickEvent.stopPropagation();
         $(".sub_menu").toggle();
@@ -452,7 +462,7 @@ $(document).ready(function () {
             return state.text, state.value;
         }
         // debugger;
-        var baseUrl = "assets/img/cb.png";
+        var baseUrl = "assets/img/rbLogo.png";
         var $state = $(
             '<div class="opstion_style_box"><div class="img_title"><img  src="' +
                 baseUrl +

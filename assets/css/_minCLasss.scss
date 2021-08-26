@@ -60,9 +60,8 @@ body {
 .body_box {
   .body_content {
     background-color: $white-color;
-    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0px 6px 10px rgba($black-color, 0.1);
+    @extend%bord_r4,%boxshadow-style;
   }
 }
 // body_box
@@ -80,6 +79,41 @@ body {
 .Customm0 {
   margin: 0 -15px;
 }
+
+
+
+.button_hover_style {
+  padding: 8px 24px;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  @extend%trans-4,%bord_r4;
+  display: flex;
+  align-items: center;
+  color: #0a58ca;
+  &:hover {
+    background-color: rgba($blueclear-color, 0.1);
+    i{
+      &.fa-arrow-right{
+        margin: 0 6px 0;
+      }
+    }
+  }
+  i {
+    @extend%trans-4;
+    &.fa-plus {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 0 4px;
+      border: 2px solid #0a58ca;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
 
 .lang-box {
   display: flex;
@@ -154,8 +188,6 @@ body {
   .order_md_1 {
     order: -1;
   }
-}
-@media (max-width: 992px) {
   body {
     &.pad_cus {
       padding: 0 10px 20px;
@@ -201,14 +233,6 @@ body {
 /*
   TODO: this is title style
 */
-
-.title_box_text {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 0 0 20px;
-  color: rgba($black-color, 1);
-  text-transform: capitalize;
-}
 
 .list_title {
   font-weight: 700;
@@ -282,10 +306,9 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   background-color: rgba($white-color, 1);
-  box-shadow: 2px 2px 8px rgba($darkgray-color, 0.1);
-  @extend%scrollbar_style,%bord_r4;
+  @extend%boxshadow-style,%scrollbar_style,%bord_r4;
   width: 950px;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
 }
 
 // page_banner_box
@@ -330,4 +353,32 @@ body {
     background-color: rgba($green-color, 0.2);
     text-align: center;
   }
+}
+
+.button-bar {
+  padding: 10px 12px;
+  justify-content: space-between;
+}
+
+.min-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  color: rgba($black-color, 1);
+  text-transform: capitalize;
+}
+
+.title-2 {
+  font-size: 15px;
+  font-weight: 550;
+  margin-block: 4px;
+  margin: 0 8px;
+}
+
+.overlay {
+  inset: 0;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba($black-color, 0.1);
+  display: none;
 }

@@ -82,7 +82,7 @@ TODO: this is dash_boxs
   .title-box {
       padding: 10px 6px;
       border-bottom: 1px solid rgba($gray-color, 1);
-      .min-title {
+      .title-box-content {
           display: flex;
           align-items: center;
           .small_img {
@@ -91,12 +91,7 @@ TODO: this is dash_boxs
           i {
               font-size: 20px;
           }
-          .title_box_text {
-              font-size: 15px;
-              font-weight: 550;
-              margin-block: 4px;
-              margin: 0 8px;
-          }
+
       }
       .list_title {
           font-size: 14px;
@@ -105,10 +100,7 @@ TODO: this is dash_boxs
       }
   }
 
-  .button-bar {
-      padding: 10px 12px;
-      justify-content: space-between;
-  }
+
 
   .statistics_content {
       border-bottom: 1px solid rgba($gray-color, 1);

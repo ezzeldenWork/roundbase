@@ -1,111 +1,131 @@
 .tap_heade {
-    background-color: #e9eff5;
-    &.tap_heade_inside {
-        background-color: transparent;
-        .tabes-box {
-            background-color: transparent;
-            padding: 10px;
-            .tabs-item {
-                background-color: rgba($blue-color, 0.12);
-                padding: 10px 26px;
-                border-radius: 80px;
-                box-shadow: unset;
-                color: rgba($black-color, 0.5);
-                &.active {
-                    font-weight: 550;
-                    color: rgba($black-color, 1);
-                }
-                &::after {
-                    display: none;
-                }
-            }
+  background-color: #e9eff5;
+  &.tap_heade_inside {
+    background-color: transparent;
+    .tabes-box {
+      background-color: transparent;
+      padding: 10px;
+      .tabs-item {
+        background-color: rgba($blue-color, 0.12);
+        padding: 10px 26px;
+        border-radius: 80px;
+        box-shadow: unset;
+        color: rgba($black-color, 0.5);
+        &.active {
+          font-weight: 550;
+          color: rgba($black-color, 1);
         }
+        &::after {
+          display: none;
+        }
+      }
     }
+  }
 }
 .tabes-box {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e9eff5;
+  // margin: 0 0 10px;
+  .tabs-item {
+    text-transform: capitalize;
+    cursor: pointer;
     display: flex;
-    flex-wrap: wrap;
-    background-color: #e9eff5;
-    // margin: 0 0 10px;
-    .tabs-item {
-        text-transform: capitalize;
-        cursor: pointer;
-        display: flex;
-        html[dir="ltr"] & {
-            margin: 0 10px 0 0;
-        }
-        html[dir="rtl"] & {
-            margin: 0 0 0 10px;
-        }
-        padding: 24px;
-        position: relative;
-        z-index: 1;
-        border-radius: 8px 8px 0 0;
-
-        &:hover {
-            background-color: rgba($black-color, 0.1);
-        }
-
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            background-color: $white-color;
-            height: 10px;
-            z-index: 2;
-            opacity: 0;
-        }
-        &.active {
-            background-color: $white-color;
-
-            box-shadow: 0 3px 1px -2px rgba($black-color, 0.2), 0 2px 2px 0 rgba($black-color, 0.14), 0 1px 5px 0 rgba($black-color, 0.12);
-            .tab-title {
-                font-size: 16px;
-                font-weight: 590;
-            }
-            &:after {
-                opacity: 1;
-            }
-        }
-        svg {
-            height: 16px;
-            fill: #183444;
-            padding: 0 4px;
-        }
+    html[dir="ltr"] & {
+      margin: 0 10px 0 0;
     }
+    html[dir="rtl"] & {
+      margin: 0 0 0 10px;
+    }
+    padding: 24px;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+
+    &:hover {
+      background-color: rgba($black-color, 0.1);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      background-color: $white-color;
+      height: 10px;
+      z-index: 2;
+      opacity: 0;
+    }
+    &.active {
+      background-color: $white-color;
+
+      @extend%boxshadow-style;
+      .tab-title {
+        font-size: 16px;
+        font-weight: 590;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+    svg {
+      height: 16px;
+      fill: #183444;
+      padding: 0 4px;
+    }
+  }
 }
 
 .tab-title {
-    font-size: 16px;
-    color: #183444;
-    font-weight: 500;
+  font-size: 16px;
+  color: #183444;
+  font-weight: 500;
 }
 
 .tap_content_section {
-    margin: 20px 0 0;
-    .tap_content {
-        display: none;
-        padding: 20px;
-        &.active {
-            display: block;
-        }
-
-        .title_box {
-            margin: 0 0 20px;
-            border-bottom: 1px solid rgba($blue-color, 1);
-            padding: 0 0 10px;
-            text-transform: capitalize;
-            .title {
-                font-size: 22px;
-                font-weight: 600;
-                color: rgba($min-color, 1);
-            }
-        }
+  margin: 20px 0 0;
+  .tap_content {
+    display: none;
+    padding: 20px;
+    &.active {
+      display: block;
     }
+
+    .title_box {
+      margin: 0 0 20px;
+      border-bottom: 1px solid rgba($blue-color, 1);
+      padding: 0 0 10px;
+      text-transform: capitalize;
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+        color: rgba($min-color, 1);
+      }
+    }
+  }
 }
 
 .top-marg {
-    margin: 40px 0 0;
+  margin: 40px 0 0;
+}
+
+@media (max-width: 1220px) {
+  .tabes-box {
+    .tabs-item {
+        margin: 10px 6px !important;
+        background-color: rgba($blue-color, 0.12);
+        padding: 10px 26px;
+        border-radius: 80px;
+        box-shadow: unset;
+        color: rgba($black-color, 0.5);
+        &.active {
+          font-weight: 550;
+          color: rgba($black-color, 1);
+        }
+        &::after {
+          display: none;
+        }
+    }
+  }
 }

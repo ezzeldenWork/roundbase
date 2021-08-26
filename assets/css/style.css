@@ -60,10 +60,7 @@ body:after {
 
 .body_box .body_content {
   background-color: #fff;
-  border-radius: 4px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .status_disactive {
@@ -76,6 +73,45 @@ body:after {
 
 .Customm0 {
   margin: 0 -15px;
+}
+
+.button_hover_style {
+  padding: 8px 24px;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0a58ca;
+}
+
+.button_hover_style:hover {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.button_hover_style:hover i.fa-arrow-right {
+  margin: 0 6px 0;
+}
+
+.button_hover_style i.fa-plus {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 4px;
+  border: 2px solid #0a58ca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .lang-box {
@@ -174,9 +210,6 @@ html[dir="rtl"] .tap_heade .lang-box {
         -ms-flex-order: -1;
             order: -1;
   }
-}
-
-@media (max-width: 992px) {
   body.pad_cus {
     padding: 0 10px 20px;
   }
@@ -217,14 +250,6 @@ html[dir="rtl"] .tap_heade .lang-box {
 /*
   TODO: this is title style
 */
-.title_box_text {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 0 0 20px;
-  color: black;
-  text-transform: capitalize;
-}
-
 .list_title {
   font-weight: 700;
   text-transform: uppercase;
@@ -305,10 +330,8 @@ html[dir="rtl"] .tap_heade .lang-box {
   overflow-y: auto;
   overflow-x: hidden;
   background-color: white;
-  -webkit-box-shadow: 2px 2px 8px rgba(51, 51, 51, 0.1);
-          box-shadow: 2px 2px 8px rgba(51, 51, 51, 0.1);
   width: 950px;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
 }
 
 .page_banner_box {
@@ -352,6 +375,36 @@ html[dir="rtl"] .tags_list li {
 
 html[dir="ltr"] .tags_list li {
   margin-right: 10px;
+}
+
+.button-bar {
+  padding: 10px 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.min-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  color: black;
+  text-transform: capitalize;
+}
+
+.title-2 {
+  font-size: 15px;
+  font-weight: 550;
+  margin-block: 4px;
+  margin: 0 8px;
+}
+
+.overlay {
+  inset: 0;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 input,
@@ -676,8 +729,34 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
   background-color: white;
   border-top: 10px solid #1e3056;
   border-bottom: 1px solid rgba(30, 48, 86, 0.2);
-  -webkit-box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
-          box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
+}
+
+.header_section .menu-icon, .header_section .close-icon {
+  display: none;
+}
+
+.header_section .menu-icon i, .header_section .close-icon i {
+  cursor: pointer;
+  font-size: 22px;
+  color: #1e3056;
+  margin: 13px 41px 0;
+}
+
+.header_section .close-icon {
+  position: absolute;
+  top: 20px;
+}
+
+.header_section .close-icon i {
+  color: white;
+}
+
+html[dir="rtl"] .header_section .close-icon {
+  left: 10px;
+}
+
+html[dir="ltr"] .header_section .close-icon {
+  right: 10px;
 }
 
 .header_section .logo-box a img {
@@ -719,6 +798,10 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
 
 .header_section .top_nav ul li a:hover {
   background-color: rgba(30, 48, 86, 0.1);
+}
+
+.header_section .min_menu .close-icon {
+  display: block;
 }
 
 .header_section .min_menu ul {
@@ -772,8 +855,6 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
-          box-shadow: 0 1px 8px rgba(30, 48, 86, 0.1);
   cursor: pointer;
 }
 
@@ -784,6 +865,7 @@ html[dir="rtl"] .pretty .state label:before, html[dir="rtl"] .pretty .state labe
   border-top: 2px solid #1e3056;
   width: 163px;
   margin: 6px 0 0;
+  z-index: 9999;
   display: none;
 }
 
@@ -817,6 +899,58 @@ html[dir="rtl"] .header_section .nav-profile .sub_menu {
 
 html[dir="ltr"] .header_section .nav-profile .sub_menu {
   right: 10px;
+}
+
+@media (max-width: 992px) {
+  .header_section .nav-profile {
+    margin: 0;
+  }
+  .header_section .min_menu ul li a {
+    padding: 8px 7px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 772px) {
+  .header_section .menu-icon {
+    display: block;
+  }
+  .header_section .min_menu {
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    bottom: 0;
+    -webkit-box-shadow: 10px 0 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 10px 0 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: #1e3056;
+    padding: 60px 40px;
+  }
+  html[dir="rtl"] .header_section .min_menu {
+    right: -100%;
+  }
+  html[dir="ltr"] .header_section .min_menu {
+    left: -100%;
+  }
+  .header_section .min_menu ul {
+    display: block;
+  }
+  .header_section .min_menu ul li a {
+    display: inline-block;
+    color: white;
+  }
+  .header_section .min_menu ul li a.active {
+    color: #1e3056;
+    background-color: white;
+  }
+}
+
+html[dir="rtl"] .opne_nemu {
+  right: 0 !important;
+}
+
+html[dir="ltr"] .opne_nemu {
+  left: 0 !important;
 }
 
 .registerbox {
@@ -1130,8 +1264,6 @@ tr.shown td.details-control {
   margin: 0 10px;
   width: 25px;
   height: 25px;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .data-label .item-box .img-box img {
@@ -1357,8 +1489,6 @@ html[dir="rtl"] .tabes-box .tabs-item {
 
 .tabes-box .tabs-item.active {
   background-color: #fff;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .tabes-box .tabs-item.active .tab-title {
@@ -1412,6 +1542,25 @@ html[dir="rtl"] .tabes-box .tabs-item {
   margin: 40px 0 0;
 }
 
+@media (max-width: 1220px) {
+  .tabes-box .tabs-item {
+    margin: 10px 6px !important;
+    background-color: rgba(72, 111, 196, 0.12);
+    padding: 10px 26px;
+    border-radius: 80px;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .tabes-box .tabs-item.active {
+    font-weight: 550;
+    color: black;
+  }
+  .tabes-box .tabs-item::after {
+    display: none;
+  }
+}
+
 .add-popup {
   position: fixed;
   z-index: 999;
@@ -1429,8 +1578,6 @@ html[dir="rtl"] .tabes-box .tabs-item {
 }
 
 .add-popup .popup-box {
-  -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.2), 0 9px 46px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.2), 0 9px 46px 8px rgba(0, 0, 0, 0.2);
   width: 600px;
   overflow: hidden;
   background-color: white;
@@ -1857,8 +2004,6 @@ html[dir="rtl"] .tabes-box .tabs-item {
 }
 
 .filter-box-aside .filter_collapse ul li .filter-box-content {
-  -webkit-box-shadow: inset 0px 8px 3px -6px rgba(30, 48, 86, 0.5);
-          box-shadow: inset 0px 8px 3px -6px rgba(30, 48, 86, 0.5);
   background-color: #ebf7fb;
   padding: 10px;
 }
@@ -2042,41 +2187,6 @@ html[dir="rtl"] .tabes-box .tabs-item {
           justify-content: space-between;
 }
 
-.button_hover_style {
-  padding: 8px 24px;
-  background-color: transparent;
-  font-weight: 600;
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #0a58ca;
-}
-
-.button_hover_style:hover {
-  background-color: rgba(0, 0, 255, 0.1);
-}
-
-.button_hover_style i.fa-plus {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin: 0 4px;
-  border: 2px solid #0a58ca;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 @media (max-width: 992px) {
   .filter_opne_button {
     display: block;
@@ -2234,8 +2344,6 @@ html[dir="rtl"] .list_card_box .list_box.clicked:after {
 
 .recomendation_section .recomendation_box .recomendation_list .recomendation_item {
   margin: 0 0 40px;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
   position: relative;
   width: 100%;
@@ -2309,8 +2417,6 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
 
 .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img {
   height: 100px;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2394,6 +2500,12 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   font-size: 14px;
   font-weight: 500;
   color: black;
+}
+
+.recomendation_section .recomendation_box .recomendation_list .recomendation_item .button-bar {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .recomendation_section .recomendation_box .recomendation_list.card_style {
@@ -2596,8 +2708,6 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   padding: 18px 0;
   margin: 10px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
-          box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
   cursor: pointer;
   border-bottom: 1px solid rgba(51, 51, 51, 0);
 }
@@ -2768,11 +2878,6 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   padding: 10px 18px;
 }
 
-.button_banner .skip_button:hover {
-  -webkit-box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
-          box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
-}
-
 .button_banner .see_recommendations {
   font-size: 16px;
   padding: 10px 18px;
@@ -2806,8 +2911,6 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
 
 .profiles_box .profiles_item .pretty .state label img {
   height: 40px;
-  -webkit-box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
-          box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
 }
 
 .profiles_box .profiles_item .pretty .state label .text {
@@ -2863,6 +2966,9 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   .button_banner .skip_button {
     margin: 5px 0;
   }
+  .profiles_box .profiles_item {
+    width: 35%;
+  }
 }
 
 .img_box {
@@ -2872,8 +2978,6 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   margin: 0 0 10px;
   border-radius: 5px;
   background-color: white;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .img_box:hover::after {
@@ -3012,6 +3116,8 @@ html[dir="ltr"] .recomendation_section .recomendation_box .recomendation_list .r
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .redio_like_butto .button_redio_box {
@@ -3215,6 +3321,8 @@ html[dir="rtl"] .box_item ul.have_line li::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .box_item ul.links_list li .lable_text {
@@ -3239,6 +3347,26 @@ html[dir="rtl"] .box_item ul.have_line li::after {
 
 .box_item ul.links_list li a .text_link:hover {
   color: #486fc4;
+}
+
+@media (max-width: 992px) {
+  .box_item .right_box {
+    padding: 10px 0 0 !important;
+    margin: 10px 0 0;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 2px dashed #dddddd;
+  }
+}
+
+@media (max-width: 772px) {
+  .title-item-box .prag-item {
+    font-size: 10px;
+  }
+  .img_box.full_img img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .dash_list {
@@ -3337,7 +3465,7 @@ TODO: this is dash_boxs
   border-bottom: 1px solid #dddddd;
 }
 
-.dash_boxs .title-box .min-title {
+.dash_boxs .title-box .title-box-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3346,32 +3474,18 @@ TODO: this is dash_boxs
           align-items: center;
 }
 
-.dash_boxs .title-box .min-title .small_img {
+.dash_boxs .title-box .title-box-content .small_img {
   height: 20px;
 }
 
-.dash_boxs .title-box .min-title i {
+.dash_boxs .title-box .title-box-content i {
   font-size: 20px;
-}
-
-.dash_boxs .title-box .min-title .title_box_text {
-  font-size: 15px;
-  font-weight: 550;
-  margin-block: 4px;
-  margin: 0 8px;
 }
 
 .dash_boxs .title-box .list_title {
   font-size: 14px;
   letter-spacing: 0.4px;
   font-weight: 500;
-}
-
-.dash_boxs .button-bar {
-  padding: 10px 12px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .dash_boxs .statistics_content {
@@ -3543,8 +3657,6 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
 
 .show_company_box {
   margin: 10px 0;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
 }
 
@@ -3554,8 +3666,6 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
 
 .show_company_box .show_comapny_img img {
   height: 100px;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -3595,6 +3705,10 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
   display: inline-block;
 }
 
+.filter-content {
+  margin: 40px 0 0;
+}
+
 .person_filter_button_box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3613,6 +3727,8 @@ html[dir="rtl"] .dash_boxs .dash_comapny_list_box .dash_company_list.list_style_
   position: relative;
   font-size: 16px;
   font-weight: 550;
+  background-color: unset;
+  z-index: 1;
 }
 
 html[dir="rtl"] .person_filter_button_box .filter_button {
@@ -3623,15 +3739,15 @@ html[dir="ltr"] .person_filter_button_box .filter_button {
   margin: 0 20px 0 0;
 }
 
-.person_filter_button_box .filter_button.investor-button::after {
+.person_filter_button_box .filter_button.investor-button::before, .person_filter_button_box .filter_button.investor-button::after {
   background-color: #ba2c63;
 }
 
-.person_filter_button_box .filter_button.founder-button::after {
+.person_filter_button_box .filter_button.founder-button::before, .person_filter_button_box .filter_button.founder-button::after {
   background-color: #486fc4;
 }
 
-.person_filter_button_box .filter_button.employee-button::after {
+.person_filter_button_box .filter_button.employee-button::before, .person_filter_button_box .filter_button.employee-button::after {
   background-color: #333333;
 }
 
@@ -3643,6 +3759,24 @@ html[dir="ltr"] .person_filter_button_box .filter_button {
   width: 0;
   position: absolute;
   background-color: #fab118;
+}
+
+.person_filter_button_box .filter_button::before {
+  content: "";
+  bottom: -11px;
+  left: 0;
+  height: 0;
+  width: 100%;
+  position: absolute;
+  -webkit-transition-delay: .4s !important;
+          transition-delay: .4s !important;
+  background-color: #fab118;
+  z-index: -1;
+  display: none;
+}
+
+.person_filter_button_box .filter_button.mixitup-control-active::before {
+  height: 100%;
 }
 
 .person_filter_button_box .filter_button.mixitup-control-active::after {
@@ -3771,6 +3905,40 @@ html[dir="ltr"] .filter-content .filter_box_content .min_title .person_img i {
   display: inline-block;
 }
 
+@media (max-width: 992px) {
+  .person_filter_button_box {
+    margin: 20px 0 40px;
+  }
+}
+
+@media (max-width: 772px) {
+  .person_filter_button_box {
+    margin: 20px 0 40px;
+    border-bottom: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .person_filter_button_box .filter_button {
+    padding: 10px 20px;
+    margin: 14px 10px !important;
+    -webkit-transition-delay: 0.5s !important;
+            transition-delay: 0.5s !important;
+    background-color: rgba(30, 48, 86, 0.1);
+    border-radius: 0;
+  }
+  .person_filter_button_box .filter_button::before, .person_filter_button_box .filter_button::after {
+    display: block;
+    bottom: 0;
+  }
+  .person_filter_button_box .filter_button.mixitup-control-active {
+    background-color: rgba(30, 48, 86, 0);
+    color: white;
+  }
+}
+
 @-webkit-keyframes opacity_animation {
   0% {
     opacity: 0;
@@ -3813,12 +3981,12 @@ html[dir="ltr"] .filter-content .filter_box_content .min_title .person_img i {
   }
 }
 
-.button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .min_menu ul li a, .header_section .nav-profile .sub_menu li a, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link, .person_filter_button_box .filter_button::after {
+.button_hover_style, .button_hover_style i, .button-bar .openin_box button, .buttom_style, .buttom_style i, .buttom_style::after, .buttom_style::before, .buttom_style .borderSpan::after, .buttom_style .borderSpan::before, .header_section .min_menu, .header_section .min_menu ul li a, .header_section .nav-profile .sub_menu li a, .sochile_list li a, .dataTable .table_link, .add-popup .popup-box .item-continer-box .item-box li, .add-popup .popup-box .item-continer-box .item-box li .title-lable, .add-popup .popup-box .item-continer-box .item-box li i, .add-popup .popup-box .item-continer-box .item-box .min-list li, .add-popup .popup-box .item-continer-box .item-box .min-list li .title-lable, .add-popup .popup-box .item-continer-box .item-box .min-list li i, .button-bar .buttom_style, .button-bar .buttom_style::after, .button-bar .buttom_style::before, .button-bar .buttom_style .borderSpan::after, .button-bar .buttom_style .borderSpan::before, .filter-box-aside .filter_collapse ul li, .filter-box-aside .filter_collapse ul li .collopse-link .link_content i, .link-box, .filter_opne_button .opne_botton, .show_hidden_bottom, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box:after, .list_card_box .list_box i, .register_form_box .wizard ul[role="tablist"] li a, .register_form_box .wizard ul[role="tablist"] li a::after, .register_form_box .wizard .step_content .boxs_componant .box_items, .select2-dropdown .icon-select-add, .button_banner .skip_button, .box_item .edite_icon, .box_item ul.links_list li a .text_link, .person_filter_button_box .filter_button, .person_filter_button_box .filter_button::after, .person_filter_button_box .filter_button::before {
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }
 
-.lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .header_section .nav-profile .sub_menu, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .button_hover_style, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img, .show_company_box, .show_company_box .show_comapny_img img, .filter-content .filter_box_content {
+.body_box .body_content, .button_hover_style, .lang-box .lang_content, .button-bar .buttom_style, .modal-content-pop, .add_box_form .add_form a, .header_section .nav-profile .sub_menu, .tipped-box .button-box a, .add-popup .popup-box, .add-popup .popup-box .input-bar .serch-box, .add-popup .popup-box .add-bar .add-button, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box .input-group_custom, .filter-box-aside .filter_collapse ul li .filter-box-content .filter-box-item .input-box input, .link-box, .filter_opne_button .opne_botton, .page_banner_title .banner_content .button_box .button_item, .list_card_box .list_box, .list_card_box .list_box:after, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .note_side, .button_banner .see_recommendations, .profiles_box .profiles_item .pretty .state label img, .dash_boxs, .dash_boxs .img-title .head-box img, .show_company_box, .show_company_box .show_comapny_img img, .filter-content .filter_box_content {
   border-radius: 4px;
 }
 
@@ -3860,4 +4028,9 @@ html[dir="ltr"] .filter-content .filter_box_content .min_title .person_img i {
 
 .modal-content-pop::-webkit-scrollbar-thumb:hover, .dash_boxs .dash_comapny_list_box .dash_company_list.list_hgt::-webkit-scrollbar-thumb:hover {
   background: rgba(30, 48, 86, 0.7) !important;
+}
+
+.body_box .body_content, .modal-content-pop, .header_section, .header_section .nav-profile img, .data-label .item-box .img-box, .tabes-box .tabs-item.active, .add-popup .popup-box, .filter-box-aside .filter_collapse ul li .filter-box-content, .recomendation_section .recomendation_box .recomendation_list .recomendation_item, .recomendation_section .recomendation_box .recomendation_list .recomendation_item .min_content .min_side .img_box_recomaend img, .register_form_box .wizard .step_content .boxs_componant .box_items, .button_banner .skip_button:hover, .profiles_box .profiles_item .pretty .state label img, .img_box, .show_company_box, .show_company_box .show_comapny_img img {
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
