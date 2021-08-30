@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#fff" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="assets/css/pretty-checkbox.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+            integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/tipped.css" />
+        <link rel="stylesheet" href="assets/css/nouislider.min.css" />
+
+        <!-- new -->
+
+        <link rel="stylesheet" href="assets/css/smart_wizard_all.min.css" />
+
+        <!-- new -->
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Companies</title>
+    </head>
+
+    <body>
+        <div id="page" class="hfeed site">
+            <!--           start content-->
+            <div class="main-container">
+                <main class="main wrapper">
+                    <div class="profile_box top-marg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="box_item">
+                                        <a data-opnemodle="editMinedetails" class="edite_icon" role="button">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-5 col-6">
+                                                        <div class="profile_img" for="img">
+                                                            <div class="img_box full_img">
+                                                                <input type="file" class="img-input" name="img" data-img="profileOver" id="img" />
+                                                                <img src="assets/img/logo.png" class="img-fluid img_show" id="profileOver" alt="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <div class="title-item-box profile_box">
+                                                            <p class="prag-item"><i class="fas fa-compass"></i> Investment Firm</p>
+                                                            <h3 class="title-item">
+                                                                Name
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="right_box">
+                                                    <h5 class="min-title">
+                                                        Links
+                                                    </h5>
+                                                    <ul class="list-unstyled links_list">
+                                                        <li>
+                                                            <span class="lable_text icone_lable">
+                                                                <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                                            </span>
+                                                            <a href="#">
+                                                                <span class="text_link">
+                                                                    12345678
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="lable_text icone_lable">
+                                                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                                                            </span>
+                                                            <a href="#">
+                                                                <span class="text_link">
+                                                                    facebook@facebook.com
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="lable_text icone_lable">
+                                                                <i class="fab fa-linkedin"></i>
+                                                            </span>
+                                                            <a href="#">
+                                                                <span class="text_link">
+                                                                    linkedin@linkedin.com
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="lable_text icone_lable">
+                                                                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                                                            </span>
+                                                            <a href="#">
+                                                                <span class="text_link">
+                                                                    twitter@twitter.com
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="lable_text icone_lable">
+                                                                <i class="fas fa-envelope"></i>
+                                                            </span>
+                                                            <a href="#">
+                                                                <span class="text_link">
+                                                                    email@email.com
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="box_item">
+                                                    <a data-opnemodle="passwordPopUp" class="edite_icon" role="button">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                    <h5 class="min-title">
+                                                        Password
+                                                    </h5>
+                                                    <ul class="list-unstyled links_list">
+                                                        <li>
+                                                            <span class="text_link">
+                                                                *************
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <!--           end content-->
+        </div>
+
+        <div class="custome_modle" id="editMinedetails">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">Add Founders</h5>
+                        <button type="button" class="custome-btn-close">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">frist Name en <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">frist Name ar <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">last Name en <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">last Name ar <span>*</span></label>
+                                    <input required type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="gender"> Gender</label>
+                                    <div class="checked_group">
+                                        <div class="pretty p-default p-smooth">
+                                            <input id="Mela" name="gender" type="radio" class="input-checked clos_button" />
+                                            <div class="state p-primary p-svg"><label>Mela </label></div>
+                                        </div>
+                                        <div class="pretty p-default p-smooth">
+                                            <input id="Female" name="gender" type="radio" class="input-checked clos_button" />
+                                            <div class="state p-primary p-svg"><label>Female </label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="facebook"> <i class="fas fa-globe-europe"></i>website</label>
+                                    <input required type="text" name="facebook" id="facebook" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="facebook"> <i class="fab fa-facebook" aria-hidden="true"></i>Face Book</label>
+                                    <input required type="text" name="facebook" id="facebook" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="linkedin"> <i class="fab fa-linkedin"></i>LinkedIn</label>
+                                    <input required type="text" name="linkedin" id="linkedin" class="form-control" placeholderurl="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="twitter"> <i class="fab fa-twitter-square" aria-hidden="true"></i>Twitter</label>
+                                    <input required type="text" name="twitter" id="twitter" class="form-control" placeholder="url" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="buttom_style closeandsave"> <span class="borderSpan">Save</span> <span class="hole"></span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custome_modle" id="passwordPopUp">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">Change Password</h5>
+                        <button type="button" class="custome-btn-close">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password <span>*</span></label>
+                                    <input required type="text" name="currentPassword" id="currentPassword" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="newPassword">New Password <span>*</span></label>
+                                    <input required type="text" name="newPassword" id="newPassword" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="newPasswordAgain">Current Password (Again) <span>*</span></label>
+                                    <input required type="text" name="newPasswordAgain" id="newPasswordAgain" class="form-control" placeholder="" aria-describedby="helpId" />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="note_list">
+                                    <ul class="">
+                                        <li>
+                                            8 characters or longer
+                                        </li>
+                                        <li>
+                                            At least one lowercase letter
+                                        </li>
+                                        <li>
+                                            At least one number
+                                        </li>
+                                        <li>
+                                            At least one uppercase letter
+                                        </li>
+                                        <li>
+                                            Passwords must match
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="button_hover_style closeandsave"> <span class="borderSpan"> Forgot password? </span> <span class="hole"></span> </a>
+                        <a href="#" class="buttom_style closeandsave"> <span class="borderSpan"> Change Password </span> <span class="hole"></span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
+        <script type="text/javascript" src="./assets/js/tipped.min.js"></script>
+        <script type="text/javascript" src="./assets/js/nouislider.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+            integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+            crossorigin="anonymous"
+        ></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

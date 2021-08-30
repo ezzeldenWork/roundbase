@@ -39,10 +39,9 @@ TODO: this is dash_boxs
 */
 
 .dash_boxs {
-  @extend%bord_r4;
-  box-shadow: 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
+  @extend%bord_r4,%boxshadow-style;
   background-color: rgba($white-color, 1);
-  margin: 0 0 10px;
+  margin: 0 0 20px;
   &.shadow_none {
       box-shadow: unset;
   }
@@ -83,6 +82,7 @@ TODO: this is dash_boxs
       padding: 10px 6px;
       border-bottom: 1px solid rgba($gray-color, 1);
       .title-box-content {
+        padding: 1px 17px;
           display: flex;
           align-items: center;
           .small_img {

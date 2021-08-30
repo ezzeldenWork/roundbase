@@ -32,8 +32,8 @@ body {
   }
   background: linear-gradient(
     190deg,
-    rgba(255, 255, 255, 1) 0%,
-    $gray-color 100%
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba($gray-color, 0.33) 100%
   );
   padding: 0 0 60px;
   position: relative;
@@ -80,8 +80,6 @@ body {
   margin: 0 -15px;
 }
 
-
-
 .button_hover_style {
   padding: 8px 24px;
   background-color: transparent;
@@ -93,8 +91,8 @@ body {
   color: #0a58ca;
   &:hover {
     background-color: rgba($blueclear-color, 0.1);
-    i{
-      &.fa-arrow-right{
+    i {
+      &.fa-arrow-right {
         margin: 0 6px 0;
       }
     }
@@ -113,7 +111,6 @@ body {
     }
   }
 }
-
 
 .lang-box {
   display: flex;
@@ -381,4 +378,13 @@ body {
   z-index: 999;
   background-color: rgba($black-color, 0.1);
   display: none;
+}
+
+@media (max-width: 772px) {
+  .page_banner_box {
+    padding: 25px 0;
+    .page_title {
+      font-size: 16px;
+    }
+  }
 }

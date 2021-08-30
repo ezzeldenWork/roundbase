@@ -78,10 +78,10 @@
         justify-content: space-around;
         flex-wrap: wrap;
         .box_items {
-          width: calc(100% / 4 - 30px);
+          width: 100%;
           text-align: center;
           padding: 18px 0;
-          margin: 10px;
+          margin: 10px 0;
           border-radius: 3px;
           cursor: pointer;
           border-bottom: 1px solid rgba($darkgray-color, 0);
@@ -113,7 +113,7 @@
         input {
           width: calc(100% - 100px);
           border: 0;
-          border-bottom: 1px solid rgba($darkgray-color, 0.2);
+          border-bottom: 1px solid rgba($darkgray-color, 0.1);
           border-radius: 0;
         }
         button {
@@ -139,18 +139,7 @@
 
 .form-group {
   margin-block: 30px;
-  .lable_select {
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba($gray-color, 1);
-  }
-  .checkbox_lable {
-    font-size: 16px;
-    font-weight: 600;
-    display: block;
-    color: rgba($darkgray-color, 1);
-    margin-block: 0 20px;
-  }
+
   .margin_in {
     margin-block: 20px;
   }
@@ -244,9 +233,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   .profiles_item {
-    width: 33%;
     margin-block: 20px;
-
+    width: 33%;
     .pretty {
       .state {
         label {
@@ -301,11 +289,6 @@
             font-size: 14px;
           }
         }
-        .boxs_componant {
-          .box_items {
-            width: calc(100% / 3 - 20px);
-          }
-        }
       }
     }
   }
@@ -316,7 +299,9 @@
       .step_content {
         .boxs_componant {
           .box_items {
-            width: calc(100% / 1 - 20px);
+            .box_items{
+              font-size: 30px;
+            }
           }
         }
       }
@@ -325,12 +310,16 @@
   .button_banner {
     flex-direction: column;
     .skip_button {
+    font-size: 14px;
       margin: 5px 0;
+    }
+    .see_recommendations{
+      font-size: 14px;
     }
   }
   .profiles_box {
     .profiles_item {
-      width: 35%;
+      width: 100%;
     }
   }
 }

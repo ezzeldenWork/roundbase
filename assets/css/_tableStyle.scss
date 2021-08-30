@@ -19,6 +19,13 @@ table.dataTable tbody th,
 table.dataTable tbody td {
     font-size: 13px;
 }
+table.dataTable tbody td {
+    color: rgba($min-color, .9);
+}
+table.dataTable thead th{
+    color: rgba($darkgray-color,1);
+    font-weight: 700;
+}
 
 .dataTables_wrapper {
     overflow-x: auto;
@@ -78,10 +85,16 @@ tr.shown td.details-control {
             }
         }
         .item-name {
-            color: #183444;
+            color: rgba($min-color, .8);
             font-weight: 500;
             text-overflow: ellipsis;
             font-size: 14px;
+            @extend%trans-4;
+        }
+        &:hover{
+            .item-name {
+                color: rgba($min-color, 1);
+            }
         }
     }
 }
